@@ -1,6 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 @import "tailwindcss";
 
+/* Menda Font Faces */
+@font-face {
+  font-family: "Menda";
+  src: url("/public/fonts/Menda-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/public/fonts/Menda-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/public/fonts/Menda-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/public/fonts/Menda-ExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Menda";
+  src: url("/public/fonts/Menda-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;
@@ -9,9 +45,28 @@
   }
 
   body {
-    font-family: "Inter", sans-serif;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background-color: #000000;
     color: #ffffff;
     overflow-x: hidden;
   }
+
+  /* Headers use Menda font */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: "Menda", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+}
+
+/* Utility classes */
+.font-menda {
+  font-family: "Menda", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.font-helvetica {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

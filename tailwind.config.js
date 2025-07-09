@@ -10,7 +10,10 @@ export default {
                 'text-secondary': '#cccccc',
             },
             fontFamily: {
+                'menda': ['Menda', 'Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
+                'helvetica': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
                 'inter': ['Inter', 'sans-serif'],
+                'sans': ['Helvetica Neue', 'Helvetica', 'Arial', 'sans-serif'],
             },
             animation: {
                 'bounce-slow': 'bounce 2s infinite',

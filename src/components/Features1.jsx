@@ -9,12 +9,12 @@ const Features1 = () => {
       <div className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-20">
           <Slide direction="up" triggerOnce>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase tracking-wider">
+            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase tracking-wider font-menda">
               SIMPLIFYING WEB3 WITH AI AGENTS
             </h2>
           </Slide>
           <Fade delay={300} triggerOnce>
-            <p className="text-xl md:text-2xl text-white/70 uppercase tracking-widest font-medium">
+            <p className="text-xl md:text-2xl text-white/70 uppercase tracking-widest font-medium font-helvetica">
               B2B2C INTEGRATIONS FOR MASS ADOPTION.
             </p>
           </Fade>
@@ -33,10 +33,10 @@ const Features1 = () => {
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide">
+              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide font-menda">
                 AI AGENTS
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-white/60 leading-relaxed font-helvetica">
                 Deploy autonomous tools to streamline Web3 tasks like trading
                 and payments with voice commands
               </p>
@@ -59,10 +59,10 @@ const Features1 = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide">
+              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide font-menda">
                 B2B2C GROWTH
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-white/60 leading-relaxed font-helvetica">
                 Scale your business with integrated AI solutions that bridge
                 traditional and decentralized systems
               </p>
@@ -85,10 +85,10 @@ const Features1 = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide">
+              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide font-menda">
                 CROSS-CHAIN LINKS
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-white/60 leading-relaxed font-helvetica">
                 Seamless integration across multiple blockchain networks for
                 maximum compatibility
               </p>
@@ -112,10 +112,10 @@ const Features1 = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide">
+              <h3 className="text-xl font-bold text-white mb-4 uppercase tracking-wide font-menda">
                 TOKENIZED SYSTEM
               </h3>
-              <p className="text-sm text-white/60 leading-relaxed">
+              <p className="text-sm text-white/60 leading-relaxed font-helvetica">
                 Leverage blockchain technology for transparent and secure
                 business operations
               </p>

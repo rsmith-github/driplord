@@ -9,31 +9,31 @@ const Footer = () => {
             <nav className="flex flex-wrap justify-center md:justify-start gap-8 items-center">
               <a
                 href="#hero"
-                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)]"
+                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica"
               >
                 LEGEND
               </a>
               <a
                 href="#features2"
-                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)]"
+                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica"
               >
                 DRIPLORD TRADING AGENT
               </a>
               <a
                 href="#features1"
-                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)]"
+                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica"
               >
                 AI FUTURE
               </a>
               <a
                 href="#roadmap"
-                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)]"
+                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica"
               >
                 ROADMAP
               </a>
               <a
                 href="#contact"
-                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)]"
+                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica"
               >
                 GET STARTED
               </a>
@@ -41,25 +41,25 @@ const Footer = () => {
             <div className="flex gap-6 items-center">
               <a
                 href="#"
-                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase"
+                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase font-helvetica"
               >
                 TG
               </a>
               <a
                 href="#"
-                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase"
+                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase font-helvetica"
               >
                 X
               </a>
               <a
                 href="#"
-                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase"
+                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase font-helvetica"
               >
                 DS
               </a>
               <a
                 href="#"
-                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase"
+                className="text-white/60 text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase font-helvetica"
               >
                 LI
               </a>

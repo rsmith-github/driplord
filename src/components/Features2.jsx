@@ -10,7 +10,7 @@ const Features2 = () => {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="text-center mb-12">
           <Slide direction="up" triggerOnce>
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 uppercase tracking-wider">
+            <h2 className="text-4xl font-bold text-white mb-8 uppercase tracking-wider font-menda">
               DRIPLORD TRADING AGENT
             </h2>
           </Slide>
@@ -54,10 +54,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
                       VOICE-BASED TRADING
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed">
+                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
                       Execute buy, sell, and stake commands using simple voice
                       or text interactions
                     </p>
@@ -80,10 +80,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
                       PORTFOLIO MANAGEMENT
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed">
+                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
                       Optimize holdings with AI signals powered by GT-Protocol
                       and sentiment data
                     </p>
@@ -114,10 +114,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
                       AUTO-DEFI STRATEGIES
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed">
+                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
                       Earn up to 240% APY with prebuilt, low-risk yield modules
                     </p>
                   </div>
@@ -139,10 +139,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide">
+                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
                       ONBOARDING & EDUCATION
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed">
+                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
                       Learn trading and Web3 basics with built-in tutorials and
                       step-by-step guidance
                     </p>
@@ -172,14 +172,14 @@ const Features2 = () => {
 
         <Fade delay={700} triggerOnce>
           <div className="text-center mt-12">
-            <button className="px-10 py-4 text-white font-bold uppercase tracking-wide text-lg">
+            <button className="px-10 py-4 text-white font-bold uppercase tracking-wide text-lg font-helvetica">
               <StarBorder
                 as="a"
                 href="#contact"
                 speed="3s"
                 color="magenta"
                 thickness={2}
-                className="inline-block text-md font-bold text-white uppercase tracking-widest"
+                className="inline-block text-md font-bold text-white uppercase tracking-widest font-helvetica"
               >
                 Get Started
               </StarBorder>

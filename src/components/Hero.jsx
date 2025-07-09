@@ -17,7 +17,7 @@ const Hero = () => {
                 speed="3s"
                 color="magenta"
                 thickness={2}
-                className="inline-block text-md font-bold text-white uppercase tracking-widest"
+                className="inline-block text-md font-bold text-white uppercase tracking-widest font-helvetica"
               >
                 Get Started
               </StarBorder>
@@ -25,7 +25,7 @@ const Hero = () => {
           </Fade>
         </div>
       </div>
-      <div className="absolute bottom-4 right-10 flex flex-col items-center gap-2 text-white/50 text-xs font-medium uppercase tracking-widest pointer-events-auto">
+      <div className="absolute bottom-4 right-10 flex flex-col items-center gap-2 text-white/50 text-xs font-medium uppercase tracking-widest pointer-events-auto font-helvetica">
         <span>SCROLL TO EXPLORE</span>
         <div className="animate-bounce text-md">↓</div>
       </div>
