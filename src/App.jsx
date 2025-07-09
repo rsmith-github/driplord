@@ -85,28 +85,166 @@ function App() {
       // Create GSAP context scoped to the scroll container
       animationContext = gsap.context(() => {
         const firstSection = scrollContainer.querySelector(".snap-start");
-        const lastSection = scrollContainer.querySelector(".snap-end");
+        const features2Section = scrollContainer.querySelector("#features2");
+        const contactSection = scrollContainer.querySelector("#contact");
 
-        // Create timeline for the entire scroll journey
-        const tl = gsap.timeline({
+        // Try to find camera and lighting objects for additional effects
+        const camera =
+          splineApp.findObjectByName("Web Camera") ||
+          splineApp.findObjectByName("Camera") ||
+          allObjects.find((obj) => obj.type === "Camera");
+
+        const pinkLight =
+          splineApp.findObjectByName("Directional Light 2") ||
+          splineApp.findObjectByName("Pink Light") ||
+          allObjects.find((obj) => obj.name && obj.name.includes("Light"));
+
+        // Debug: Check what properties are available
+        console.log("Model properties:", Object.keys(mainModel));
+        console.log("Model position:", mainModel.position);
+        console.log("Model scale:", mainModel.scale);
+
+        // Get Features1 section for more precise timing
+        const features1Section = scrollContainer.querySelector("#features1");
+
+        // Create one comprehensive timeline from start to Features2
+        const tl1 = gsap.timeline({
           scrollTrigger: {
             trigger: firstSection || scrollContainer,
             scroller: scrollContainer,
             start: "top top",
             end: () =>
-              lastSection
-                ? `+=${scrollContainer.scrollHeight - window.innerHeight}`
-                : "bottom bottom",
+              features2Section
+                ? `${features2Section.offsetTop}px`
+                : "50% bottom",
             scrub: 1,
           },
         });
 
-        // Add rotation animation to the timeline
-        tl.to(mainModel.rotation, {
-          y: Math.PI * 2, // Full 360 degree rotation
-          ease: "none",
-          duration: 1,
-        });
+        // Create a more aggressive rotation timeline with keyframes
+        tl1
+          .to(mainModel.rotation, {
+            y: Math.PI * 2 * (320 / 360), // 320 degrees at 60% progress
+            ease: "none",
+            duration: 0.6,
+          })
+          .to(mainModel.rotation, {
+            y: Math.PI * 2, // Full 360 degrees by end
+            ease: "none",
+            duration: 0.4,
+          });
+
+        // Move model backward
+        if (mainModel.position) {
+          tl1.to(
+            mainModel.position,
+            {
+              z: mainModel.position.z - 2, // Move model backward
+              ease: "none",
+              duration: 1,
+            },
+            0
+          );
+        } else if (mainModel.scale) {
+          // Fallback to scaling if position doesn't work
+          tl1.to(
+            mainModel.scale,
+            {
+              x: 0.8,
+              y: 0.8,
+              z: 0.8,
+              ease: "none",
+              duration: 1,
+            },
+            0
+          );
+        }
+
+        // Phase 2: Features2 to Contact - Complete rotation and zoom in
+        if (contactSection) {
+          const tl2 = gsap.timeline({
+            scrollTrigger: {
+              trigger: features2Section || scrollContainer,
+              scroller: scrollContainer,
+              start: "top top",
+              end: () => `${contactSection.offsetTop}px`,
+              scrub: 1,
+            },
+          });
+
+          // Continue rotation from 360° + extra, then back to ~0°
+          tl2
+            .to(
+              mainModel.rotation,
+              {
+                y: Math.PI * 2 + Math.PI * 0.5, // 360° + 90° extra
+                ease: "none",
+                duration: 0.6,
+              },
+              0
+            )
+            .to(
+              mainModel.rotation,
+              {
+                y: Math.PI * 0.1, // Close to 0° (18°)
+                ease: "power2.inOut",
+                duration: 0.4,
+              },
+              0.6
+            );
+
+          // Move model forward (zoom in effect) - try different approaches
+          if (mainModel.position) {
+            tl2.to(
+              mainModel.position,
+              {
+                z: mainModel.position.z + 3, // Move model forward for zoom effect
+                ease: "power2.inOut",
+                duration: 1,
+              },
+              0
+            );
+          } else if (mainModel.scale) {
+            // Fallback to scaling for zoom effect
+            tl2.to(
+              mainModel.scale,
+              {
+                x: 1.2,
+                y: 1.2,
+                z: 1.2,
+                ease: "power2.inOut",
+                duration: 1,
+              },
+              0
+            );
+          }
+
+          // Camera zoom in effect
+          if (camera && camera.position) {
+            tl2.to(
+              camera.position,
+              {
+                z: camera.position.z - 3, // Move camera closer
+                ease: "power2.inOut",
+                duration: 1,
+              },
+              0
+            );
+          }
+
+          // Enhance pink lighting for dramatic effect
+          if (pinkLight && pinkLight.intensity !== undefined) {
+            tl2.to(
+              pinkLight,
+              {
+                intensity: (pinkLight.intensity || 1) * 1.5,
+                ease: "power2.inOut",
+                duration: 1,
+              },
+              0
+            );
+          }
+        }
 
         // Refresh ScrollTrigger to ensure it detects the custom scroller
         ScrollTrigger.refresh();
