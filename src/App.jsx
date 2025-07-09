@@ -172,26 +172,16 @@ function App() {
             },
           });
 
-          // Continue rotation from 360° + extra, then back to ~0°
-          tl2
-            .to(
-              mainModel.rotation,
-              {
-                y: Math.PI * 2 + Math.PI * 0.5, // 360° + 90° extra
-                ease: "none",
-                duration: 0.6,
-              },
-              0
-            )
-            .to(
-              mainModel.rotation,
-              {
-                y: Math.PI * 0.1, // Close to 0° (18°)
-                ease: "power2.inOut",
-                duration: 0.4,
-              },
-              0.6
-            );
+          // Continue rotation from 360° with full extra rotation then settle
+          tl2.to(
+            mainModel.rotation,
+            {
+              y: Math.PI * 4.25, // 765° (360° + 360° + 45°) - full extra rotation then settle
+              ease: "power2.inOut",
+              duration: 0.6,
+            },
+            0
+          );
 
           // Move model forward (zoom in effect) - try different approaches
           if (mainModel.position) {
