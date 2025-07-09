@@ -1,4 +1,5 @@
 import { Fade, Slide } from "react-awesome-reveal";
+import StarBorder from "./reactbits/StarBorder";
 
 const Features2 = () => {
   return (
@@ -10,7 +11,7 @@ const Features2 = () => {
         <div className="text-center mb-12">
           <Slide direction="up" triggerOnce>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 uppercase tracking-wider">
-              SINT TRADING AGENT
+              DRIPLORD TRADING AGENT
             </h2>
           </Slide>
         </div>
@@ -171,8 +172,17 @@ const Features2 = () => {
 
         <Fade delay={700} triggerOnce>
           <div className="text-center mt-12">
-            <button className="px-10 py-4 bg-[rgb(238,63,154)] text-white font-bold rounded-lg hover:bg-[rgb(238,63,154)]/80 transition-all duration-300 uppercase tracking-wide text-lg">
-              GET STARTED
+            <button className="px-10 py-4 text-white font-bold uppercase tracking-wide text-lg">
+              <StarBorder
+                as="a"
+                href="#contact"
+                speed="3s"
+                color="magenta"
+                thickness={2}
+                className="inline-block text-md font-bold text-white uppercase tracking-widest"
+              >
+                Get Started
+              </StarBorder>
             </button>
           </div>
         </Fade>

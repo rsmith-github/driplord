@@ -7,6 +7,7 @@ import Features1 from "./components/Features1";
 import Features2 from "./components/Features2";
 import Roadmap from "./components/Roadmap";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer";
 
 function App() {
   useEffect(() => {
@@ -52,8 +53,9 @@ function App() {
         <div className="snap-always snap-start">
           <Roadmap />
         </div>
-        <div className="snap-always snap-start">
+        <div className="snap-always snap-end">
           <Contact />
+          <Footer />
         </div>
       </div>
     </div>
