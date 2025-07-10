@@ -299,6 +299,162 @@ function App() {
           }
         }
 
+        // Add subtle mouse-based camera orbit with breathing effect
+        if (camera && camera.position) {
+          // Store the original camera position as the center point
+          const originalCameraX = camera.position.x;
+          const originalCameraY = camera.position.y;
+          const originalCameraZ = camera.position.z;
+
+          let lastMouseTime = Date.now();
+          let breathingAnimation;
+          let resetTimeout;
+
+          // Check if we're in Features2 section
+          const isInFeatures2 = () => {
+            const features2Section = document.querySelector("#features2");
+            if (!features2Section) return false;
+
+            const rect = features2Section.getBoundingClientRect();
+            return rect.top <= 100 && rect.bottom >= -100; // Account for some margin
+          };
+
+          // Reset camera to original position
+          const resetCameraPosition = () => {
+            if (isInFeatures2()) return; // Don't reset in Features2
+
+            gsap.to(camera.position, {
+              x: originalCameraX,
+              y: originalCameraY,
+              z: originalCameraZ,
+              duration: 1.2,
+              ease: "power2.out",
+            });
+          };
+
+          // Start breathing animation (subtle up/down movement)
+          const startBreathing = () => {
+            breathingAnimation = gsap.to(camera.position, {
+              y: originalCameraY + 1, // Subtle up movement
+              duration: 2.5,
+              ease: "power2.inOut",
+              yoyo: true,
+              repeat: -1,
+            });
+          };
+
+          // Stop breathing animation
+          const stopBreathing = () => {
+            if (breathingAnimation) {
+              breathingAnimation.kill();
+              breathingAnimation = null;
+            }
+          };
+
+          // Mouse tracking for subtle camera orbit
+          const handleMouseMove = (event) => {
+            // Skip orbit in Features2 section
+            if (isInFeatures2()) return;
+
+            lastMouseTime = Date.now();
+            stopBreathing(); // Stop breathing when mouse is active
+
+            // Clear any pending reset timeout
+            if (resetTimeout) {
+              clearTimeout(resetTimeout);
+              resetTimeout = null;
+            }
+
+            const { clientX, clientY } = event;
+            const { innerWidth, innerHeight } = window;
+
+            // Convert mouse position to -1 to 1 range
+            const mouseX = (clientX / innerWidth) * 2 - 1;
+            const mouseY = -((clientY / innerHeight) * 2 - 1);
+
+            // Define orbit sensitivity (reduced intensity)
+            const orbitStrength = 6; // Much more subtle
+            const verticalStrength = 4;
+
+            // INVERTED: Make model appear to follow mouse direction
+            const targetX = originalCameraX - mouseX * orbitStrength; // Inverted
+            const targetY = originalCameraY - mouseY * verticalStrength; // Inverted
+            const targetZ = originalCameraZ - mouseX * orbitStrength * 0.3; // Inverted and subtle
+
+            // Smoothly animate to new position
+            gsap.to(camera.position, {
+              x: targetX,
+              y: targetY,
+              z: targetZ,
+              duration: 0.6,
+              ease: "power2.out",
+            });
+
+            // Set timeout to reset camera position after 1 second of inactivity
+            resetTimeout = setTimeout(() => {
+              resetCameraPosition();
+            }, 1000);
+          };
+
+          // Handle mouse leave to reset camera position
+          const handleMouseLeave = () => {
+            if (isInFeatures2()) return;
+
+            // Clear any pending reset timeout
+            if (resetTimeout) {
+              clearTimeout(resetTimeout);
+              resetTimeout = null;
+            }
+
+            resetCameraPosition();
+          };
+
+          // Check for idle state and start breathing
+          const checkIdle = () => {
+            if (Date.now() - lastMouseTime > 1000 && !isInFeatures2()) {
+              // 2 seconds idle
+              if (!breathingAnimation) {
+                startBreathing();
+              }
+            } else if (isInFeatures2()) {
+              // Stop breathing if we're in Features2
+              stopBreathing();
+            }
+          };
+
+          // Add mouse move listener, mouse leave listener, and idle checker
+          document.addEventListener("mousemove", handleMouseMove);
+          document.addEventListener("mouseleave", handleMouseLeave);
+          const idleInterval = setInterval(checkIdle, 500);
+
+          // Start with breathing if no immediate mouse movement
+          setTimeout(() => {
+            if (Date.now() - lastMouseTime > 1000 && !isInFeatures2()) {
+              startBreathing();
+            }
+          }, 1000);
+
+          // Store cleanup function
+          const cleanup = () => {
+            document.removeEventListener("mousemove", handleMouseMove);
+            document.removeEventListener("mouseleave", handleMouseLeave);
+            clearInterval(idleInterval);
+            stopBreathing();
+
+            // Clear any pending reset timeout
+            if (resetTimeout) {
+              clearTimeout(resetTimeout);
+              resetTimeout = null;
+            }
+          };
+
+          // Add to cleanup array
+          if (!window.splineCleanupFunctions) {
+            window.splineCleanupFunctions = [];
+          }
+          window.splineCleanupFunctions.push(cleanup);
+        }
+
         // Refresh ScrollTrigger to ensure it detects the custom scroller
         ScrollTrigger.refresh();
       }, scrollContainer);
@@ -313,6 +469,12 @@ function App() {
         animationContext.revert();
       }
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+
+      // Cleanup mouse event listeners
+      if (window.splineCleanupFunctions) {
+        window.splineCleanupFunctions.forEach((cleanup) => cleanup());
+        window.splineCleanupFunctions = [];
+      }
     };
   }, [splineApp]);
 
