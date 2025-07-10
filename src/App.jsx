@@ -10,6 +10,7 @@ import Features2 from "./components/Features2";
 import Roadmap from "./components/Roadmap";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import HUD from "./components/HUD";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -312,11 +313,28 @@ function App() {
 
           // Check if we're in Features2 section
           const isInFeatures2 = () => {
+            const scrollContainer = document.querySelector(".snap-y");
             const features2Section = document.querySelector("#features2");
-            if (!features2Section) return false;
 
-            const rect = features2Section.getBoundingClientRect();
-            return rect.top <= 100 && rect.bottom >= -100; // Account for some margin
+            if (!scrollContainer || !features2Section) return false;
+
+            // Get scroll position and section position
+            const scrollTop = scrollContainer.scrollTop;
+            const features2Top = features2Section.offsetTop;
+            const viewportHeight = scrollContainer.clientHeight;
+
+            // More aggressive detection - if we're anywhere near Features2
+            const isNearFeatures2 =
+              Math.abs(scrollTop - features2Top) < viewportHeight * 0.5;
+
+            console.log("Features2 Detection:", {
+              scrollTop,
+              features2Top,
+              isNearFeatures2,
+              difference: Math.abs(scrollTop - features2Top),
+            });
+
+            return isNearFeatures2;
           };
 
           // Reset camera to original position
@@ -390,10 +408,11 @@ function App() {
               ease: "power2.out",
             });
 
-            // Set timeout to reset camera position after 1 second of inactivity
-            resetTimeout = setTimeout(() => {
-              resetCameraPosition();
-            }, 1000);
+            // Clear any pending reset timeout (but don't set a new one)
+            if (resetTimeout) {
+              clearTimeout(resetTimeout);
+              resetTimeout = null;
+            }
           };
 
           // Handle mouse leave to reset camera position
@@ -480,6 +499,9 @@ function App() {
 
   return (
     <div className="w-full min-h-screen relative">
+      {/* HUD Elements - Behind Spline Model */}
+      <HUD />
+
       {/* Fixed Spline Background */}
       <div
         className={`fixed inset-0 transition-opacity duration-500`}

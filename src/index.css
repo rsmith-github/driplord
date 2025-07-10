@@ -4,35 +4,35 @@
 /* Menda Font Faces */
 @font-face {
   font-family: "Menda";
-  src: url("/public/fonts/Menda-Medium.ttf") format("truetype");
+  src: url("/fonts/Menda-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Menda";
-  src: url("/public/fonts/Menda-SemiBold.ttf") format("truetype");
+  src: url("/fonts/Menda-SemiBold.ttf") format("truetype");
   font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Menda";
-  src: url("/public/fonts/Menda-Bold.ttf") format("truetype");
+  src: url("/fonts/Menda-Bold.ttf") format("truetype");
   font-weight: 700;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Menda";
-  src: url("/public/fonts/Menda-ExtraBold.ttf") format("truetype");
+  src: url("/fonts/Menda-ExtraBold.ttf") format("truetype");
   font-weight: 800;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Menda";
-  src: url("/public/fonts/Menda-Black.ttf") format("truetype");
+  src: url("/fonts/Menda-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
 }
