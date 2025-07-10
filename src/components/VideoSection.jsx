@@ -5,7 +5,7 @@ const VideoSection = () => {
     <Fade triggerOnce>
       <section
         id="video"
-        className="h-screen flex items-center justify-center relative overflow-hidden"
+        className="h-screen flex items-center justify-center relative overflow-hidden bg-black"
       >
         <div
           className="w-full h-full bg-cover bg-center bg-no-repeat"

@@ -112,16 +112,6 @@ function App() {
           splineApp.findObjectByName("Pink Light") ||
           allObjects.find((obj) => obj.name && obj.name.includes("Light"));
 
-        // Debug: Check what properties are available
-        console.log("Model properties:", Object.keys(mainModel));
-        console.log("Model position:", mainModel.position);
-        console.log("Model scale:", mainModel.scale);
-        console.log("Position x:", mainModel.position.x);
-        console.log("Position z:", mainModel.position.z);
-
-        // Get Features1 section for more precise timing
-        const features1Section = scrollContainer.querySelector("#features1");
-
         // Create one comprehensive timeline from start to Features2
         const tl1 = gsap.timeline({
           scrollTrigger: {
@@ -182,9 +172,9 @@ function App() {
           .to(
             mainModel.position,
             {
-              x: originalModelX + 15, // Move model right (appears to move right)
-              y: originalModelY + 5, // Move model up slightly
-              z: originalModelZ - 10, // Move model back (zoom out effect)
+              x: originalModelX + 30, // Move model right (appears to move right)
+              y: originalModelY + 15, // Move model up slightly
+              z: originalModelZ - 40, // Move model back (zoom out effect)
               ease: "power2.out",
               duration: 0.6,
             },
@@ -193,9 +183,9 @@ function App() {
           .to(
             mainModel.position,
             {
-              x: originalModelX, // Return to center
-              y: originalModelY, // Return to original height
-              z: originalModelZ - 5, // Keep slightly back
+              x: originalModelX + 1, // Return to center
+              y: originalModelY + 40, // Return to original height
+              z: originalModelZ - 150, // Much more zoomed out for Features2
               ease: "power2.inOut",
               duration: 0.4,
             },
@@ -218,27 +208,25 @@ function App() {
           tl2.to(
             mainModel.rotation,
             {
-              y: Math.PI * 4.25, // 765° (360° + 360° + 45°) - full extra rotation then settle
+              y: Math.PI * 4.5, // 765° (360° + 360° + 45°) - full extra rotation then settle
               ease: "power2.inOut",
               duration: 0.6,
             },
             0
           );
 
-          // Camera zoom in effect for Contact section
-          if (camera && camera.position) {
-            tl2.to(
-              camera.position,
-              {
-                x: 0, // Center camera
-                y: 88.35, // Return to original height
-                z: 45.83, // Move camera closer (original z position for zoom in)
-                ease: "power2.inOut",
-                duration: 1,
-              },
-              0
-            );
-          }
+          // Model zoom in effect for Contact section
+          tl2.to(
+            mainModel.position,
+            {
+              x: originalModelX, // Keep centered
+              y: originalModelY - 80, // Return to original height
+              z: originalModelZ + 400, // Move model forward (zoom in effect)
+              ease: "power2.inOut",
+              duration: 1,
+            },
+            0
+          );
 
           // Enhance pink lighting for dramatic effect
           if (pinkLight && pinkLight.intensity !== undefined) {
