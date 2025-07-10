@@ -112,6 +112,13 @@ function App() {
           splineApp.findObjectByName("Pink Light") ||
           allObjects.find((obj) => obj.name && obj.name.includes("Light"));
 
+        console.log("Pink light found:", pinkLight);
+        if (pinkLight) {
+          console.log("Light name:", pinkLight.name);
+          console.log("Light position:", pinkLight.position);
+          console.log("Light intensity:", pinkLight.intensity);
+        }
+
         // Create one comprehensive timeline from start to Features2
         const tl1 = gsap.timeline({
           scrollTrigger: {
@@ -167,6 +174,18 @@ function App() {
         const originalModelY = mainModel.position.y;
         const originalModelZ = mainModel.position.z;
 
+        // Store original light properties if available
+        let originalLightX,
+          originalLightY,
+          originalLightZ,
+          originalLightIntensity;
+        if (pinkLight && pinkLight.position) {
+          originalLightX = pinkLight.position.x;
+          originalLightY = pinkLight.position.y;
+          originalLightZ = pinkLight.position.z;
+          originalLightIntensity = pinkLight.intensity || 1;
+        }
+
         // Move model and scale it for visual variety
         tl1
           .to(
@@ -191,6 +210,42 @@ function App() {
             },
             0.6
           );
+
+        // Simple alternating light position using your exact Spline coordinates
+        if (pinkLight && pinkLight.position) {
+          console.log(
+            "Original light position:",
+            originalLightX,
+            originalLightY,
+            originalLightZ
+          );
+
+          // Features1: Move light to -120 (left side)
+          tl1
+            .to(
+              pinkLight.position,
+              {
+                x: -120, // Move to left side
+                y: -15.27, // Keep your original y
+                z: -31.73, // Keep your original z
+                ease: "power2.out",
+                duration: 0.6,
+              },
+              0
+            )
+            // Features2: Move light back to original position (120.08)
+            .to(
+              pinkLight.position,
+              {
+                x: 120.08, // Back to original right side
+                y: -15.27, // Keep your original y
+                z: -31.73, // Keep your original z
+                ease: "power2.inOut",
+                duration: 0.4,
+              },
+              0.6
+            );
+        }
 
         // Phase 2: Features2 to Contact - Complete rotation and zoom in
         if (contactSection) {
@@ -228,14 +283,16 @@ function App() {
             0
           );
 
-          // Enhance pink lighting for dramatic effect
-          if (pinkLight && pinkLight.intensity !== undefined) {
+          // Contact: Move light back to left side (-120)
+          if (pinkLight && pinkLight.position) {
             tl2.to(
-              pinkLight,
+              pinkLight.position,
               {
-                intensity: (pinkLight.intensity || 1) * 1.5,
+                x: -120, // Back to left side for Contact
+                y: -15.27, // Keep your original y
+                z: -10.73, // Make it closer
                 ease: "power2.inOut",
-                duration: 1,
+                duration: 0.5,
               },
               0
             );
