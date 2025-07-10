@@ -94,6 +94,19 @@ function App() {
           splineApp.findObjectByName("Camera") ||
           allObjects.find((obj) => obj.type === "Camera");
 
+        console.log("Camera found:", camera);
+        if (camera) {
+          console.log("Camera name:", camera.name);
+          console.log("Camera type:", camera.type);
+          console.log("Camera position available:", !!camera.position);
+          if (camera.position) {
+            console.log(
+              "Camera position properties:",
+              Object.keys(camera.position)
+            );
+          }
+        }
+
         const pinkLight =
           splineApp.findObjectByName("Directional Light 2") ||
           splineApp.findObjectByName("Pink Light") ||
@@ -103,6 +116,8 @@ function App() {
         console.log("Model properties:", Object.keys(mainModel));
         console.log("Model position:", mainModel.position);
         console.log("Model scale:", mainModel.scale);
+        console.log("Position x:", mainModel.position.x);
+        console.log("Position z:", mainModel.position.z);
 
         // Get Features1 section for more precise timing
         const features1Section = scrollContainer.querySelector("#features1");
@@ -134,31 +149,58 @@ function App() {
             duration: 0.4,
           });
 
-        // Move model backward
-        if (mainModel.position) {
-          tl1.to(
+        // Use dramatic model scaling since position/camera approaches aren't working
+        console.log("Using model scaling approach");
+
+        // Store initial scale values
+        const initialScaleX = mainModel.scale.x;
+        const initialScaleY = mainModel.scale.y;
+        const initialScaleZ = mainModel.scale.z;
+
+        console.log(
+          "Initial scale:",
+          initialScaleX,
+          initialScaleY,
+          initialScaleZ
+        );
+
+        // Try moving the model instead of the camera for more predictable results
+        console.log(
+          "Original model position:",
+          mainModel.position.x,
+          mainModel.position.y,
+          mainModel.position.z
+        );
+
+        // Store original model position
+        const originalModelX = mainModel.position.x;
+        const originalModelY = mainModel.position.y;
+        const originalModelZ = mainModel.position.z;
+
+        // Move model and scale it for visual variety
+        tl1
+          .to(
             mainModel.position,
             {
-              z: mainModel.position.z - 2, // Move model backward
-              ease: "none",
-              duration: 1,
+              x: originalModelX + 15, // Move model right (appears to move right)
+              y: originalModelY + 5, // Move model up slightly
+              z: originalModelZ - 10, // Move model back (zoom out effect)
+              ease: "power2.out",
+              duration: 0.6,
             },
             0
-          );
-        } else if (mainModel.scale) {
-          // Fallback to scaling if position doesn't work
-          tl1.to(
-            mainModel.scale,
+          )
+          .to(
+            mainModel.position,
             {
-              x: 0.8,
-              y: 0.8,
-              z: 0.8,
-              ease: "none",
-              duration: 1,
+              x: originalModelX, // Return to center
+              y: originalModelY, // Return to original height
+              z: originalModelZ - 5, // Keep slightly back
+              ease: "power2.inOut",
+              duration: 0.4,
             },
-            0
+            0.6
           );
-        }
 
         // Phase 2: Features2 to Contact - Complete rotation and zoom in
         if (contactSection) {
@@ -183,38 +225,14 @@ function App() {
             0
           );
 
-          // Move model forward (zoom in effect) - try different approaches
-          if (mainModel.position) {
-            tl2.to(
-              mainModel.position,
-              {
-                z: mainModel.position.z + 3, // Move model forward for zoom effect
-                ease: "power2.inOut",
-                duration: 1,
-              },
-              0
-            );
-          } else if (mainModel.scale) {
-            // Fallback to scaling for zoom effect
-            tl2.to(
-              mainModel.scale,
-              {
-                x: 1.2,
-                y: 1.2,
-                z: 1.2,
-                ease: "power2.inOut",
-                duration: 1,
-              },
-              0
-            );
-          }
-
-          // Camera zoom in effect
+          // Camera zoom in effect for Contact section
           if (camera && camera.position) {
             tl2.to(
               camera.position,
               {
-                z: camera.position.z - 3, // Move camera closer
+                x: 0, // Center camera
+                y: 88.35, // Return to original height
+                z: 45.83, // Move camera closer (original z position for zoom in)
                 ease: "power2.inOut",
                 duration: 1,
               },
