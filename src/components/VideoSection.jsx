@@ -2,19 +2,18 @@ import { Fade } from "react-awesome-reveal";
 
 const VideoSection = () => {
   return (
-    <Fade triggerOnce>
-      <section
-        id="video"
-        className="h-screen flex items-center justify-center relative overflow-hidden bg-black"
-      >
-        <div
-          className="w-full h-full bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage: "url('/images/video-bg.png')",
-          }}
-        ></div>
-      </section>
-    </Fade>
+    <section
+      id="video"
+      className="relative h-screen flex items-center justify-center overflow-hidden bg-black"
+      style={{ zIndex: 60 }}
+    >
+      <div
+        className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: "url('/images/video-bg.png')",
+        }}
+      ></div>
+    </section>
   );
 };
 

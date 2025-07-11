@@ -7,8 +7,8 @@ const Features2 = () => {
       id="features2"
       className="h-screen bg-transparent flex items-center justify-center px-8 py-16 relative overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto w-full relative z-10">
-        <div className="text-center mb-12">
+      <div className="mx-auto w-full relative z-10 px-[5%] flex flex-col justify-center gap-[5rem] 2xl:gap-[10rem]">
+        <div className="text-center">
           <Slide direction="up">
             <h2 className="text-4xl font-bold text-white mb-8 uppercase tracking-wider font-menda">
               DRIPLORD TRADING AGENT
@@ -16,7 +16,7 @@ const Features2 = () => {
           </Slide>
         </div>
 
-        <div className="relative max-w-6xl mx-auto h-96 flex items-center justify-center">
+        <div className="relative h-96 flex items-center justify-center">
           {/* Left Side HUD Element */}
           <div className="absolute left-0 top-0 h-full flex items-center">
             <svg
@@ -35,7 +35,7 @@ const Features2 = () => {
           </div>
 
           {/* Left Side Features */}
-          <div className="absolute left-16 top-0 w-80 h-full flex flex-col justify-center gap-12">
+          <div className="absolute left-16 top-0 w-80 2xl:w-96 h-full flex flex-col justify-center gap-[8rem] 2xl:gap-[10rem]">
             {/* Voice-Based Trading - Top Left */}
             <Fade delay={300}>
               <div className="group">
@@ -53,11 +53,11 @@ const Features2 = () => {
                       />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
+                  <div className="flex-1">
+                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       VOICE-BASED TRADING
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
                       Execute buy, sell, and stake commands using simple voice
                       or text interactions
                     </p>
@@ -79,11 +79,11 @@ const Features2 = () => {
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
+                  <div className="flex-1">
+                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       PORTFOLIO MANAGEMENT
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
                       Optimize holdings with AI signals powered by GT-Protocol
                       and sentiment data
                     </p>
@@ -94,12 +94,12 @@ const Features2 = () => {
           </div>
 
           {/* Central Area - Reserved for potential figure/illustration */}
-          <div className="w-64 h-64 flex items-center justify-center">
+          <div className="w-64 2xl:w-80 h-64 2xl:h-80 flex items-center justify-center">
             {/* This space is reserved for a central figure/illustration if needed */}
           </div>
 
           {/* Right Side Features */}
-          <div className="absolute right-16 top-0 w-80 h-full flex flex-col justify-center gap-12">
+          <div className="absolute right-16 top-0 w-80 2xl:w-96 h-full flex flex-col justify-center gap-[8rem] 2xl:gap-[10rem]">
             {/* Auto-DeFi Strategies - Top Right */}
             <Fade delay={400}>
               <div className="group text-right">
@@ -113,11 +113,11 @@ const Features2 = () => {
                       <path d="M2 11a1 1 0 011-1h2a1 1 0 011 1v5a1 1 0 01-1 1H3a1 1 0 01-1-1v-5zM8 7a1 1 0 011-1h2a1 1 0 011 1v9a1 1 0 01-1 1H9a1 1 0 01-1-1V7zM14 4a1 1 0 011-1h2a1 1 0 011 1v12a1 1 0 01-1 1h-2a1 1 0 01-1-1V4z" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
+                  <div className="flex-1">
+                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       AUTO-DEFI STRATEGIES
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
                       Earn up to 240% APY with prebuilt, low-risk yield modules
                     </p>
                   </div>
@@ -138,11 +138,11 @@ const Features2 = () => {
                       <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
                     </svg>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-bold text-white mb-3 uppercase tracking-wide font-menda">
+                  <div className="flex-1">
+                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       ONBOARDING & EDUCATION
                     </h3>
-                    <p className="text-sm text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
                       Learn trading and Web3 basics with built-in tutorials and
                       step-by-step guidance
                     </p>
@@ -169,23 +169,6 @@ const Features2 = () => {
             </svg>
           </div>
         </div>
-
-        <Fade delay={700}>
-          <div className="text-center mt-12">
-            <button className="px-10 py-4 text-white font-bold uppercase tracking-wide text-lg font-helvetica">
-              <StarBorder
-                as="a"
-                href="#contact"
-                speed="3s"
-                color="magenta"
-                thickness={2}
-                className="inline-block text-md font-bold text-white uppercase tracking-widest font-helvetica"
-              >
-                Get Started
-              </StarBorder>
-            </button>
-          </div>
-        </Fade>
       </div>
     </section>
   );

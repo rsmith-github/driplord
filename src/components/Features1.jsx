@@ -10,12 +10,13 @@ const Features1 = () => {
         <div className="text-center mb-20">
           <Slide direction="up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase tracking-wider font-menda">
-              SIMPLIFYING WEB3 WITH AI AGENTS
+              SIMPLIFYING WEB3 <br />
+              WITH AI AGENTS
             </h2>
           </Slide>
           <Fade delay={300}>
-            <p className="text-xl md:text-2xl text-white/70 uppercase tracking-widest font-medium font-helvetica">
-              B2B2C INTEGRATIONS FOR MASS ADOPTION.
+            <p className="text-xl md:text-2xl text-white/70 tracking-widest font-medium font-helvetica">
+              B2B2C Integrations For Mass Adoption.
             </p>
           </Fade>
         </div>
@@ -26,7 +27,7 @@ const Features1 = () => {
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
-                  className="w-12 h-12 text-white/80 group-hover:text-[rgb(238,63,154)] transition-colors duration-300"
+                  className="w-12 h-12 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
@@ -48,7 +49,7 @@ const Features1 = () => {
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
-                  className="w-12 h-12 text-white/80 group-hover:text-[rgb(238,63,154)] transition-colors duration-300"
+                  className="w-12 h-12 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -74,7 +75,7 @@ const Features1 = () => {
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
-                  className="w-12 h-12 text-white/80 group-hover:text-[rgb(238,63,154)] transition-colors duration-300"
+                  className="w-12 h-12 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -100,7 +101,7 @@ const Features1 = () => {
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
-                  className="w-12 h-12 text-white/80 group-hover:text-[rgb(238,63,154)] transition-colors duration-300"
+                  className="w-12 h-12 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >

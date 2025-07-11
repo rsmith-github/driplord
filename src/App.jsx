@@ -196,7 +196,7 @@ function App() {
             {
               x: originalModelX + 30, // Move model right (appears to move right)
               y: originalModelY + 15, // Move model up slightly
-              z: originalModelZ - 40, // Move model back (zoom out effect)
+              z: originalModelZ - 120, // Move model back (zoom out effect)
               ease: "power2.out",
               duration: 0.6,
             },
@@ -205,9 +205,9 @@ function App() {
           .to(
             mainModel.position,
             {
-              x: originalModelX + 1, // Return to center
-              y: originalModelY + 40, // Return to original height
-              z: originalModelZ - 150, // Much more zoomed out for Features2
+              x: originalModelX - 2, // Return to center
+              y: originalModelY + 20, // Return to original height
+              z: originalModelZ - 500, // Much more zoomed out for Features2
               ease: "power2.inOut",
               duration: 0.4,
             },
@@ -278,8 +278,8 @@ function App() {
             mainModel.position,
             {
               x: originalModelX, // Keep centered
-              y: originalModelY - 80, // Return to original height
-              z: originalModelZ + 400, // Move model forward (zoom in effect)
+              y: originalModelY - 40, // Return to original height
+              z: originalModelZ + 1200, // Move model forward (zoom in effect)
               ease: "power2.inOut",
               duration: 1,
             },
@@ -465,8 +465,8 @@ function App() {
         />
       </div>
 
-      <Navbar />
       <div className="snap-y snap-mandatory overflow-y-scroll h-screen relative z-10">
+        <Navbar />
         <div className="snap-always snap-start">
           <Hero />
         </div>
