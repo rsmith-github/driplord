@@ -90,6 +90,8 @@ function App() {
         const firstSection = scrollContainer.querySelector(".snap-start");
         const features2Section = scrollContainer.querySelector("#features2");
         const contactSection = scrollContainer.querySelector("#contact");
+        const features1Section = scrollContainer.querySelector("#features1");
+        const gradientImg = document.querySelector(".gradient-img");
 
         // Try to find camera and lighting objects for additional effects
         const camera =
@@ -120,6 +122,82 @@ function App() {
           console.log("Light name:", pinkLight.name);
           console.log("Light position:", pinkLight.position);
           console.log("Light intensity:", pinkLight.intensity);
+        }
+
+        // Add gradient animation
+        if (gradientImg && features1Section) {
+          ScrollTrigger.create({
+            trigger: features1Section,
+            scroller: scrollContainer,
+            start: "top bottom",
+            end: "bottom top",
+            onEnter: () => {
+              gsap.to(gradientImg, {
+                x: "30vw",
+                duration: 0.8,
+                ease: "power2.inOut",
+              });
+            },
+            onLeave: () => {
+              gsap.to(gradientImg, {
+                x: "0",
+                duration: 0.8,
+                ease: "power2.inOut",
+              });
+            },
+            onEnterBack: () => {
+              gsap.to(gradientImg, {
+                x: "30vw",
+                duration: 0.8,
+                ease: "power2.inOut",
+              });
+            },
+            onLeaveBack: () => {
+              gsap.to(gradientImg, {
+                x: "0",
+                duration: 0.8,
+                ease: "power2.inOut",
+              });
+            },
+          });
+        }
+
+        // Fade out gradient on Features2
+        if (gradientImg && features2Section) {
+          ScrollTrigger.create({
+            trigger: features2Section,
+            scroller: scrollContainer,
+            start: "top bottom",
+            end: "bottom top",
+            onEnter: () => {
+              gsap.to(gradientImg, {
+                opacity: 0,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+            onLeave: () => {
+              gsap.to(gradientImg, {
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+            onEnterBack: () => {
+              gsap.to(gradientImg, {
+                opacity: 0,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+            onLeaveBack: () => {
+              gsap.to(gradientImg, {
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+          });
         }
 
         // Create one comprehensive timeline from start to Features2
@@ -452,11 +530,16 @@ function App() {
       {/* HUD Elements - Behind Spline Model */}
       {/* <HUD /> */}
 
+      {/* Gradient Image */}
+      <img
+        src="/images/gradient.svg"
+        alt=""
+        className="gradient-img fixed inset-0 w-full h-full object-cover"
+        style={{ zIndex: -10 }}
+      />
+
       {/* Fixed Spline Background */}
-      <div
-        className={`fixed inset-0 transition-opacity duration-500`}
-        style={{ zIndex: -1 }}
-      >
+      <div className="fixed inset-0" style={{ zIndex: -1 }}>
         <Spline
           ref={splineRef}
           scene="https://prod.spline.design/KoGDuI4YV2TSHmSW/scene.splinecode"

@@ -5,18 +5,16 @@ const Features2 = () => {
   return (
     <section
       id="features2"
-      className="h-screen bg-transparent flex items-center justify-center px-8 py-16 relative overflow-hidden"
+      className="h-screen bg-transparent flex flex-col items-center justify-center px-8 py-16 relative overflow-hidden"
     >
-      <div className="mx-auto w-full relative z-10 px-[5%] flex flex-col justify-center gap-[5rem] 2xl:gap-[10rem]">
-        <div className="text-center">
-          <Slide direction="up">
-            <h2 className="text-4xl font-bold text-white mb-8 uppercase tracking-wider font-menda">
-              DRIPLORD TRADING AGENT
-            </h2>
-          </Slide>
-        </div>
+      <Slide direction="up">
+        <h2 className="text-[clamp(1rem,2.5vw,4rem)] font-bold text-white text-center uppercase tracking-wider font-menda mt-16">
+          DRIPLORD TRADING AGENT
+        </h2>
+      </Slide>
 
-        <div className="relative h-96 flex items-center justify-center">
+      <div className="mx-auto w-full relative z-10 px-[5vw] flex-1 flex items-center">
+        <div className="relative h-96 flex items-center justify-center w-full">
           {/* Left Side HUD Element */}
           <div className="absolute left-0 top-0 h-full flex items-center">
             <svg
@@ -35,14 +33,14 @@ const Features2 = () => {
           </div>
 
           {/* Left Side Features */}
-          <div className="absolute left-16 top-0 w-80 2xl:w-96 h-full flex flex-col justify-center gap-[8rem] 2xl:gap-[10rem]">
+          <div className="absolute left-16 top-0 w-96 2xl:w-[28rem] h-full flex flex-col justify-center gap-[6rem] 2xl:gap-[15rem]">
             {/* Voice-Based Trading - Top Left */}
             <Fade delay={300}>
               <div className="group">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 mt-1">
                     <svg
-                      className="w-8 h-8 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                      className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -54,10 +52,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
+                    <h3 className="text-[clamp(0.8rem,1.1vw,2.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       VOICE-BASED TRADING
                     </h3>
-                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-[clamp(0.8rem,1.1vw,2rem)] text-white/70 leading-relaxed font-helvetica">
                       Execute buy, sell, and stake commands using simple voice
                       or text interactions
                     </p>
@@ -72,7 +70,7 @@ const Features2 = () => {
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 mt-1">
                     <svg
-                      className="w-8 h-8 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                      className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -80,10 +78,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
+                    <h3 className="text-[clamp(0.8rem,1.1vw,2.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       PORTFOLIO MANAGEMENT
                     </h3>
-                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-[clamp(0.8rem,1.1vw,2rem)] text-white/70 leading-relaxed font-helvetica">
                       Optimize holdings with AI signals powered by GT-Protocol
                       and sentiment data
                     </p>
@@ -99,14 +97,14 @@ const Features2 = () => {
           </div>
 
           {/* Right Side Features */}
-          <div className="absolute right-16 top-0 w-80 2xl:w-96 h-full flex flex-col justify-center gap-[8rem] 2xl:gap-[10rem]">
+          <div className="absolute right-16 top-0 w-96 2xl:w-[28rem] h-full flex flex-col justify-center gap-[6rem] 2xl:gap-[15rem]">
             {/* Auto-DeFi Strategies - Top Right */}
             <Fade delay={400}>
               <div className="group text-right">
                 <div className="flex items-start gap-4 flex-row-reverse">
                   <div className="flex-shrink-0 mt-1">
                     <svg
-                      className="w-8 h-8 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                      className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -114,10 +112,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
+                    <h3 className="text-[clamp(0.8rem,1.1vw,2.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       AUTO-DEFI STRATEGIES
                     </h3>
-                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-[clamp(0.8rem,1.1vw,2rem)] text-white/70 leading-relaxed font-helvetica">
                       Earn up to 240% APY with prebuilt, low-risk yield modules
                     </p>
                   </div>
@@ -131,7 +129,7 @@ const Features2 = () => {
                 <div className="flex items-start gap-4 flex-row-reverse">
                   <div className="flex-shrink-0 mt-1">
                     <svg
-                      className="w-8 h-8 text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                      className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                       fill="currentColor"
                       viewBox="0 0 20 20"
                     >
@@ -139,10 +137,10 @@ const Features2 = () => {
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-[1.25rem] 2xl:text-[1.5rem] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
+                    <h3 className="text-[clamp(0.8rem,1.1vw,2.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda whitespace-nowrap">
                       ONBOARDING & EDUCATION
                     </h3>
-                    <p className="text-sm 2xl:text-base text-white/70 leading-relaxed font-helvetica">
+                    <p className="text-[clamp(0.8rem,1.1vw,2rem)] text-white/70 leading-relaxed font-helvetica">
                       Learn trading and Web3 basics with built-in tutorials and
                       step-by-step guidance
                     </p>

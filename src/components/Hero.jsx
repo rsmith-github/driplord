@@ -20,17 +20,21 @@ const Hero = () => {
       className="relative h-screen w-full overflow-hidden flex items-center justify-center text-center bg-transparent pointer-events-none"
     >
       <div className="relative z-50 flex flex-col items-center justify-between w-full h-full px-8 pointer-events-none">
-        <img src="/images/driplord-bg.png" alt="logo" className="w-full h-auto mt-24" />
+        <img
+          src="/images/driplord-bg.png"
+          alt="logo"
+          className="w-full h-auto mt-24"
+        />
         <div className="text-center mb-10 pointer-events-auto">
           <Fade delay={600} triggerOnce>
-            <div className="mb-8">
+            <div className="mb-[40%]">
               <StarBorder
                 as="button"
                 onClick={handleScrollToVideo}
                 speed="3s"
                 color="magenta"
                 thickness={2}
-                className="inline-block text-md font-bold text-white uppercase tracking-widest font-helvetica cursor-pointer"
+                className="inline-block text-[clamp(1rem,1.1vw,4vw)] font-bold text-white uppercase tracking-widest font-helvetica cursor-pointer"
               >
                 Get Started
               </StarBorder>

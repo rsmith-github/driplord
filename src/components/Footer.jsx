@@ -20,7 +20,7 @@ const Footer = () => {
                   className="w-30 h-10"
                 />
               </a>
-              <p className="text-white text-[0.6rem] uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica">
+              <p className="text-white text-[clamp(0.4rem,0.8vw,1rem)] uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Quisquam, quos.
               </p>

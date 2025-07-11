@@ -24,7 +24,7 @@ const Navbar = () => {
       <div className="mx-auto px-6 2xl:px-8 py-4 2xl:py-6 flex justify-between items-center">
         <div className="flex gap-16 2xl:gap-20 items-center">
           <div className="navbar-brand">
-            <h3 className="text-2xl 2xl:text-3xl font-bold tracking-widest text-white font-menda">
+            <h3 className="text-[clamp(1rem,1.1vw,3rem)] font-bold tracking-widest text-white font-menda">
               DRIPLORD
             </h3>
           </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection("hero")}
-                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-[clamp(0.6rem,0.9vw,0.9vw)] font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 LEGEND
               </button>
@@ -41,7 +41,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection("features2")}
-                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-[clamp(0.6rem,0.9vw,0.9vw)] font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 DRIPLORD TRADING AGENT
               </button>
@@ -49,7 +49,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection("features1")}
-                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-[clamp(0.6rem,0.9vw,0.9vw)] font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 AI FUTURE
               </button>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection("roadmap")}
-                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-[clamp(0.6rem,0.9vw,0.9vw)] font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 ROADMAP
               </button>

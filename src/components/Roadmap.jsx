@@ -35,17 +35,17 @@ const Roadmap = () => {
     >
       <div className="absolute bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_0%,#000_70%,transparent_110%)]"></div>
       <Slide direction="up">
-        <h1 className="absolute left-1/2 -translate-x-1/2 -translate-y-[200px] text-3xl font-bold text-white text-center uppercase tracking-wider font-menda">
+        <h1 className="absolute left-1/2 -translate-x-1/2 -translate-y-[30vh] text-[clamp(1rem,3vw,5rem)] font-bold text-white text-center uppercase tracking-wider font-menda">
           ROADMAP
         </h1>
       </Slide>
 
-      <div className="max-w-7xl mx-auto w-full">
+      <div className="w-[85%]">
         <div className="relative">
           {/* Invisible center line for reference */}
           <div className="hidden md:block absolute top-1/2 left-0 right-0 h-px bg-white/20 z-0"></div>
 
-          <div className="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-4 lg:gap-8 relative">
+          <div className="flex flex-col md:flex-row justify-center items-center gap-[clamp(2rem,4vw,8rem)] relative">
             {roadmapItems.map((item, index) => {
               const isTop = index % 2 === 0; // Even indices go on top, odd on bottom
 
@@ -55,17 +55,19 @@ const Roadmap = () => {
                     {/* Roadmap Item */}
                     <div
                       className={`flex flex-col items-center text-center ${
-                        isTop ? "md:-translate-y-20" : "md:translate-y-26"
+                        isTop
+                          ? "md:-translate-y-[clamp(10vh,11vh,11vh)]"
+                          : "md:translate-y-[clamp(10vh,12vh,12vh)]"
                       }`}
                     >
                       <div className="mb-4">
-                        <h2 className="text-lg md:text-xl font-bold text-white uppercase tracking-wide font-menda">
+                        <h2 className="text-[clamp(0.8rem,1.3vw,2rem)] font-bold text-white uppercase tracking-wide font-menda">
                           {item.title}
                         </h2>
                       </div>
 
                       <div className="text-center mb-4">
-                        <p className="text-sm text-white/70 leading-relaxed uppercase tracking-wide font-helvetica">
+                        <p className="text-[clamp(0.6rem,1vw,1.5rem)] text-white/70 leading-relaxed uppercase tracking-wide font-helvetica">
                           {item.description}
                         </p>
                       </div>
@@ -76,7 +78,7 @@ const Roadmap = () => {
 
                     {/* Horizontal Connecting Line (except for last item) */}
                     {index < roadmapItems.length - 1 && (
-                      <div className="hidden md:block absolute top-1/2 left-[calc(50%+6px)] w-[calc(100%+2rem)] h-px bg-white/30 z-5"></div>
+                      <div className="hidden md:block absolute top-1/2 left-[calc(50%+6px)] w-[clamp(calc(100%+2rem),calc(100%+4vw),calc(100%+8rem))] h-px bg-white/30 z-5"></div>
                     )}
                   </div>
                 </Fade>
