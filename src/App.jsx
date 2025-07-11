@@ -190,13 +190,6 @@ function App() {
                 ease: "power2.inOut",
               });
             },
-            onLeaveBack: () => {
-              gsap.to(gradientImg, {
-                opacity: 1,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
           });
         }
 
