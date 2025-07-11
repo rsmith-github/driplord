@@ -162,12 +162,50 @@ function App() {
           });
         }
 
+        // Fade out gradient on Hero section
+        if (gradientImg && firstSection) {
+          ScrollTrigger.create({
+            trigger: firstSection,
+            scroller: scrollContainer,
+            start: "top top",
+            end: "bottom top",
+            onEnter: () => {
+              gsap.to(gradientImg, {
+                opacity: 0,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+            onLeave: () => {
+              gsap.to(gradientImg, {
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+            onEnterBack: () => {
+              gsap.to(gradientImg, {
+                opacity: 0,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+            onLeaveBack: () => {
+              gsap.to(gradientImg, {
+                opacity: 1,
+                duration: 0.6,
+                ease: "power2.inOut",
+              });
+            },
+          });
+        }
+
         // Fade out gradient on Features2
         if (gradientImg && features2Section) {
           ScrollTrigger.create({
             trigger: features2Section,
             scroller: scrollContainer,
-            start: "top bottom",
+            start: "top center",
             end: "bottom top",
             onEnter: () => {
               gsap.to(gradientImg, {
@@ -535,7 +573,7 @@ function App() {
         src="/images/gradient.svg"
         alt=""
         className="gradient-img fixed inset-0 w-full h-full object-cover"
-        style={{ zIndex: -10 }}
+        style={{ zIndex: -10, opacity: 0 }}
       />
 
       {/* Fixed Spline Background */}
