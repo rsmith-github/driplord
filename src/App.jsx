@@ -11,6 +11,7 @@ import Roadmap from "./components/Roadmap";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import HUD from "./components/HUD";
+import LoadingScreen from "./components/LoadingScreen";
 
 // Register ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -18,10 +19,35 @@ gsap.registerPlugin(ScrollTrigger);
 function App() {
   const splineRef = useRef(null);
   const [splineApp, setSplineApp] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSplineLoaded, setIsSplineLoaded] = useState(false);
 
   // Handle Spline load
   const onLoad = (spline) => {
     setSplineApp(spline);
+    setIsSplineLoaded(true);
+
+    // Wait a bit for objects to initialize before hiding loading screen
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  };
+
+  // Disable scrolling during loading
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isLoading]);
+
+  const handleLoadingComplete = () => {
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -601,6 +627,12 @@ function App() {
         </div>
       </div>
       <Footer />
+      
+      {/* Loading Screen */}
+      <LoadingScreen 
+        isLoading={isLoading} 
+        onLoadingComplete={handleLoadingComplete}
+      />
     </div>
   );
 }
