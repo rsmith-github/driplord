@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="h-[calc(100vh-100px)] bg-transparent flex flex-col justify-center items-center text-center px-8 relative overflow-hidden"
+      className="h-screen bg-transparent flex flex-col justify-center items-center text-center px-8 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-center relative z-10">
         <Slide direction="up">

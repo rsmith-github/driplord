@@ -47,14 +47,14 @@ function App() {
       }
 
       // Try to find the main model object
-      let mainModel = splineApp.findObjectByName("Hape_AI_Agent_Cyberpunk");
+      let mainModel = splineApp.findObjectByName("DripAnimated");
 
       if (!mainModel) {
         // Try alternative names
         const possibleNames = [
-          "Hape_AI_Agent_Cyberpunk",
-          "Hape AI Agent Cyberpunk",
-          "HapeAIAgentCyberpunk",
+          "DripAnimated",
+          "Drip_Animated",
+          "Drip Animated",
           "Character",
           "Model",
           "Root",
@@ -75,6 +75,8 @@ function App() {
         console.warn("Could not find any suitable object to animate");
         return;
       }
+
+      console.log("Main model:", mainModel);
 
       // Get the custom scroll container
       const scrollContainer = document.querySelector(".snap-y");
@@ -300,7 +302,7 @@ function App() {
           }
         }
 
-        // Add subtle mouse-based camera orbit with breathing effect
+        // Add subtle mouse-based camera orbit without breathing effect
         if (camera && camera.position) {
           // Store the original camera position as the center point
           const originalCameraX = camera.position.x;
@@ -308,7 +310,6 @@ function App() {
           const originalCameraZ = camera.position.z;
 
           let lastMouseTime = Date.now();
-          let breathingAnimation;
           let resetTimeout;
 
           // Check if we're in Features2 section
@@ -327,13 +328,6 @@ function App() {
             const isNearFeatures2 =
               Math.abs(scrollTop - features2Top) < viewportHeight * 0.5;
 
-            console.log("Features2 Detection:", {
-              scrollTop,
-              features2Top,
-              isNearFeatures2,
-              difference: Math.abs(scrollTop - features2Top),
-            });
-
             return isNearFeatures2;
           };
 
@@ -350,32 +344,12 @@ function App() {
             });
           };
 
-          // Start breathing animation (subtle up/down movement)
-          const startBreathing = () => {
-            breathingAnimation = gsap.to(camera.position, {
-              y: originalCameraY + 1, // Subtle up movement
-              duration: 2.5,
-              ease: "power2.inOut",
-              yoyo: true,
-              repeat: -1,
-            });
-          };
-
-          // Stop breathing animation
-          const stopBreathing = () => {
-            if (breathingAnimation) {
-              breathingAnimation.kill();
-              breathingAnimation = null;
-            }
-          };
-
           // Mouse tracking for subtle camera orbit
           const handleMouseMove = (event) => {
             // Skip orbit in Features2 section
             if (isInFeatures2()) return;
 
             lastMouseTime = Date.now();
-            stopBreathing(); // Stop breathing when mouse is active
 
             // Clear any pending reset timeout
             if (resetTimeout) {
@@ -390,29 +364,28 @@ function App() {
             const mouseX = (clientX / innerWidth) * 2 - 1;
             const mouseY = -((clientY / innerHeight) * 2 - 1);
 
-            // Define orbit sensitivity (reduced intensity)
-            const orbitStrength = 6; // Much more subtle
-            const verticalStrength = 4;
+            // Define orbit sensitivity (much more subtle)
+            const orbitStrength = 3; // Reduced from 6 to 3
+            const verticalStrength = 3; // Reduced from 4 to 2
 
             // INVERTED: Make model appear to follow mouse direction
             const targetX = originalCameraX - mouseX * orbitStrength; // Inverted
             const targetY = originalCameraY - mouseY * verticalStrength; // Inverted
-            const targetZ = originalCameraZ - mouseX * orbitStrength * 0.3; // Inverted and subtle
+            const targetZ = originalCameraZ - mouseX * orbitStrength * 0.2; // Reduced from 0.3 to 0.2
 
             // Smoothly animate to new position
             gsap.to(camera.position, {
               x: targetX,
               y: targetY,
               z: targetZ,
-              duration: 0.6,
+              duration: 0.8, // Slightly slower for smoother movement
               ease: "power2.out",
             });
 
-            // Clear any pending reset timeout (but don't set a new one)
-            if (resetTimeout) {
-              clearTimeout(resetTimeout);
-              resetTimeout = null;
-            }
+            // Set a timeout to reset if mouse stops moving
+            resetTimeout = setTimeout(() => {
+              resetCameraPosition();
+            }, 1000); // Reset after 2 seconds of no mouse movement
           };
 
           // Handle mouse leave to reset camera position
@@ -428,37 +401,14 @@ function App() {
             resetCameraPosition();
           };
 
-          // Check for idle state and start breathing
-          const checkIdle = () => {
-            if (Date.now() - lastMouseTime > 1000 && !isInFeatures2()) {
-              // 2 seconds idle
-              if (!breathingAnimation) {
-                startBreathing();
-              }
-            } else if (isInFeatures2()) {
-              // Stop breathing if we're in Features2
-              stopBreathing();
-            }
-          };
-
-          // Add mouse move listener, mouse leave listener, and idle checker
+          // Add mouse move and mouse leave listeners
           document.addEventListener("mousemove", handleMouseMove);
           document.addEventListener("mouseleave", handleMouseLeave);
-          const idleInterval = setInterval(checkIdle, 500);
-
-          // Start with breathing if no immediate mouse movement
-          setTimeout(() => {
-            if (Date.now() - lastMouseTime > 1000 && !isInFeatures2()) {
-              startBreathing();
-            }
-          }, 1000);
 
           // Store cleanup function
           const cleanup = () => {
             document.removeEventListener("mousemove", handleMouseMove);
             document.removeEventListener("mouseleave", handleMouseLeave);
-            clearInterval(idleInterval);
-            stopBreathing();
 
             // Clear any pending reset timeout
             if (resetTimeout) {
@@ -509,7 +459,7 @@ function App() {
       >
         <Spline
           ref={splineRef}
-          scene="https://prod.spline.design/Z0fl2oJrlLoLQ4A4/scene.splinecode"
+          scene="https://prod.spline.design/KoGDuI4YV2TSHmSW/scene.splinecode"
           className="w-full h-full pointer-events-auto"
           onLoad={onLoad}
         />
