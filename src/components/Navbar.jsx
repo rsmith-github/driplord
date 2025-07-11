@@ -20,20 +20,20 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="absolute top-0 left-0 right-0 z-50 bg-black/90 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <div className="flex gap-16 items-center">
+    <nav className="absolute top-0 left-0 right-0 z-50">
+      <div className="mx-auto px-6 2xl:px-8 py-4 2xl:py-6 flex justify-between items-center">
+        <div className="flex gap-16 2xl:gap-20 items-center">
           <div className="navbar-brand">
-            <h3 className="text-2xl font-bold tracking-widest text-white font-menda">
+            <h3 className="text-2xl 2xl:text-3xl font-bold tracking-widest text-white font-menda">
               DRIPLORD
             </h3>
           </div>
 
-          <ul className="hidden lg:flex gap-8 items-center">
+          <ul className="hidden lg:flex gap-8 2xl:gap-10 items-center">
             <li>
               <button
                 onClick={() => scrollToSection("hero")}
-                className="text-white/80 text-sm font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 LEGEND
               </button>
@@ -41,7 +41,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection("features2")}
-                className="text-white/80 text-sm font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 DRIPLORD TRADING AGENT
               </button>
@@ -49,7 +49,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection("features1")}
-                className="text-white/80 text-sm font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 AI FUTURE
               </button>
@@ -57,7 +57,7 @@ const Navbar = () => {
             <li>
               <button
                 onClick={() => scrollToSection("roadmap")}
-                className="text-white/80 text-sm font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
+                className="text-white/80 text-sm 2xl:text-base font-medium cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica"
               >
                 ROADMAP
               </button>
@@ -65,19 +65,28 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="flex gap-6 items-center">
-          <span className="text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase text-white/80 font-helvetica">
-            TG
-          </span>
-          <span className="text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase text-white/80 font-helvetica">
-            X
-          </span>
-          <span className="text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase text-white/80 font-helvetica">
-            DS
-          </span>
-          <span className="text-sm font-semibold cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase text-white/80 font-helvetica">
-            LI
-          </span>
+        <div className="flex gap-6 2xl:gap-8 items-center">
+          <div className="flex items-center justify-center">
+            <img
+              src="/images/twitter-x.svg"
+              alt="Twitter"
+              className="w-[1.2rem] h-[1.5rem]"
+            />
+          </div>
+          <div className="flex items-center justify-center">
+            <img
+              src="/images/discord.svg"
+              alt="Discord"
+              className="w-[1.8rem] h-[1.8rem]"
+            />
+          </div>
+          <div className="flex items-center justify-center">
+            <img
+              src="/images/insta-logo.svg"
+              alt="Instagram"
+              className="w-[1.5rem] h-[1.5rem]"
+            />
+          </div>
         </div>
       </div>
     </nav>

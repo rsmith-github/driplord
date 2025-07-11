@@ -500,12 +500,12 @@ function App() {
   return (
     <div className="w-full min-h-screen relative">
       {/* HUD Elements - Behind Spline Model */}
-      <HUD />
+      {/* <HUD /> */}
 
       {/* Fixed Spline Background */}
       <div
         className={`fixed inset-0 transition-opacity duration-500`}
-        style={{ zIndex: 1 }}
+        style={{ zIndex: -1 }}
       >
         <Spline
           ref={splineRef}
@@ -515,9 +515,9 @@ function App() {
         />
       </div>
 
+      <Navbar />
       <div className="snap-y snap-mandatory overflow-y-scroll h-screen relative z-10">
         <div className="snap-always snap-start">
-          <Navbar />
           <Hero />
         </div>
         <div className="snap-always snap-start">
@@ -534,9 +534,9 @@ function App() {
         </div>
         <div className="snap-always snap-end">
           <Contact />
-          <Footer />
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

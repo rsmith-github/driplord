@@ -8,7 +8,7 @@ const Contact = () => {
       className="h-[calc(100vh-100px)] bg-transparent flex flex-col justify-center items-center text-center px-8 relative overflow-hidden"
     >
       <div className="max-w-7xl mx-auto flex flex-col justify-center relative z-10">
-        <Slide direction="up" triggerOnce>
+        <Slide direction="up">
           <div className="mb-16">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-8 uppercase tracking-wider font-menda">
               PARTNER WITH DRIPLORD
@@ -20,7 +20,7 @@ const Contact = () => {
           </div>
         </Slide>
 
-        <Fade delay={300} triggerOnce>
+        <Fade delay={300}>
           <div className="inline-block px-12 py-6 text-xl font-bold text-white uppercase tracking-wide font-helvetica">
             <StarBorder
               as="a"

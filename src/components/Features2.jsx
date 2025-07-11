@@ -9,7 +9,7 @@ const Features2 = () => {
     >
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="text-center mb-12">
-          <Slide direction="up" triggerOnce>
+          <Slide direction="up">
             <h2 className="text-4xl font-bold text-white mb-8 uppercase tracking-wider font-menda">
               DRIPLORD TRADING AGENT
             </h2>
@@ -37,7 +37,7 @@ const Features2 = () => {
           {/* Left Side Features */}
           <div className="absolute left-16 top-0 w-80 h-full flex flex-col justify-center gap-12">
             {/* Voice-Based Trading - Top Left */}
-            <Fade delay={300} triggerOnce>
+            <Fade delay={300}>
               <div className="group">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 mt-1">
@@ -67,7 +67,7 @@ const Features2 = () => {
             </Fade>
 
             {/* Portfolio Management - Bottom Left */}
-            <Fade delay={500} triggerOnce>
+            <Fade delay={500}>
               <div className="group">
                 <div className="flex items-start gap-4">
                   <div className="flex-shrink-0 mt-1">
@@ -101,7 +101,7 @@ const Features2 = () => {
           {/* Right Side Features */}
           <div className="absolute right-16 top-0 w-80 h-full flex flex-col justify-center gap-12">
             {/* Auto-DeFi Strategies - Top Right */}
-            <Fade delay={400} triggerOnce>
+            <Fade delay={400}>
               <div className="group text-right">
                 <div className="flex items-start gap-4 flex-row-reverse">
                   <div className="flex-shrink-0 mt-1">
@@ -126,7 +126,7 @@ const Features2 = () => {
             </Fade>
 
             {/* Onboarding & Education - Bottom Right */}
-            <Fade delay={600} triggerOnce>
+            <Fade delay={600}>
               <div className="group text-right">
                 <div className="flex items-start gap-4 flex-row-reverse">
                   <div className="flex-shrink-0 mt-1">
@@ -170,7 +170,7 @@ const Features2 = () => {
           </div>
         </div>
 
-        <Fade delay={700} triggerOnce>
+        <Fade delay={700}>
           <div className="text-center mt-12">
             <button className="px-10 py-4 text-white font-bold uppercase tracking-wide text-lg font-helvetica">
               <StarBorder

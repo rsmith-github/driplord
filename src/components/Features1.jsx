@@ -8,12 +8,12 @@ const Features1 = () => {
     >
       <div className="max-w-7xl mx-auto w-full">
         <div className="text-center mb-20">
-          <Slide direction="up" triggerOnce>
+          <Slide direction="up">
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 uppercase tracking-wider font-menda">
               SIMPLIFYING WEB3 WITH AI AGENTS
             </h2>
           </Slide>
-          <Fade delay={300} triggerOnce>
+          <Fade delay={300}>
             <p className="text-xl md:text-2xl text-white/70 uppercase tracking-widest font-medium font-helvetica">
               B2B2C INTEGRATIONS FOR MASS ADOPTION.
             </p>
@@ -22,7 +22,7 @@ const Features1 = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 max-w-6xl mx-auto">
           {/* AI Agents */}
-          <Fade delay={400} triggerOnce>
+          <Fade delay={400}>
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
@@ -44,7 +44,7 @@ const Features1 = () => {
           </Fade>
 
           {/* B2B2C Growth */}
-          <Fade delay={500} triggerOnce>
+          <Fade delay={500}>
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
@@ -70,7 +70,7 @@ const Features1 = () => {
           </Fade>
 
           {/* Cross-Chain Links */}
-          <Fade delay={600} triggerOnce>
+          <Fade delay={600}>
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
@@ -96,7 +96,7 @@ const Features1 = () => {
           </Fade>
 
           {/* Tokenized System */}
-          <Fade delay={700} triggerOnce>
+          <Fade delay={700}>
             <div className="text-center group">
               <div className="mb-6 flex justify-center">
                 <svg
