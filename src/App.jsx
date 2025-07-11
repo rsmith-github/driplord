@@ -629,8 +629,8 @@ function App() {
       <Footer />
       
       {/* Loading Screen */}
-      <LoadingScreen 
-        isLoading={isLoading} 
+      <LoadingScreen
+        isLoading={isLoading}
         onLoadingComplete={handleLoadingComplete}
       />
     </div>
