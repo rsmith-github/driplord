@@ -105,7 +105,7 @@ function App() {
       console.log("Main model:", mainModel);
 
       // Get the custom scroll container
-      const scrollContainer = document.querySelector(".snap-y");
+      const scrollContainer = document.querySelector(".overflow-y-scroll");
       if (!scrollContainer) {
         console.warn("Scroll container not found");
         return;
@@ -113,7 +113,8 @@ function App() {
 
       // Create GSAP context scoped to the scroll container
       animationContext = gsap.context(() => {
-        const firstSection = scrollContainer.querySelector(".snap-start");
+        const firstSection =
+          scrollContainer.querySelector("div:first-child").nextElementSibling; // Skip navbar, get first section
         const features2Section = scrollContainer.querySelector("#features2");
         const contactSection = scrollContainer.querySelector("#contact");
         const features1Section = scrollContainer.querySelector("#features1");
@@ -468,7 +469,8 @@ function App() {
 
           // Check if we're in Features2 section
           const isInFeatures2 = () => {
-            const scrollContainer = document.querySelector(".snap-y");
+            const scrollContainer =
+              document.querySelector(".overflow-y-scroll");
             const features2Section = document.querySelector("#features2");
 
             if (!scrollContainer || !features2Section) return false;
@@ -624,24 +626,24 @@ function App() {
         />
       </div>
 
-      <div className="snap-y snap-mandatory overflow-y-scroll h-screen relative z-10">
+      <div className="overflow-y-scroll h-screen relative z-10 snap-y snap-mandatory md:snap-y md:snap-mandatory">
         <Navbar />
-        <div className="snap-always snap-start">
+        <div className="md:snap-always md:snap-start">
           <Hero />
         </div>
-        <div className="snap-always snap-start">
+        <div className="md:snap-always md:snap-start">
           <VideoSection />
         </div>
-        <div className="snap-always snap-start">
+        <div className="md:snap-always md:snap-start">
           <Features1 />
         </div>
-        <div className="snap-always snap-start">
+        <div className="md:snap-always md:snap-start">
           <Features2 />
         </div>
-        <div className="snap-always snap-start">
+        <div className="md:snap-always md:snap-start">
           <Roadmap />
         </div>
-        <div className="snap-always snap-end">
+        <div className="md:snap-always md:snap-end">
           <Contact />
         </div>
       </div>
