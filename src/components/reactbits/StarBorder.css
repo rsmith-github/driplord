@@ -3,6 +3,19 @@
   position: relative;
   border-radius: var(--border-radius, 20px);
   overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  /* Mobile touch improvements */
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+.star-border-container:hover {
+  transform: scale(1.02);
+}
+
+.star-border-container:active {
+  transform: scale(0.98);
 }
 
 .border-gradient-bottom {
@@ -38,6 +51,29 @@
   padding: var(--padding-y, 16px) var(--padding-x, 26px);
   border-radius: var(--border-radius, 20px);
   z-index: 1;
+  /* Mobile-specific improvements */
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .inner-content {
+    padding: var(--padding-y, 12px) var(--padding-x, 20px);
+    font-size: inherit;
+  }
+
+  .star-border-container {
+    border-radius: var(--border-radius, 16px);
+  }
+
+  .inner-content {
+    border-radius: var(--border-radius, 16px);
+  }
 }
 
 @keyframes star-movement-bottom {

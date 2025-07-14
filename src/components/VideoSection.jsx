@@ -11,8 +11,13 @@ const VideoSection = () => {
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/images/video-bg.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center center",
         }}
       ></div>
+
+      {/* Optional overlay for better mobile visibility */}
+      <div className="absolute inset-0 bg-black/20 sm:bg-black/10"></div>
     </section>
   );
 };

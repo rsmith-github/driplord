@@ -158,8 +158,12 @@ function App() {
             start: "top bottom",
             end: "bottom top",
             onEnter: () => {
+              // Keep gradient centered on mobile, move on desktop
+              const isMobile = window.innerWidth < 768;
+              const moveAmount = isMobile ? "0" : "30vw";
+
               gsap.to(gradientImg, {
-                x: "30vw",
+                x: moveAmount,
                 duration: 0.8,
                 ease: "power2.inOut",
               });
@@ -172,8 +176,12 @@ function App() {
               });
             },
             onEnterBack: () => {
+              // Keep gradient centered on mobile, move on desktop
+              const isMobile = window.innerWidth < 768;
+              const moveAmount = isMobile ? "0" : "30vw";
+
               gsap.to(gradientImg, {
-                x: "30vw",
+                x: moveAmount,
                 duration: 0.8,
                 ease: "power2.inOut",
               });
@@ -324,14 +332,23 @@ function App() {
           originalLightIntensity = pinkLight.intensity || 1;
         }
 
-        // Move model and scale it for visual variety
+        // Move model and scale it for visual variety - responsive to screen size
+        const isMobile = window.innerWidth < 768;
+        const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
+
+        // Adjust movement based on screen size
+        const rightMovement = isMobile ? 10 : isTablet ? 20 : 30;
+        const upMovement = isMobile ? 10 : 15;
+        const backMovement = isMobile ? -80 : -120;
+        const finalBackMovement = isMobile ? -300 : -500;
+
         tl1
           .to(
             mainModel.position,
             {
-              x: originalModelX + 30, // Move model right (appears to move right)
-              y: originalModelY + 15, // Move model up slightly
-              z: originalModelZ - 120, // Move model back (zoom out effect)
+              x: originalModelX + rightMovement, // Less movement on mobile
+              y: originalModelY + upMovement, // Less movement on mobile
+              z: originalModelZ + backMovement, // Less zoom out on mobile
               ease: "power2.out",
               duration: 0.6,
             },
@@ -342,7 +359,7 @@ function App() {
             {
               x: originalModelX - 2, // Return to center
               y: originalModelY + 20, // Return to original height
-              z: originalModelZ - 500, // Much more zoomed out for Features2
+              z: originalModelZ + finalBackMovement, // Less zoom out for Features2 on mobile
               ease: "power2.inOut",
               duration: 0.4,
             },
@@ -408,13 +425,15 @@ function App() {
             0
           );
 
-          // Model zoom in effect for Contact section
+          // Model zoom in effect for Contact section - responsive to screen size
+          const contactZoomAmount = isMobile ? 300 : isTablet ? 600 : 1200;
+
           tl2.to(
             mainModel.position,
             {
               x: originalModelX, // Keep centered
               y: originalModelY - 40, // Return to original height
-              z: originalModelZ + 1200, // Move model forward (zoom in effect)
+              z: originalModelZ + contactZoomAmount, // Less zoom on mobile to prevent model going too close
               ease: "power2.inOut",
               duration: 1,
             },
@@ -627,7 +646,7 @@ function App() {
         </div>
       </div>
       <Footer />
-      
+
       {/* Loading Screen */}
       <LoadingScreen
         isLoading={isLoading}

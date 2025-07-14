@@ -4,40 +4,40 @@ const Features1 = () => {
   return (
     <section
       id="features1"
-      className="h-screen bg-transparent flex items-center justify-center px-8 py-16"
+      className="h-screen bg-transparent flex items-center justify-center px-4 sm:px-8 pt-24 pb-24 sm:pt-0 sm:pb-0"
     >
-      <div className="mx-auto w-full h-full flex flex-col justify-center gap-[3rem] 2xl:gap-[10rem] px-[5%] pt-[2%]">
+      <div className="mx-auto w-full h-full flex flex-col justify-center gap-4 sm:gap-[3rem] 2xl:gap-[10rem] px-4 sm:px-[5%] pt-4 sm:pt-[2%]">
         <div className="ml-0">
           <Slide direction="up">
-            <h2 className="text-[clamp(1rem,2.5vw,4rem)] font-bold text-white mb-6 uppercase tracking-wider font-menda">
+            <h2 className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,2.5vw,4rem)] font-bold text-white mb-4 sm:mb-6 uppercase tracking-wider font-menda">
               SIMPLIFYING WEB3 <br />
               WITH AI AGENTS
             </h2>
           </Slide>
           <Fade delay={300}>
-            <p className="text-[clamp(0.5rem,1vw,1.5rem)] text-white/70 tracking-widest font-medium font-helvetica uppercase">
+            <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] sm:text-[clamp(0.5rem,1vw,1.5rem)] text-white/70 tracking-widest font-medium font-helvetica uppercase">
               B2B2C Integrations For Mass Adoption.
             </p>
           </Fade>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 2xl:gap-12 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 2xl:gap-12 w-full">
           {/* AI Agents */}
           <Fade delay={400}>
             <div className="group">
-              <div className="mb-6 flex">
+              <div className="mb-4 sm:mb-6 flex">
                 <svg
-                  className="w-[clamp(1.5rem,2vw,4rem)] h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 24 24"
                 >
                   <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                 </svg>
               </div>
-              <h3 className="text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-4 uppercase tracking-wide font-menda">
+              <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide font-menda">
                 AI AGENTS
               </h3>
-              <p className="text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
+              <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] sm:text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
                 Deploy autonomous tools to streamline Web3 tasks like trading
                 and payments with voice commands
               </p>
@@ -47,9 +47,9 @@ const Features1 = () => {
           {/* B2B2C Growth */}
           <Fade delay={500}>
             <div className="group">
-              <div className="mb-6 flex">
+              <div className="mb-4 sm:mb-6 flex">
                 <svg
-                  className="w-[clamp(1.5rem,2vw,4rem)] h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -60,10 +60,10 @@ const Features1 = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-4 uppercase tracking-wide font-menda">
+              <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide font-menda">
                 B2B2C GROWTH
               </h3>
-              <p className="text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
+              <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] sm:text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
                 Scale your business with integrated AI solutions that bridge
                 traditional and decentralized systems
               </p>
@@ -73,9 +73,9 @@ const Features1 = () => {
           {/* Cross-Chain Links */}
           <Fade delay={600}>
             <div className="group">
-              <div className="mb-6 flex">
+              <div className="mb-4 sm:mb-6 flex">
                 <svg
-                  className="w-[clamp(1.5rem,2vw,4rem)] h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -86,10 +86,10 @@ const Features1 = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-4 uppercase tracking-wide font-menda">
+              <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide font-menda">
                 CROSS-CHAIN LINKS
               </h3>
-              <p className="text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
+              <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] sm:text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
                 Seamless integration across multiple blockchain networks for
                 maximum compatibility
               </p>
@@ -99,9 +99,9 @@ const Features1 = () => {
           {/* Tokenized System */}
           <Fade delay={700}>
             <div className="group">
-              <div className="mb-6 flex">
+              <div className="mb-4 sm:mb-6 flex">
                 <svg
-                  className="w-[clamp(1.5rem,2vw,4rem)] h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
+                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)] text-[rgb(238,63,154)] group-hover:text-white transition-colors duration-300"
                   fill="currentColor"
                   viewBox="0 0 20 20"
                 >
@@ -113,10 +113,10 @@ const Features1 = () => {
                   />
                 </svg>
               </div>
-              <h3 className="text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-4 uppercase tracking-wide font-menda">
+              <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white mb-3 sm:mb-4 uppercase tracking-wide font-menda">
                 TOKENIZED SYSTEM
               </h3>
-              <p className="text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
+              <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] sm:text-[clamp(0.6rem,1vw,1.5rem)] text-white/60 leading-relaxed font-helvetica">
                 Leverage blockchain technology for transparent and secure
                 business operations
               </p>

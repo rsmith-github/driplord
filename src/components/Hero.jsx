@@ -17,24 +17,24 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="relative h-screen w-full overflow-hidden flex items-center justify-center text-center bg-transparent pointer-events-none"
+      className="h-screen bg-transparent flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-0 sm:pt-16"
     >
-      <div className="relative z-50 flex flex-col items-center justify-between w-full h-full px-8 pointer-events-none">
+      <div className="relative z-50 flex flex-col items-center justify-between w-full h-full px-4 sm:px-0 pointer-events-none">
         <img
           src="/images/driplord-bg.png"
           alt="logo"
-          className="w-full h-auto mt-24"
+          className="w-full max-w-[90vw] sm:max-w-[100vw] h-auto mt-16 sm:mt-0"
         />
-        <div className="text-center mb-10 pointer-events-auto">
+        <div className="text-center mb-42 sm:mb-10 md:mb-12 pointer-events-auto">
           <Fade delay={600} triggerOnce>
-            <div className="mb-[40%]">
+            <div className="mb-[20%] sm:mb-[30%] md:mb-[40%]">
               <StarBorder
                 as="button"
                 onClick={handleScrollToVideo}
                 speed="3s"
                 color="magenta"
                 thickness={2}
-                className="inline-block text-[clamp(1rem,1.1vw,4vw)] font-bold text-white uppercase tracking-widest font-helvetica cursor-pointer"
+                className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,1.1vw,4vw)] font-bold text-white uppercase tracking-widest font-helvetica cursor-pointer px-6 py-3 sm:px-8 sm:py-4"
               >
                 Get Started
               </StarBorder>

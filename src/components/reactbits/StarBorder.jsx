@@ -14,6 +14,11 @@ const StarBorder = ({
       className={`star-border-container ${className}`}
       style={{
         padding: `${thickness}px 0`,
+        minHeight: "44px", // Minimum touch target size for mobile
+        minWidth: "44px",
+        display: "inline-flex",
+        alignItems: "center",
+        justifyContent: "center",
         ...rest.style,
       }}
       {...rest}
