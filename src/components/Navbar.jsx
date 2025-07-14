@@ -22,7 +22,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="fixed top-0 left-0 right-0 w-full" style={{ zIndex: 50 }}>
+    <nav className="fixed top-0 left-0 right-0 w-full navbar-z-index">
       <div className="mx-auto px-4 sm:px-6 2xl:px-8 py-4 2xl:py-6 flex justify-between items-center">
         <div className="flex gap-8 sm:gap-16 2xl:gap-20 items-center">
           <div className="navbar-brand">

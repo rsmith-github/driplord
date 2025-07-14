@@ -17,7 +17,7 @@ const Hero = () => {
   return (
     <section
       id="hero"
-      className="h-screen bg-transparent flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-0 sm:pt-16 2xl:pt-24"
+      className="h-screen bg-transparent flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-5 sm:pt-16 2xl:pt-24"
     >
       <div className="relative z-50 flex flex-col items-center justify-between w-full h-full px-4 sm:px-0 pointer-events-none">
         <img
