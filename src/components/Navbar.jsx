@@ -72,21 +72,21 @@ const Navbar = () => {
         <div className="hidden sm:flex gap-4 sm:gap-6 2xl:gap-8 items-center">
           <div className="flex items-center justify-center">
             <img
-              src="/images/twitter-x.svg"
+              src="https://d17r7llinqok54.cloudfront.net/twitter-x.svg"
               alt="Twitter"
               className="w-[1.2rem] h-[1.5rem]"
             />
           </div>
           <div className="flex items-center justify-center">
             <img
-              src="/images/discord.svg"
+              src="https://d17r7llinqok54.cloudfront.net/discord.svg"
               alt="Discord"
               className="w-[1.8rem] h-[1.8rem]"
             />
           </div>
           <div className="flex items-center justify-center">
             <img
-              src="/images/insta-logo.svg"
+              src="https://d17r7llinqok54.cloudfront.net/insta-logo.svg"
               alt="Instagram"
               className="w-[1.5rem] h-[1.5rem]"
             />
@@ -152,21 +152,21 @@ const Navbar = () => {
           <div className="flex gap-6 items-center pt-4 border-t border-white/20">
             <div className="flex items-center justify-center">
               <img
-                src="/images/twitter-x.svg"
+                src="https://d17r7llinqok54.cloudfront.net/twitter-x.svg"
                 alt="Twitter"
                 className="w-[1.2rem] h-[1.5rem]"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="/images/discord.svg"
+                src="https://d17r7llinqok54.cloudfront.net/discord.svg"
                 alt="Discord"
                 className="w-[1.8rem] h-[1.8rem]"
               />
             </div>
             <div className="flex items-center justify-center">
               <img
-                src="/images/insta-logo.svg"
+                src="https://d17r7llinqok54.cloudfront.net/insta-logo.svg"
                 alt="Instagram"
                 className="w-[1.5rem] h-[1.5rem]"
               />

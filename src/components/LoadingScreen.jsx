@@ -43,7 +43,7 @@ const LoadingScreen = ({ isLoading, onLoadingComplete }) => {
         <Fade>
           <div className="mb-12">
             <img
-              src="/images/driplord-bg.png"
+              src="https://d17r7llinqok54.cloudfront.net/driplord-bg.png"
               alt="DRIPLORD"
               className="w-64 h-auto opacity-90"
             />

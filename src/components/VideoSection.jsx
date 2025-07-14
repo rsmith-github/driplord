@@ -10,7 +10,8 @@ const VideoSection = () => {
       <div
         className="absolute inset-0 w-full h-full bg-cover bg-center bg-no-repeat"
         style={{
-          backgroundImage: "url('/images/video-bg.png')",
+          backgroundImage:
+            "url('https://d17r7llinqok54.cloudfront.net/video-bg.png')",
           backgroundSize: "cover",
           backgroundPosition: "center center",
         }}

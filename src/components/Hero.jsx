@@ -21,7 +21,7 @@ const Hero = () => {
     >
       <div className="relative z-50 flex flex-col items-center justify-between w-full h-full px-4 sm:px-0 pointer-events-none">
         <img
-          src="/images/driplord-bg.png"
+          src="https://d17r7llinqok54.cloudfront.net/driplord-bg.png"
           alt="logo"
           className="w-full max-w-[90vw] sm:max-w-[100vw] h-auto mt-16 sm:mt-0"
         />

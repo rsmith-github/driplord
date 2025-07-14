@@ -15,7 +15,7 @@ const Footer = () => {
                 className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica pointer-events-auto"
               >
                 <img
-                  src="/images/footerlogo.svg"
+                  src="https://d17r7llinqok54.cloudfront.net/footerlogo.svg"
                   alt="logo"
                   className="w-20 sm:w-30 h-6 sm:h-10"
                 />

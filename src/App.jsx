@@ -610,7 +610,7 @@ function App() {
 
       {/* Gradient Image */}
       <img
-        src="/images/gradient.svg"
+        src="https://d17r7llinqok54.cloudfront.net/gradient.svg"
         alt=""
         className="gradient-img fixed inset-0 w-full h-full object-cover"
         style={{ zIndex: -10, opacity: 0 }}
