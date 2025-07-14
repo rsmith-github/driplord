@@ -20,12 +20,12 @@ const Hero = () => {
       className="h-screen bg-transparent flex flex-col justify-center items-center text-center px-4 relative overflow-hidden pt-5 sm:pt-16 2xl:pt-24"
     >
       <div className="relative z-50 flex flex-col items-center justify-between w-full h-full px-4 sm:px-0 pointer-events-none">
-        <img
+        {/* <img
           src="https://d17r7llinqok54.cloudfront.net/driplord-bg.png"
           alt="logo"
           className="w-full max-w-[90vw] sm:max-w-[100vw] h-auto mt-16 sm:mt-0"
-        />
-        <div className="text-center mb-42 sm:mb-10 md:mb-12 pointer-events-auto">
+        /> */}
+        {/* <div className="text-center mb-42 sm:mb-10 md:mb-12 pointer-events-auto">
           <Fade delay={600} triggerOnce>
             <div className="mb-[20%] sm:mb-[30%] md:mb-[40%]">
               <StarBorder
@@ -40,7 +40,7 @@ const Hero = () => {
               </StarBorder>
             </div>
           </Fade>
-        </div>
+        </div> */}
       </div>
     </section>
   );
