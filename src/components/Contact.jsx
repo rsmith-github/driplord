@@ -9,7 +9,7 @@ const Contact = () => {
     >
       <div className="w-full mx-auto flex flex-col justify-center relative z-10">
         <Slide direction="up">
-          <div className="mb-8 sm:mb-16">
+          <div className="mb-30 sm:mb-16">
             <h2 className="text-[clamp(1.2rem,4vw,6rem)] sm:text-[clamp(1.5rem,4vw,6rem)] font-bold text-white mb-6 sm:mb-8 uppercase tracking-wider font-menda">
               PARTNER WITH DRIPLORD
             </h2>
@@ -21,7 +21,7 @@ const Contact = () => {
         </Slide>
 
         <Fade delay={300}>
-          <div className="inline-block px-6 sm:px-12 py-4 sm:py-6 text-xl font-bold text-white uppercase tracking-wide font-helvetica">
+          <div className="inline-block px-6 sm:px-12 text-xl font-bold text-white uppercase tracking-wide font-helvetica">
             <StarBorder
               as="a"
               href="mailto:hello@driplord.ai"

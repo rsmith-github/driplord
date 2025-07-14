@@ -33,10 +33,11 @@ const LoadingScreen = ({ isLoading, onLoadingComplete }) => {
   return (
     <div className="fixed inset-0 bg-black z-[9999] flex flex-col items-center justify-center">
       {/* Background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgb(238,63,154)] to-transparent animate-pulse"></div>
-      </div>
-
+      <Fade duration={5000}>
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0 bg-gradient-to-br from-transparent via-[rgb(238,63,154)] to-transparent"></div>
+        </div>
+      </Fade>
       {/* Logo */}
       {showLogo && (
         <Fade>
