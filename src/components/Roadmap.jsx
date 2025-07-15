@@ -5,25 +5,25 @@ const Roadmap = () => {
     {
       title: "NOW DONE",
       description:
-        "60K+ USERS, LINKS WITH FETCH.AI, ASI, GT-PROTOCOL; TRADING AGENT ON MAINNET",
+        "60K+ users, links with Fetch.ai, asi, gt-protocol; trading agent on mainnet",
     },
     {
       title: "Q3 2025",
       description:
-        "ROLL OUT 1K MCP INTEGRATIONS TO ENHANCE UX FOR PARTNER AUDIENCES",
+        "Roll out 1k MCP integrations to enhance UX for partner audiences",
     },
     {
       title: "Q4 2025",
-      description: "ADD CROSS-CHAIN SUPPORT AND API SDK FOR 5K PARTNER LINKS",
+      description: "Add cross-chain support and API SDK for 5k partner links",
     },
     {
       title: "2026",
       description:
-        "LAUNCH MODULES FOR NEW FIELDS LIKE ROBOTICS AND HEALTHCARE TASKS",
+        "Launch modules for new fields like robotics and healthcare tasks",
     },
     {
       title: "2027",
-      description: "HIT 10M USERS VIA 10K+ GLOBAL PARTNER NETWORKS",
+      description: "Hit 10M users via 10k+ global partner networks",
     },
   ];
 
@@ -63,7 +63,7 @@ const Roadmap = () => {
                         <h2 className="text-[clamp(0.9rem,3vw,1.5rem)] font-bold text-white uppercase tracking-wide font-menda mb-3">
                           {item.title}
                         </h2>
-                        <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] text-white/70 leading-relaxed uppercase tracking-wide font-helvetica">
+                        <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] text-white/70 leading-relaxed tracking-wide font-helvetica">
                           {item.description}
                         </p>
                       </div>

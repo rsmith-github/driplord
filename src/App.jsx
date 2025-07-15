@@ -620,7 +620,7 @@ function App() {
       <div className="fixed inset-0" style={{ zIndex: -1 }}>
         <Spline
           ref={splineRef}
-          scene="https://prod.spline.design/KoGDuI4YV2TSHmSW/scene.splinecode"
+          scene="https://prod.spline.design/Fe-e2HHJ2eNPDBR9/scene.splinecode"
           className="w-full h-full pointer-events-auto"
           onLoad={onLoad}
         />
