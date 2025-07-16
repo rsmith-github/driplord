@@ -21,8 +21,7 @@ const Footer = () => {
                 />
               </a>
               <p className="text-white text-[clamp(0.7rem,2vw,1rem)] sm:text-[clamp(0.4rem,0.8vw,1rem)] uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica text-right max-w-[60%] sm:max-w-none">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Quisquam, quos.
+                Privacy Policy <span className="mx-2">|</span>Terms of Service
               </p>
             </nav>
           </div>

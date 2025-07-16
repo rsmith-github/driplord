@@ -341,7 +341,7 @@ function App() {
         const rightMovement = isMobile ? 10 : isTablet ? 20 : 30;
         const upMovement = isMobile ? 10 : 15;
         const backMovement = isMobile ? -80 : -120;
-        const finalBackMovement = isMobile ? -300 : -500;
+        const finalBackMovement = isMobile ? -300 : -400;
 
         tl1
           .to(
@@ -359,7 +359,7 @@ function App() {
             mainModel.position,
             {
               x: originalModelX - 2, // Return to center
-              y: originalModelY + 20, // Return to original height
+              y: originalModelY + 10, // Return to original height
               z: originalModelZ + finalBackMovement, // Less zoom out for Features2 on mobile
               ease: "power2.inOut",
               duration: 0.4,
@@ -434,7 +434,7 @@ function App() {
             mainModel.position,
             {
               x: originalModelX, // Keep centered
-              y: originalModelY - 40, // Return to original height
+              y: originalModelY - 20, // (should be -40 with roadmap)
               z: originalModelZ + contactZoomAmount, // Less zoom on mobile to prevent model going too close
               ease: "power2.inOut",
               duration: 0.7, // should be 1 when roadmap is visible
