@@ -421,7 +421,8 @@ function App() {
             {
               y: Math.PI * 4.5, // 765° (360° + 360° + 45°) - full extra rotation then settle
               ease: "power2.inOut",
-              duration: 0.6,
+              // Since roadmap is hidden, we need to complete the full rotation to Contact
+              duration: 1.0, // SHOULD BE 0.6 WHEN ROADMAP IS VISIBLE
             },
             0
           );
@@ -436,7 +437,7 @@ function App() {
               y: originalModelY - 40, // Return to original height
               z: originalModelZ + contactZoomAmount, // Less zoom on mobile to prevent model going too close
               ease: "power2.inOut",
-              duration: 1,
+              duration: 0.7, // should be 1 when roadmap is visible
             },
             0
           );
@@ -640,9 +641,7 @@ function App() {
         <div className="md:snap-always md:snap-start">
           <Features2 />
         </div>
-        <div className="md:snap-always md:snap-start">
-          <Roadmap />
-        </div>
+        <div className="md:snap-always md:snap-start">{/* <Roadmap /> */}</div>
         <div className="md:snap-always md:snap-end">
           <Contact />
         </div>
