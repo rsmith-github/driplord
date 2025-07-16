@@ -36,7 +36,7 @@ const Features2 = () => {
                 <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda">
                   VOICE-BASED TRADING
                 </h3>
-                <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
+                <p className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
                   Execute buy, sell, and stake commands using simple voice or
                   text interactions
                 </p>
@@ -58,7 +58,7 @@ const Features2 = () => {
                 <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda">
                   AUTO-DEFI STRATEGIES
                 </h3>
-                <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
+                <p className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
                   Earn up to 240% APY with prebuilt, low-risk yield modules
                 </p>
               </div>
@@ -79,7 +79,7 @@ const Features2 = () => {
                 <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda">
                   PORTFOLIO MANAGEMENT
                 </h3>
-                <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
+                <p className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
                   Optimize holdings with AI signals powered by GT-Protocol and
                   sentiment data
                 </p>
@@ -101,7 +101,7 @@ const Features2 = () => {
                 <h3 className="text-[clamp(0.9rem,3vw,1.5rem)] font-bold text-white mb-3 uppercase tracking-wide font-menda">
                   ONBOARDING & EDUCATION
                 </h3>
-                <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
+                <p className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed font-helvetica max-w-sm mx-auto">
                   Learn trading and Web3 basics with built-in tutorials and
                   step-by-step guidance
                 </p>

@@ -13,7 +13,7 @@ const Contact = () => {
             <h2 className="text-[clamp(1.2rem,4vw,6rem)] sm:text-[clamp(1.5rem,4vw,6rem)] font-bold text-white mb-6 sm:mb-8 uppercase tracking-wider font-menda">
               PARTNER WITH DRIPLORD
             </h2>
-            <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] sm:text-[clamp(0.8rem,1.5vw,2.5rem)] text-white/70 mx-auto leading-relaxed font-helvetica max-w-4xl px-4">
+            <p className="text-[clamp(1rem,2.5vw,1.2rem)] sm:text-[clamp(0.8rem,1.5vw,2.5rem)] text-white/70 mx-auto leading-relaxed font-helvetica max-w-4xl px-4">
               Upgrade your firm with AI-driven Web3 tools. Boost growth,
               efficiency, and innovation in decentralized tech.
             </p>

@@ -63,7 +63,7 @@ const Roadmap = () => {
                         <h2 className="text-[clamp(0.9rem,3vw,1.5rem)] font-bold text-white uppercase tracking-wide font-menda mb-3">
                           {item.title}
                         </h2>
-                        <p className="text-[clamp(0.8rem,2.5vw,1.2rem)] text-white/70 leading-relaxed tracking-wide font-helvetica">
+                        <p className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed tracking-wide font-helvetica">
                           {item.description}
                         </p>
                       </div>
@@ -101,7 +101,7 @@ const Roadmap = () => {
                         </div>
 
                         <div className="text-center mb-4">
-                          <p className="text-[clamp(0.6rem,1vw,1.5rem)] text-white/70 leading-relaxed uppercase tracking-wide font-helvetica">
+                          <p className="text-[clamp(0.6rem,1vw,1.5rem)] text-white/70 leading-relaxed tracking-wide font-helvetica">
                             {item.description}
                           </p>
                         </div>
