@@ -2,32 +2,44 @@ import { Fade } from "react-awesome-reveal";
 
 const Footer = () => {
   return (
-    <Fade delay={500} triggerOnce style={{ zIndex: 50 }}>
-      <footer
-        className="fixed bottom-0 w-full py-2 pointer-events-none"
-        style={{ zIndex: 50 }}
-      >
-        <div className="px-4 sm:px-8 w-full pointer-events-auto">
-          <div className="flex justify-between items-center gap-4 w-full">
-            <nav className="flex justify-between items-center w-full">
-              <a
-                href="#hero"
-                className="text-white/60 text-sm font-medium uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica pointer-events-auto"
-              >
-                <img
-                  src="https://d17r7llinqok54.cloudfront.net/footerlogo.svg"
-                  alt="logo"
-                  className="w-20 sm:w-30 h-6 sm:h-10"
-                />
-              </a>
-              <p className="text-white text-[clamp(0.7rem,2vw,1rem)] sm:text-[clamp(0.4rem,0.8vw,1rem)] uppercase tracking-wide transition-colors duration-300 hover:text-[rgb(238,63,154)] font-helvetica text-right max-w-[60%] sm:max-w-none">
-                Privacy Policy <span className="mx-2">|</span>Terms of Service
-              </p>
-            </nav>
+    <footer
+      className="fixed bottom-0 left-0 right-0 w-full py-2"
+      style={{ zIndex: 999 }}
+    >
+      <div className="px-4 sm:px-6 2xl:px-8 py-4 2xl:py-6 flex justify-between items-end text-white/60 text-[0.7rem] font-helvetica pointer-events-auto">
+        <div className="flex flex-col sm:flex-row gap-1 sm:gap-4">
+          <span>2025 © Copyright Drip Prime. All Rights Reserved.</span>
+          <a href="#" className="hover:text-[rgb(238,63,154)]">
+            Terms and Conditions
+          </a>
+          <span className="hidden sm:inline">|</span>
+          <a href="#" className="hover:text-[rgb(238,63,154)]">
+            Privacy Policy
+          </a>
+        </div>
+
+        <div className="flex gap-4 sm:gap-6">
+          <div className="flex items-center justify-center">
+            <svg
+              className="w-[1.2rem] h-[1.2rem] text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+            </svg>
+          </div>
+          <div className="flex items-center justify-center">
+            <svg
+              className="w-[1.2rem] h-[1.2rem] text-white"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43V7.93a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.36z" />
+            </svg>
           </div>
         </div>
-      </footer>
-    </Fade>
+      </div>
+    </footer>
   );
 };
 

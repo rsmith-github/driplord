@@ -118,7 +118,6 @@ function App() {
         const features2Section = scrollContainer.querySelector("#features2");
         const contactSection = scrollContainer.querySelector("#contact");
         const features1Section = scrollContainer.querySelector("#features1");
-        const gradientImg = document.querySelector(".gradient-img");
 
         // Try to find camera and lighting objects for additional effects
         const camera =
@@ -149,121 +148,6 @@ function App() {
           console.log("Light name:", pinkLight.name);
           console.log("Light position:", pinkLight.position);
           console.log("Light intensity:", pinkLight.intensity);
-        }
-
-        // Add gradient animation
-        if (gradientImg && features1Section) {
-          ScrollTrigger.create({
-            trigger: features1Section,
-            scroller: scrollContainer,
-            start: "top bottom",
-            end: "bottom top",
-            onEnter: () => {
-              // Keep gradient centered on mobile, move on desktop
-              const isMobile = window.innerWidth < 768;
-              const moveAmount = isMobile ? "0" : "30vw";
-
-              gsap.to(gradientImg, {
-                x: moveAmount,
-                duration: 0.8,
-                ease: "power2.inOut",
-              });
-            },
-            onLeave: () => {
-              gsap.to(gradientImg, {
-                x: "0",
-                duration: 0.8,
-                ease: "power2.inOut",
-              });
-            },
-            onEnterBack: () => {
-              // Keep gradient centered on mobile, move on desktop
-              const isMobile = window.innerWidth < 768;
-              const moveAmount = isMobile ? "0" : "30vw";
-
-              gsap.to(gradientImg, {
-                x: moveAmount,
-                duration: 0.8,
-                ease: "power2.inOut",
-              });
-            },
-            onLeaveBack: () => {
-              gsap.to(gradientImg, {
-                x: "0",
-                duration: 0.8,
-                ease: "power2.inOut",
-              });
-            },
-          });
-        }
-
-        // Fade out gradient on Hero section
-        if (gradientImg && firstSection) {
-          ScrollTrigger.create({
-            trigger: firstSection,
-            scroller: scrollContainer,
-            start: "top top",
-            end: "bottom top",
-            onEnter: () => {
-              gsap.to(gradientImg, {
-                opacity: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
-            onLeave: () => {
-              gsap.to(gradientImg, {
-                opacity: 1,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
-            onEnterBack: () => {
-              gsap.to(gradientImg, {
-                opacity: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
-          });
-        }
-
-        // Fade out gradient on Features2
-        if (gradientImg && features2Section) {
-          ScrollTrigger.create({
-            trigger: features2Section,
-            scroller: scrollContainer,
-            start: "top center",
-            end: "bottom top",
-            onEnter: () => {
-              gsap.to(gradientImg, {
-                opacity: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
-            onLeave: () => {
-              gsap.to(gradientImg, {
-                opacity: 1,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
-            onEnterBack: () => {
-              gsap.to(gradientImg, {
-                opacity: 0,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
-            onLeaveBack: () => {
-              gsap.to(gradientImg, {
-                opacity: 1,
-                duration: 0.6,
-                ease: "power2.inOut",
-              });
-            },
-          });
         }
 
         // Create one comprehensive timeline from start to Features2
@@ -522,8 +406,8 @@ function App() {
             const mouseY = -((clientY / innerHeight) * 2 - 1);
 
             // Define orbit sensitivity (much more subtle)
-            const orbitStrength = 3; // Reduced from 6 to 3
-            const verticalStrength = 3; // Reduced from 4 to 2
+            const orbitStrength = 2; // Reduced from 6 to 2
+            const verticalStrength = 2; // Reduced from 4 to 2
 
             // INVERTED: Make model appear to follow mouse direction
             const targetX = originalCameraX - mouseX * orbitStrength; // Inverted
@@ -609,28 +493,10 @@ function App() {
       {/* HUD Elements - Behind Spline Model */}
       {/* <HUD /> */}
 
-      {/* Gradient Image */}
-      <img
-        src="https://d17r7llinqok54.cloudfront.net/gradient.svg"
-        alt=""
-        className="gradient-img fixed inset-0 w-full h-full object-cover"
-        style={{ zIndex: -10, opacity: 0 }}
-      />
-
-      {/* Fixed Spline Background */}
-      <div className="fixed inset-0" style={{ zIndex: -1 }}>
-        <Spline
-          ref={splineRef}
-          scene="https://prod.spline.design/Fe-e2HHJ2eNPDBR9/scene.splinecode"
-          className="w-full h-full pointer-events-auto"
-          onLoad={onLoad}
-        />
-      </div>
-
       <div className="overflow-y-scroll h-screen relative z-10 snap-y snap-mandatory md:snap-y md:snap-mandatory">
         <Navbar />
         <div className="md:snap-always md:snap-start">
-          <Hero />
+          <Hero splineRef={splineRef} onLoad={onLoad} />
         </div>
         <div className="md:snap-always md:snap-start">
           <VideoSection />
@@ -645,8 +511,8 @@ function App() {
         <div className="md:snap-always md:snap-end">
           <Contact />
         </div>
+        <Footer />
       </div>
-      <Footer />
 
       {/* Loading Screen */}
       <LoadingScreen
