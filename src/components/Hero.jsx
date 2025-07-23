@@ -32,7 +32,10 @@ const Hero = ({ splineRef, onLoad }) => {
       </div>
 
       {/* Fixed Spline Background */}
-      <div className="fixed inset-0" style={{ zIndex: 10 }}>
+      <div
+        className="fixed inset-0"
+        style={{ zIndex: 10, height: "110vh", top: "-3vh" }}
+      >
         <Spline
           ref={splineRef}
           scene="https://prod.spline.design/Fe-e2HHJ2eNPDBR9/scene.splinecode"
