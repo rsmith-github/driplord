@@ -6,12 +6,12 @@ const Contact = () => {
       id="contact"
       className="h-screen bg-transparent relative overflow-hidden py-20 sm:py-24 flex items-center"
     >
-      <div className="w-full mx-auto px-4 sm:px-[5%] relative z-10 sm:grid sm:grid-cols-[1fr_50vw]">
+      <div className="w-full mx-auto px-4 sm:px-[5%] relative z-10 sm:grid sm:grid-cols-[1fr_45.26vw]">
         <div className="w-full flex flex-col items-start sm:col-start-2 sm:col-end-3 gap-16">
           <Slide direction="up">
             <div>
               <h2
-                className="text-[clamp(1.2rem,4vw,6rem)] sm:text-[clamp(1.5rem,2.5vw,4vw)] font-bold text-white uppercase tracking-wider"
+                className="text-[clamp(1.2rem,4vw,6rem)] sm:text-[clamp(1.5rem,1.875vw,1.875vw)] font-bold text-white uppercase tracking-wider"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "750",
@@ -22,7 +22,7 @@ const Contact = () => {
                 PARTNER WITH DRIP LORD
               </h2>
               <p
-                className="text-[clamp(1rem,1.667vw,1.667vw)] sm:text-[clamp(0.5rem,1.667vw,1.667vw)] text-white tracking-widest font-medium capitalize"
+                className="text-[clamp(1rem,1.25vw,1.25vw)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -31,7 +31,7 @@ const Contact = () => {
                 Supercharge Your Business with AI-Powered Web3 Infrastructure
               </p>
               <p
-                className="text-[clamp(1rem,1.25vw,1.25vw)] sm:text-[clamp(0.8rem,1.25vw,1.25vw)] leading-relaxed font-helvetica max-w-2xl mt-4"
+                className="text-[clamp(1rem,1.25vw,1.25vw)] sm:text-[clamp(0.8rem,0.938vw,0.938vw)] leading-relaxed font-helvetica max-w-[35.885vw] mt-4"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -48,8 +48,8 @@ const Contact = () => {
           </Slide>
           <Fade delay={600}>
             <div className="pointer-events-auto">
-              <div className="mb-[20%] sm:mb-[30%] bg-white rounded-full">
-                <button className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,1.1vw,4vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 py-3 sm:px-8 sm:py-4 text-black">
+              <div className="bg-white rounded-full h-[3.125vw]">
+                <button className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,0.833vw,0.833vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 sm:px-8 text-black h-full">
                   Book a Call
                 </button>
               </div>

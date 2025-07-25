@@ -43,7 +43,7 @@ const Features2 = () => {
           <div className="ml-0 text-center sm:text-left">
             <Slide direction="up">
               <h2
-                className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,2.25rem,4rem)] font-bold text-white mb-2 uppercase tracking-wider bold"
+                className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "750",
@@ -58,7 +58,7 @@ const Features2 = () => {
             </Slide>
             <Fade delay={300}>
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.5rem,2rem)] text-white tracking-widest font-medium capitalize"
+                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -119,11 +119,11 @@ const Features2 = () => {
                       <img
                         src={featuresData[0].icon}
                         alt={featuresData[0].title}
-                        className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)]"
+                        className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                       />
                     </div>
                     <h3
-                      className="text-[clamp(0.8rem,1.1vw,2.5rem)] text-white uppercase tracking-wide  whitespace-nowrap pt-1.5"
+                      className="text-[clamp(0.75rem,0.833vw,0.833vw)] text-white uppercase tracking-wide  whitespace-nowrap pt-1"
                       style={{
                         fontFamily: "Helvetica Neue",
                         fontWeight: "750",
@@ -153,11 +153,11 @@ const Features2 = () => {
                       <img
                         src={featuresData[2].icon}
                         alt={featuresData[2].title}
-                        className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)]"
+                        className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                       />
                     </div>
                     <h3
-                      className="text-[clamp(0.8rem,1.1vw,2.5rem)] text-white uppercase tracking-wide  whitespace-nowrap pt-1.5"
+                      className="text-[clamp(0.75rem,0.833vw,0.833vw)] text-white uppercase tracking-wide  whitespace-nowrap pt-1"
                       style={{
                         fontFamily: "Helvetica Neue",
                         fontWeight: "750",
@@ -190,11 +190,11 @@ const Features2 = () => {
                       <img
                         src={featuresData[1].icon}
                         alt={featuresData[1].title}
-                        className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)]"
+                        className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                       />
                     </div>
                     <h3
-                      className="text-[clamp(0.8rem,1.1vw,2.5rem)] text-white uppercase tracking-wide whitespace-nowrap pt-1.5"
+                      className="text-[clamp(0.75rem,0.833vw,0.833vw)] text-white uppercase tracking-wide whitespace-nowrap pt-1"
                       style={{
                         fontFamily: "Helvetica Neue",
                         fontWeight: "750",
@@ -224,11 +224,11 @@ const Features2 = () => {
                       <img
                         src={featuresData[3].icon}
                         alt={featuresData[3].title}
-                        className="w-[clamp(1.5rem,2vw,3rem)] h-[clamp(1.5rem,2vw,3rem)]"
+                        className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                       />
                     </div>
                     <h3
-                      className="text-[clamp(0.8rem,1.1vw,2.5rem)] text-white uppercase tracking-wide  whitespace-nowrap pt-1.5"
+                      className="text-[clamp(0.75rem,0.833vw,0.833vw)] text-white uppercase tracking-wide  whitespace-nowrap pt-1"
                       style={{
                         fontFamily: "Helvetica Neue",
                         fontWeight: "750",

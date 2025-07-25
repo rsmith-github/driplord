@@ -1,8 +1,7 @@
 import { useState, useEffect } from "react";
 
-const Navbar = () => {
+const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -29,11 +28,9 @@ const Navbar = () => {
             <img
               src="https://d17r7llinqok54.cloudfront.net/drip-navbar-logo.svg"
               alt="Driplord Logo"
-              className="w-[100px] h-[100px]"
+              className="w-[8.125vw] h-[0.781vw]"
             />
           </div>
-
-          {/* Desktop Navigation - Hidden */}
         </div>
 
         {/* Mobile Menu Button - Always visible burger icon */}
@@ -67,12 +64,12 @@ const Navbar = () => {
         }`}
       >
         {/* Mobile Menu Header - Logo and Close Button */}
-        <div className="px-4 sm:px-6 2xl:px-8 flex justify-between items-center">
+        <div className="sm:px-6 2xl:px-8 py-4 2xl:py-6  flex justify-between items-center">
           <div className="navbar-brand">
             <img
               src="/images/drip-navbar-logo.svg"
               alt="Driplord Logo"
-              className="w-[100px] h-[100px]"
+              className="w-[8.125vw] h-[0.781vw]"
             />
           </div>
           <button
@@ -88,25 +85,25 @@ const Navbar = () => {
         <div className="flex-grow flex flex-col justify-center items-center gap-8 pb-30">
           <button
             onClick={() => scrollToSection("hero")}
-            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(2.5vw,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             LEGEND
           </button>
           <button
             onClick={() => scrollToSection("features2")}
-            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(2.5vw,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             TRADING AGENT
           </button>
           <button
             onClick={() => scrollToSection("features1")}
-            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(2.5vw,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             AI FUTURE
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(2.5vw,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             Book a Call
           </button>

@@ -10,7 +10,7 @@ const Features1 = () => {
         <div className="ml-0 text-center sm:text-left">
           <Slide direction="up">
             <h2
-              className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,2.25rem,4rem)] font-bold text-white mb-2 uppercase tracking-wider bold"
+              className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "750",
@@ -25,7 +25,7 @@ const Features1 = () => {
           </Slide>
           <Fade delay={300}>
             <p
-              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.5rem,2rem)] text-white tracking-widest font-medium capitalize"
+              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "300",
@@ -38,7 +38,7 @@ const Features1 = () => {
           <Fade delay={400}>
             <div className="flex justify-start mt-4">
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.125rem,1.5rem)] text-white tracking-widest font-medium normal-case w-[55%]"
+                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,0.938vw,0.938vw)] text-white tracking-widest font-medium normal-case w-[55%]"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -64,17 +64,17 @@ const Features1 = () => {
                 <img
                   src={"https://d17r7llinqok54.cloudfront.net/agents.svg"}
                   alt="AI Agent"
-                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
+                  className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   AI AGENTS
                 </h3>
               </div>
               <p
-                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
+                className="text-[clamp(0.5rem,0.938vw,0.938vw)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -96,17 +96,17 @@ const Features1 = () => {
                 <img
                   src={"https://d17r7llinqok54.cloudfront.net/solutions.svg"}
                   alt="AI Agent"
-                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
+                  className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   B2B2C SOLUTIONS
                 </h3>
               </div>
               <p
-                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
+                className="text-[clamp(0.5rem,0.938vw,0.938vw)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -128,17 +128,17 @@ const Features1 = () => {
                 <img
                   src={"https://d17r7llinqok54.cloudfront.net/chain.svg"}
                   alt="AI Agent"
-                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
+                  className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   CROSS-CHAIN COMPATIBILITY
                 </h3>
               </div>
               <p
-                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
+                className="text-[clamp(0.5rem,0.938vw,0.938vw)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -159,17 +159,17 @@ const Features1 = () => {
                 <img
                   src={"https://d17r7llinqok54.cloudfront.net/token.svg"}
                   alt="AI Agent"
-                  className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
+                  className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   TOKENIZED INFRASTRUCTURE
                 </h3>
               </div>
               <p
-                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
+                className="text-[clamp(0.5rem,0.938vw,0.938vw)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",

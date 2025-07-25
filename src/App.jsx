@@ -23,6 +23,8 @@ function App() {
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   // Handle Spline load
   const onLoad = (spline) => {
     setSplineApp(spline);
@@ -504,7 +506,10 @@ function App() {
       {/* <HUD /> */}
 
       <div className="overflow-y-scroll h-screen relative z-10 snap-y md:snap-y md:snap-mandatory">
-        <Navbar />
+        <Navbar
+          isMobileMenuOpen={isMobileMenuOpen}
+          setIsMobileMenuOpen={setIsMobileMenuOpen}
+        />
         <div className="md:snap-always md:snap-start">
           <Hero splineRef={splineRef} onLoad={onLoad} />
         </div>
@@ -521,7 +526,7 @@ function App() {
         <div className="md:snap-always md:snap-end">
           <Contact />
         </div>
-        <Footer />
+        <Footer scrollProgress={scrollProgress} />
       </div>
 
       {/* Loading Screen */}
@@ -531,7 +536,12 @@ function App() {
       />
 
       {/* Scroll Progress Bar */}
-      <div className="fixed right-[3.5%] top-1/2 -translate-y-1/2 h-[40%] w-1 z-50">
+      <div
+        className="fixed right-[3.5%] top-1/2 -translate-y-1/2 h-[40%] w-1 z-50"
+        style={{
+          display: isMobileMenuOpen ? "none" : "block",
+        }}
+      >
         {/* Top Dot */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"></div>
 

@@ -48,11 +48,11 @@ const Hero = ({ splineRef, onLoad }) => {
         {/* Empty space where the image was - now the image is positioned separately */}
         <div></div>
 
-        <div className="text-center mb-42 sm:mb-10 md:mb-12 pointer-events-auto">
+        <div className="text-center mb-42 sm:mb-[8.021vw] pointer-events-auto">
           <Fade delay={600} triggerOnce>
-            <div className="mb-[20%] sm:mb-[30%] bg-white rounded-full">
+            <div className="bg-white rounded-full h-[3.125vw]">
               <button
-                className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,1.1vw,4vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 py-3 sm:px-8 sm:py-4 text-black"
+                className="nline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,0.833vw,0.833vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 sm:px-8 text-black h-full"
                 onClick={handleScrollToVideo}
               >
                 Get Started
