@@ -493,7 +493,7 @@ function App() {
       {/* HUD Elements - Behind Spline Model */}
       {/* <HUD /> */}
 
-      <div className="overflow-y-scroll h-screen relative z-10 md:snap-y md:snap-mandatory">
+      <div className="overflow-y-scroll h-screen relative z-10 snap-y md:snap-y md:snap-mandatory">
         <Navbar />
         <div className="md:snap-always md:snap-start">
           <Hero splineRef={splineRef} onLoad={onLoad} />

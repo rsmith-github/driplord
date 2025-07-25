@@ -6,15 +6,16 @@ const Features1 = () => {
       id="features1"
       className="h-screen bg-transparent flex items-center justify-center px-4 sm:px-8 pt-24 pb-24 sm:pt-0 sm:pb-0"
     >
-      <div className="mx-auto w-full h-full flex flex-col justify-center gap-4 sm:gap-[3rem] 2xl:gap-[10rem] px-4 sm:px-[5%] pt-4 sm:pt-[2%]">
+      <div className="mx-auto w-full h-full flex flex-col justify-center gap-4 sm:gap-[3rem] px-4 sm:px-[5%] pt-4 sm:pt-[2%]">
         <div className="ml-0 text-center sm:text-left">
           <Slide direction="up">
             <h2
-              className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,2.5vw,4rem)] font-bold text-white mb-2 uppercase tracking-wider bold"
+              className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,2.25rem,4rem)] font-bold text-white mb-2 uppercase tracking-wider bold"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "750",
                 lineHeight: "100%",
+                letterSpacing: "-5%",
               }}
             >
               UNLOCKING WEB3 FOR
@@ -24,7 +25,7 @@ const Features1 = () => {
           </Slide>
           <Fade delay={300}>
             <p
-              className="text-[clamp(1rem,2.5vw,1.2rem)] sm:text-[clamp(0.5rem,1vw,1.5rem)] text-white tracking-widest font-medium uppercase"
+              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1vw,1.5rem)] text-white tracking-widest font-medium uppercase"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "300",
@@ -34,9 +35,28 @@ const Features1 = () => {
               Worlds
             </p>
           </Fade>
+          <Fade delay={400}>
+            <div className="flex justify-start mt-4">
+              <p
+                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,0.85vw,1.5rem)] text-white tracking-widest font-medium uppercase w-[55%]"
+                style={{
+                  fontFamily: "Helvetica Neue",
+                  fontWeight: "300",
+                  color: "#6D6C68",
+                }}
+              >
+                AI doesn't just simplify Web3—it makes it accessible. Drip
+                empowers businesses and users alike with intelligent agents that
+                automate trading, payments, and blockchain interactions. Whether
+                you're integrating into existing systems or building something
+                entirely new, our cross-chain, tokenized infrastructure is ready
+                to scale with you.
+              </p>
+            </div>
+          </Fade>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 2xl:gap-12 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 2xl:gap-12 w-[58%]">
           {/* AI Agents */}
           <Fade delay={400}>
             <div className="group text-center sm:text-left">
@@ -54,15 +74,17 @@ const Features1 = () => {
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed max-w-sm"
+                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
                   color: "#6D6C68",
+                  lineHeight: "1.5",
                 }}
               >
-                Deploy autonomous tools to streamline Web3 tasks like trading
-                and payments with voice commands
+                Autonomous tools that handle trading, payments, and on-chain
+                tasks using simple voice commands or prompts—no technical
+                expertise required.
               </p>
             </div>
           </Fade>
@@ -84,15 +106,17 @@ const Features1 = () => {
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed max-w-sm"
+                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
                   color: "#6D6C68",
+                  lineHeight: "1.5",
                 }}
               >
-                Scale your business with integrated AI solutions that bridge
-                traditional and decentralized systems
+                Boost adoption with AI-powered workflows that connect Web2
+                familiarity to Web3 functionality, helping your business onboard
+                users at scale.
               </p>
             </div>
           </Fade>
@@ -114,15 +138,16 @@ const Features1 = () => {
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed max-w-sm"
+                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
                   color: "#6D6C68",
+                  lineHeight: "1.5",
                 }}
               >
-                Seamless integration across multiple blockchain networks for
-                maximum compatibility
+                Operate seamlessly across major blockchain networks with
+                plug-and-play cross-chain integration.
               </p>
             </div>
           </Fade>
@@ -144,15 +169,17 @@ const Features1 = () => {
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed max-w-sm"
+                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
                   color: "#6D6C68",
+                  lineHeight: "1.5",
                 }}
               >
-                Leverage blockchain technology for transparent and secure
-                business operations
+                Power your business with secure, transparent, and auditable
+                systems built on blockchain technology—ideal for identity,
+                access, and transactions.
               </p>
             </div>
           </Fade>
