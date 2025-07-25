@@ -20,13 +20,18 @@ const Contact = () => {
           </div>
         </Slide>
 
-        <Fade delay={300}>
-          <div className="inline-block px-6 sm:px-12 text-xl font-bold text-white uppercase tracking-wide font-helvetica">
-            <button className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,1.1vw,4vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 py-3 sm:px-8 sm:py-4 text-black">
-              Book a Call
-            </button>
+        <div className="relative z-50 flex flex-col items-center justify-between w-full h-full px-4 sm:px-0 pointer-events-none">
+
+          <div className="text-center mb-42 sm:mb-10 md:mb-12 pointer-events-auto">
+            <Fade delay={600} triggerOnce>
+              <div className="mb-[20%] sm:mb-[30%] bg-white rounded-full">
+                <button className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,1.1vw,4vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 py-3 sm:px-8 sm:py-4 text-black">
+                  Book a Call
+                </button>
+              </div>
+            </Fade>
           </div>
-        </Fade>
+        </div>
       </div>
     </section>
   );

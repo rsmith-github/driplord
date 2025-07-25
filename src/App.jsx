@@ -181,26 +181,6 @@ function App() {
         // Use dramatic model scaling since position/camera approaches aren't working
         console.log("Using model scaling approach");
 
-        // Store initial scale values
-        const initialScaleX = mainModel.scale.x;
-        const initialScaleY = mainModel.scale.y;
-        const initialScaleZ = mainModel.scale.z;
-
-        console.log(
-          "Initial scale:",
-          initialScaleX,
-          initialScaleY,
-          initialScaleZ
-        );
-
-        // Try moving the model instead of the camera for more predictable results
-        console.log(
-          "Original model position:",
-          mainModel.position.x,
-          mainModel.position.y,
-          mainModel.position.z
-        );
-
         // Store original model position
         const originalModelX = mainModel.position.x;
         const originalModelY = mainModel.position.y;
@@ -223,10 +203,10 @@ function App() {
         const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
 
         // Adjust movement based on screen size
-        const rightMovement = isMobile ? 10 : isTablet ? 20 : 30;
+        const rightMovement = isMobile ? 10 : isTablet ? 20 : 33;
         const upMovement = isMobile ? 10 : 15;
         const backMovement = isMobile ? -80 : -120;
-        const finalBackMovement = isMobile ? -300 : -400;
+        const finalBackMovement = isMobile ? -50 : -100;
 
         tl1
           .to(
@@ -243,8 +223,8 @@ function App() {
           .to(
             mainModel.position,
             {
-              x: originalModelX - 2, // Return to center
-              y: originalModelY + 10, // Return to original height
+              x: originalModelX, // Return to center
+              y: originalModelY + 3, // Return to original height
               z: originalModelZ + finalBackMovement, // Less zoom out for Features2 on mobile
               ease: "power2.inOut",
               duration: 0.4,

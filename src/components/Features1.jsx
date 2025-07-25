@@ -18,14 +18,14 @@ const Features1 = () => {
                 letterSpacing: "-5%",
               }}
             >
-              UNLOCKING WEB3 FOR
+              Unlock Web3 for
               <br />
-              EVERYONE WITH AI AGENTS
+              Everyone with AI Agents
             </h2>
           </Slide>
           <Fade delay={300}>
             <p
-              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1vw,1.5rem)] text-white tracking-widest font-medium uppercase"
+              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.5rem,2rem)] text-white tracking-widest font-medium capitalize"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "300",
@@ -38,7 +38,7 @@ const Features1 = () => {
           <Fade delay={400}>
             <div className="flex justify-start mt-4">
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,0.85vw,1.5rem)] text-white tracking-widest font-medium uppercase w-[55%]"
+                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.125rem,1.5rem)] text-white tracking-widest font-medium normal-case w-[55%]"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -67,14 +67,14 @@ const Features1 = () => {
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   AI AGENTS
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -99,14 +99,14 @@ const Features1 = () => {
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   B2B2C SOLUTIONS
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -131,14 +131,14 @@ const Features1 = () => {
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   CROSS-CHAIN COMPATIBILITY
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -162,14 +162,14 @@ const Features1 = () => {
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
                 <h3
-                  className="text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide"
+                  className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,1.2vw,2rem)] font-bold text-white uppercase tracking-wide pt-1.5"
                   style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
                 >
                   TOKENIZED INFRASTRUCTURE
                 </h3>
               </div>
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+                className="text-[clamp(0.5rem,1.125rem,1.5rem)] text-white/70"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
