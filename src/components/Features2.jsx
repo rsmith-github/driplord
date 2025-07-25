@@ -36,38 +36,39 @@ const Features2 = () => {
   return (
     <section
       id="features2"
-      className="h-screen bg-transparent flex flex-col items-start justify-center px-4 sm:px-8 py-20 sm:pt-[10%] relative overflow-hidden"
+      className="h-screen bg-transparent flex flex-col items-start justify-center px-4 sm:px-8 relative overflow-hidden"
     >
-      <div className="mx-auto w-full h-full flex flex-col justify-center px-4 sm:px-[5%] pt-4 sm:pt-[2%]">
-        <div className="ml-0 text-center sm:text-left">
-          <Slide direction="up">
-            <h2
-              className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,2.25rem,4rem)] font-bold text-white mb-2 uppercase tracking-wider bold"
-              style={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: "750",
-                lineHeight: "100%",
-                letterSpacing: "-5%",
-              }}
-            >
-              Meet the Drip Lord
-              <br />
-              Ultimate AI Trading Agent
-            </h2>
-          </Slide>
-          <Fade delay={300}>
-            <p
-              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1vw,1.5rem)] text-white tracking-widest font-medium capitalize"
-              style={{
-                fontFamily: "Helvetica Neue",
-                fontWeight: "300",
-              }}
-            >
-              AI-Powered Automation for Smarter, Simpler Web3 Trading
-            </p>
-          </Fade>
-        </div>
-        <div className="w-full relative z-10 flex-1 flex items-center">
+      <div className="mx-auto w-full h-auto flex flex-col justify-center px-4 sm:px-[5%]">
+        <div className="w-full relative z-10 flex-1 flex flex-col gap-[5rem]">
+          <div className="ml-0 text-center sm:text-left">
+            <Slide direction="up">
+              <h2
+                className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,2.25rem,4rem)] font-bold text-white mb-2 uppercase tracking-wider bold"
+                style={{
+                  fontFamily: "Helvetica Neue",
+                  fontWeight: "750",
+                  lineHeight: "100%",
+                  letterSpacing: "-5%",
+                }}
+              >
+                Meet the Drip Lord
+                <br />
+                Ultimate AI Trading Agent
+              </h2>
+            </Slide>
+            <Fade delay={300}>
+              <p
+                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.5rem,2rem)] text-white tracking-widest font-medium capitalize"
+                style={{
+                  fontFamily: "Helvetica Neue",
+                  fontWeight: "300",
+                }}
+              >
+                AI-Powered Automation for Smarter, Simpler Web3 Trading
+              </p>
+            </Fade>
+          </div>
+
           {/* Mobile Layout - Stack vertically */}
           <div className="block lg:hidden w-full">
             <div className="space-y-8 sm:space-y-12">
@@ -91,7 +92,7 @@ const Features2 = () => {
                       </h3>
                     </div>
                     <p
-                      className="text-[clamp(1rem,2.5vw,1.2rem)] text-white/70 leading-relaxed max-w-sm"
+                      className="text-[clamp(1rem,2.5vw,1.2rem)] leading-relaxed max-w-sm"
                       style={{
                         fontFamily: "Helvetica Neue",
                         fontWeight: "300",
@@ -132,7 +133,7 @@ const Features2 = () => {
                     </h3>
                   </div>
                   <p
-                    className="text-[clamp(0.8rem,1.125rem,2rem)] text-white/70 leading-relaxed mt-2"
+                    className="text-[clamp(0.8rem,1.125rem,2rem)] leading-relaxed mt-2"
                     style={{
                       fontFamily: "Helvetica Neue",
                       fontWeight: "300",
@@ -166,7 +167,7 @@ const Features2 = () => {
                     </h3>
                   </div>
                   <p
-                    className="text-[clamp(0.8rem,1.125rem,2rem)] text-white/70 leading-relaxed mt-2"
+                    className="text-[clamp(0.8rem,1.125rem,2rem)] leading-relaxed mt-2"
                     style={{
                       fontFamily: "Helvetica Neue",
                       fontWeight: "300",
@@ -203,7 +204,7 @@ const Features2 = () => {
                     </h3>
                   </div>
                   <p
-                    className="text-[clamp(0.8rem,1.125rem,2rem)] text-white/70 leading-relaxed mt-2 text-right"
+                    className="text-[clamp(0.8rem,1.125rem,2rem)] leading-relaxed mt-2 text-right"
                     style={{
                       fontFamily: "Helvetica Neue",
                       fontWeight: "300",
@@ -237,7 +238,7 @@ const Features2 = () => {
                     </h3>
                   </div>
                   <p
-                    className="text-[clamp(0.8rem,1.125rem,2rem)] text-white/70 leading-relaxed mt-2 text-right"
+                    className="text-[clamp(0.8rem,1.125rem,2rem)] leading-relaxed mt-2 text-right"
                     style={{
                       fontFamily: "Helvetica Neue",
                       fontWeight: "300",

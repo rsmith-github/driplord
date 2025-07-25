@@ -223,8 +223,8 @@ function App() {
           .to(
             mainModel.position,
             {
-              x: originalModelX, // Return to center
-              y: originalModelY + 3, // Return to original height
+              x: originalModelX - 4, // Return to center
+              y: originalModelY, // Return to original height
               z: originalModelZ + finalBackMovement, // Less zoom out for Features2 on mobile
               ease: "power2.inOut",
               duration: 0.4,
@@ -293,13 +293,14 @@ function App() {
           );
 
           // Model zoom in effect for Contact section - responsive to screen size
-          const contactZoomAmount = isMobile ? 300 : isTablet ? 600 : 1200;
+          const contactZoomAmount = isMobile ? 50 : isTablet ? 200 : 400;
+          const contactLeftAmount = isMobile ? 0 : 100;
 
           tl2.to(
             mainModel.position,
             {
-              x: originalModelX, // Keep centered
-              y: originalModelY - 20, // (should be -40 with roadmap)
+              x: originalModelX - contactLeftAmount, // Keep centered
+              y: originalModelY, // (should be -40 with roadmap)
               z: originalModelZ + contactZoomAmount, // Less zoom on mobile to prevent model going too close
               ease: "power2.inOut",
               duration: 0.7, // should be 1 when roadmap is visible

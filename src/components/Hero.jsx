@@ -33,13 +33,13 @@ const Hero = ({ splineRef, onLoad }) => {
 
       {/* Fixed Spline Background */}
       <div
-        className="fixed inset-0"
+        className="fixed inset-0 pointer-events-none"
         style={{ zIndex: 10, height: "110vh", top: "-3vh" }}
       >
         <Spline
           ref={splineRef}
           scene="https://prod.spline.design/giOldpZA9M8l0dFa/scene.splinecode"
-          className="w-full h-full pointer-events-none"
+          className="w-full h-full"
           onLoad={onLoad}
         />
       </div>
