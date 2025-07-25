@@ -38,8 +38,8 @@ const Hero = ({ splineRef, onLoad }) => {
       >
         <Spline
           ref={splineRef}
-          scene="https://prod.spline.design/Fe-e2HHJ2eNPDBR9/scene.splinecode"
-          className="w-full h-full pointer-events-auto"
+          scene="https://prod.spline.design/giOldpZA9M8l0dFa/scene.splinecode"
+          className="w-full h-full pointer-events-none"
           onLoad={onLoad}
         />
       </div>
