@@ -74,7 +74,7 @@ function App() {
       }
 
       // Try to find the main model object
-      let mainModel = splineApp.findObjectByName("DripAnimated");
+      let mainModel = splineApp.findObjectByName("Drip_Animated");
 
       if (!mainModel) {
         // Try alternative names
@@ -350,7 +350,6 @@ function App() {
           const originalCameraY = camera.position.y;
           const originalCameraZ = camera.position.z;
 
-          let lastMouseTime = Date.now();
           let resetTimeout;
 
           // Check if we're in Features2 section
