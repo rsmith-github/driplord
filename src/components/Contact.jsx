@@ -22,16 +22,9 @@ const Contact = () => {
 
         <Fade delay={300}>
           <div className="inline-block px-6 sm:px-12 text-xl font-bold text-white uppercase tracking-wide font-helvetica">
-            <StarBorder
-              as="a"
-              href="mailto:hello@driplord.ai"
-              speed="3s"
-              color="magenta"
-              thickness={2}
-              className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,1.1vw,4vw)] font-bold text-white uppercase tracking-widest font-helvetica cursor-pointer px-6 py-3 sm:px-8 sm:py-4"
-            >
-              BOOK A CALL
-            </StarBorder>
+            <button className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,1.1vw,4vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 py-3 sm:px-8 sm:py-4 text-black">
+              Book a Call
+            </button>
           </div>
         </Fade>
       </div>

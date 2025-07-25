@@ -21,6 +21,7 @@ function App() {
   const [splineApp, setSplineApp] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [isSplineLoaded, setIsSplineLoaded] = useState(false);
+  const [scrollProgress, setScrollProgress] = useState(0);
 
   // Handle Spline load
   const onLoad = (spline) => {
@@ -488,6 +489,35 @@ function App() {
     };
   }, [splineApp]);
 
+  useEffect(() => {
+    const scrollContainer = document.querySelector(".overflow-y-scroll");
+    if (!scrollContainer) return;
+
+    const updateScrollProgress = () => {
+      const totalHeight = scrollContainer.scrollHeight;
+      const viewportHeight = scrollContainer.clientHeight;
+      const scrollTop = scrollContainer.scrollTop;
+
+      const scrollableHeight = totalHeight - viewportHeight;
+      let progress = 0;
+
+      if (scrollableHeight > 0) {
+        progress = (scrollTop / scrollableHeight) * 100;
+      } else {
+        // If content is not scrollable, consider it fully scrolled
+        progress = 100;
+      }
+      setScrollProgress(Math.min(100, Math.max(0, progress)));
+    };
+
+    updateScrollProgress(); // Set initial progress
+    scrollContainer.addEventListener("scroll", updateScrollProgress);
+
+    return () => {
+      scrollContainer.removeEventListener("scroll", updateScrollProgress);
+    };
+  }, []);
+
   return (
     <div className="w-full min-h-screen relative">
       {/* HUD Elements - Behind Spline Model */}
@@ -519,6 +549,24 @@ function App() {
         isLoading={isLoading}
         onLoadingComplete={handleLoadingComplete}
       />
+
+      {/* Scroll Progress Bar */}
+      <div className="fixed right-[3.5%] top-1/2 -translate-y-1/2 h-[40%] w-1 z-50">
+        {/* Top Dot */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"></div>
+
+        {/* The Track (gray part) */}
+        <div className="absolute top-6 bottom-6 left-1/2 -translate-x-1/2 w-[1px] bg-white/20 rounded-full">
+          {/* Scroll Progress Indicator (white part) */}
+          <div
+            className="absolute top-0 left-0 w-full bg-white rounded-full origin-top"
+            style={{ height: `${scrollProgress}%` }}
+          ></div>
+        </div>
+
+        {/* Bottom Dot */}
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-1 h-1 bg-white rounded-full"></div>
+      </div>
     </div>
   );
 }

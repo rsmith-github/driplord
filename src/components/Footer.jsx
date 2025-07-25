@@ -9,11 +9,11 @@ const Footer = () => {
       <div className="px-4 sm:px-6 2xl:px-8 py-4 2xl:py-6 flex justify-between items-end text-white/60 text-[0.7rem] font-helvetica pointer-events-auto">
         <div className="flex flex-col sm:flex-row gap-1 sm:gap-4">
           <span>2025 © Copyright Drip Prime. All Rights Reserved.</span>
-          <a href="#" className="hover:text-[rgb(238,63,154)]">
+          <a href="#" className="hover:text-[rgb(238,63,154)] text-white">
             Terms and Conditions
           </a>
-          <span className="hidden sm:inline">|</span>
-          <a href="#" className="hover:text-[rgb(238,63,154)]">
+          <span className="hidden sm:inline text-white">|</span>
+          <a href="#" className="hover:text-[rgb(238,63,154)] text-white">
             Privacy Policy
           </a>
         </div>

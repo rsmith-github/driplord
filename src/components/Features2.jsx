@@ -4,28 +4,28 @@ import StarBorder from "./reactbits/StarBorder";
 const featuresData = [
   {
     id: "voice-based-trading",
-    icon: "public/images/feature2-icons/voice.svg",
+    icon: "https://d17r7llinqok54.cloudfront.net/voice.svg",
     title: "VOICE-BASED TRADING",
     description:
       "Buy, sell, stake, or swap with natural voice or text commands—no dashboards, no complexity.",
   },
   {
     id: "auto-defi-strategies",
-    icon: "public/images/feature-icons/solutions.svg",
+    icon: "https://d17r7llinqok54.cloudfront.net/solutions.svg",
     title: "AUTO-DEFI STRATEGIES",
     description:
       "Access curated yield modules with returns up to 240% APY—automated, diversified, and beginner-friendly.",
   },
   {
     id: "portfolio-management",
-    icon: "public/images/feature2-icons/portfolio.svg",
+    icon: "https://d17r7llinqok54.cloudfront.net/portfolio.svg",
     title: "PORTFOLIO MANAGEMENT",
     description:
       "Maximize performance with real-time AI signals powered by GT-Protocol and live sentiment analysis.",
   },
   {
     id: "onboarding-education",
-    icon: "public/images/feature2-icons/education.svg",
+    icon: "https://d17r7llinqok54.cloudfront.net/education.svg",
     title: "ONBOARDING & EDUCATION",
     description:
       "Master the basics of Web3 and trading with built-in tutorials, walkthroughs, and contextual guidance.",

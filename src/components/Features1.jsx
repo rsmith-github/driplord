@@ -62,7 +62,7 @@ const Features1 = () => {
             <div className="group text-center sm:text-left">
               <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
                 <img
-                  src={"public/images/feature-icons/agents.svg"}
+                  src={"https://d17r7llinqok54.cloudfront.net/agents.svg"}
                   alt="AI Agent"
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
@@ -94,7 +94,7 @@ const Features1 = () => {
             <div className="group text-center sm:text-left">
               <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
                 <img
-                  src={"public/images/feature-icons/solutions.svg"}
+                  src={"https://d17r7llinqok54.cloudfront.net/solutions.svg"}
                   alt="AI Agent"
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
@@ -126,7 +126,7 @@ const Features1 = () => {
             <div className="group text-center sm:text-left">
               <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
                 <img
-                  src={"public/images/feature-icons/chain.svg"}
+                  src={"https://d17r7llinqok54.cloudfront.net/chain.svg"}
                   alt="AI Agent"
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
@@ -157,7 +157,7 @@ const Features1 = () => {
             <div className="group text-center sm:text-left">
               <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
                 <img
-                  src={"public/images/feature-icons/token.svg"}
+                  src={"https://d17r7llinqok54.cloudfront.net/token.svg"}
                   alt="AI Agent"
                   className="w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] sm:w-[clamp(1.5rem,2vw,4rem)] sm:h-[clamp(1.5rem,2vw,4rem)]"
                 />
