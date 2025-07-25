@@ -1,13 +1,42 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap");
 @import "tailwindcss";
 
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("HelveticaNeueThin"), url("./assets/fonts/HelveticaNeueThin.otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Helvetica Neue";
+  src: local("HelveticaNeueBold"), url("./assets/fonts/HelveticaNeueBold.otf");
+  font-weight: 750;
+  font-style: normal;
+  font-display: swap;
+}
+/* @font-face {
+  font-family: "Helvetica Neue";
+  src: local("HelveticaNeueUltraLight"),
+    url("./assets/fonts/HelveticaNeueUltraLight.otf");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+} */
+
 /* Menda Font Faces */
 @font-face {
   font-family: "Menda";
-  src: url("/fonts/Menda-Medium.ttf") format("truetype");
+  src: local("Menda"), url("./assets/fonts/Menda-Medium.ttf");
   font-weight: 500;
   font-style: normal;
 }
+
+.menda-normal {
+  font-family: "Menda", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* 
 
 @font-face {
   font-family: "Menda";
@@ -35,7 +64,7 @@
   src: url("/fonts/Menda-Black.ttf") format("truetype");
   font-weight: 900;
   font-style: normal;
-}
+} */
 
 @layer base {
   html {
@@ -48,7 +77,7 @@
   }
 
   body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /* font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; */
     background-color: #0e0e0e;
     color: #ffffff;
     overflow-x: hidden;
@@ -59,14 +88,18 @@
   }
 
   /* Headers use Menda font */
-  h1,
+  /* h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
     font-family: "Menda", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  }
+  } */
+
+h3 {
+  margin-bottom: 0;
+}
 
   /* Mobile-specific scroll improvements */
   .snap-y {
@@ -129,13 +162,13 @@
 }
 
 /* Utility classes */
-.font-menda {
+/* .font-menda {
   font-family: "Menda", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+} */
 
-.font-helvetica {
+/* .font-helvetica {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+} */
 
 /* Mobile-specific utility classes */
 @media (max-width: 768px) {

@@ -88,25 +88,25 @@ const Navbar = () => {
         <div className="flex-grow flex flex-col justify-center items-center gap-8 pb-30">
           <button
             onClick={() => scrollToSection("hero")}
-            className="block text-white/80 text-[clamp(1.5rem,4vw,2.5rem)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             LEGEND
           </button>
           <button
             onClick={() => scrollToSection("features2")}
-            className="block text-white/80 text-[clamp(1.5rem,4vw,2.5rem)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             TRADING AGENT
           </button>
           <button
             onClick={() => scrollToSection("features1")}
-            className="block text-white/80 text-[clamp(1.5rem,4vw,2.5rem)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             AI FUTURE
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="block text-white/80 text-[clamp(1.5rem,4vw,2.5rem)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 ~text-xl/2xl font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
             Book a Call
           </button>

@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="w-full mx-auto flex flex-col justify-center relative z-10">
         <Slide direction="up">
           <div className="mb-30 sm:mb-16">
-            <h2 className="text-[clamp(1.2rem,4vw,6rem)] sm:text-[clamp(1.5rem,4vw,6rem)] font-bold text-white mb-6 sm:mb-8 uppercase tracking-wider font-menda">
+            <h2 className="text-[clamp(1.2rem,4vw,6rem)] sm:text-[clamp(1.5rem,4vw,6rem)] font-bold text-white mb-6 sm:mb-8 uppercase tracking-wider ">
               PARTNER WITH DRIPLORD
             </h2>
             <p className="text-[clamp(1rem,2.5vw,1.2rem)] sm:text-[clamp(0.8rem,1.5vw,2.5rem)] text-white/70 mx-auto leading-relaxed font-helvetica max-w-4xl px-4">
