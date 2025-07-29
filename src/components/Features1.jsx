@@ -1,6 +1,9 @@
 import { Fade, Slide } from "react-awesome-reveal";
+import { useState } from "react";
 
 const Features1 = () => {
+  const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+
   const features = [
     {
       id: 1,
@@ -36,6 +39,47 @@ const Features1 = () => {
     },
   ];
 
+  const nextFeature = () => {
+    setCurrentFeatureIndex((prev) => (prev + 1) % features.length);
+  };
+
+  const prevFeature = () => {
+    setCurrentFeatureIndex(
+      (prev) => (prev - 1 + features.length) % features.length
+    );
+  };
+
+  const renderFeature = (feature, index) => (
+    <Fade key={feature.id} delay={feature.delay}>
+      <div className="group text-left">
+        <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
+          <img
+            src={feature.icon}
+            alt={feature.title}
+            className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
+          />
+          <h3
+            className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
+            style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
+          >
+            {feature.title}
+          </h3>
+        </div>
+        <p
+          className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+          style={{
+            fontFamily: "Helvetica Neue",
+            fontWeight: "300",
+            color: "#6D6C68",
+            lineHeight: "1.5",
+          }}
+        >
+          {feature.description}
+        </p>
+      </div>
+    </Fade>
+  );
+
   return (
     <section
       id="features1"
@@ -45,7 +89,7 @@ const Features1 = () => {
         <div className="ml-0 text-left">
           <Slide direction="up">
             <h2
-              className="text-[clamp(1.2rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold"
+              className="text-[clamp(2.25rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold w-[18rem] sm:w-[55%]"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "750",
@@ -53,14 +97,14 @@ const Features1 = () => {
                 letterSpacing: "-5%",
               }}
             >
-              Unlock Web3 for
-              <br />
+              Unlock Web3 for{" "}
+              <br className="hidden sm:visible" />
               Everyone with AI Agents
             </h2>
           </Slide>
           <Fade delay={300}>
             <p
-              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize"
+              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize w-[18rem] sm:w-[55%]"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "300",
@@ -71,9 +115,9 @@ const Features1 = () => {
             </p>
           </Fade>
           <Fade delay={400}>
-            <div className="flex justify-start mt-4">
+            <div className="flex justify-start mt-4 mb-14 sm:mb-0">
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(1rem,1vw,1.2rem)] text-white tracking-widest font-medium normal-case w-[55%]"
+                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(1rem,1vw,1.2rem)] text-white tracking-widest font-medium normal-case w-[18rem] sm:w-[55%]"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
@@ -91,37 +135,34 @@ const Features1 = () => {
           </Fade>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 sm:gap-8 2xl:gap-12 w-[58%]">
-          {features.map((feature) => (
-            <Fade key={feature.id} delay={feature.delay}>
-              <div className="group text-left">
-                <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
-                  <img
-                    src={feature.icon}
-                    alt={feature.title}
-                    className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
-                  />
-                  <h3
-                    className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
-                    style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
-                  >
-                    {feature.title}
-                  </h3>
-                </div>
-                <p
-                  className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
-                  style={{
-                    fontFamily: "Helvetica Neue",
-                    fontWeight: "300",
-                    color: "#6D6C68",
-                    lineHeight: "1.5",
-                  }}
-                >
-                  {feature.description}
-                </p>
-              </div>
-            </Fade>
-          ))}
+        {/* Mobile: Single feature with navigation */}
+        <div className="block sm:hidden w-[18rem]">
+          <div className="w-full">
+            {renderFeature(features[currentFeatureIndex], currentFeatureIndex)}
+          </div>
+
+          {/* Navigation buttons */}
+          <div className="flex justify-start items-center gap-4 mt-8">
+            <button
+              onClick={prevFeature}
+              className="w-12 h-12 rounded-full bg-white border border-black flex items-center justify-center hover:bg-gray-100 transition-colors"
+              aria-label="Previous feature"
+            >
+              <span className="text-black text-lg font-bold">←</span>
+            </button>
+            <button
+              onClick={nextFeature}
+              className="w-12 h-12 rounded-full bg-white border border-black flex items-center justify-center hover:bg-gray-100 transition-colors"
+              aria-label="Next feature"
+            >
+              <span className="text-black text-lg font-bold">→</span>
+            </button>
+          </div>
+        </div>
+
+        {/* Desktop: Grid layout (unchanged) */}
+        <div className="hidden sm:grid sm:grid-cols-2 gap-6 sm:gap-8 2xl:gap-12 w-[58%]">
+          {features.map((feature, index) => renderFeature(feature, index))}
         </div>
       </div>
     </section>
