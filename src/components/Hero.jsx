@@ -21,13 +21,13 @@ const Hero = ({ splineRef, onLoad }) => {
     >
       {/* Hero background image - behind Spline scene */}
       <div
-        className="absolute inset-0 top-[55%] translate-y-[-55%] opacity-40"
+        className="absolute inset-0 top-[55%] translate-y-[-55%] translate-x-[-100%] sm:translate-x-0 opacity-10"
         style={{ zIndex: 5 }}
       >
         <img
           src="https://d17r7llinqok54.cloudfront.net/driplord-bg.png"
           alt="logo"
-          className="w-[95%] max-w-[90vw] sm:max-w-[100vw] h-auto mt-16 sm:mt-0 mx-auto"
+          className="w-[113.5rem] sm:w-[95%] max-w-[113.5rem] sm:max-w-[100vw] h-auto mt-16 sm:mt-0 mx-auto"
         />
       </div>
 
@@ -50,7 +50,7 @@ const Hero = ({ splineRef, onLoad }) => {
 
         <div className="text-center mb-42 sm:mb-[8.021vw] pointer-events-auto">
           <Fade delay={600} triggerOnce>
-            <div className="bg-white rounded-full h-[3.125vw]">
+            <div className="bg-white rounded-full h-[clamp(3.75rem,3.125vw,3.125vw)] w-[clamp(15.375rem,3.125vw,3.125vw)]">
               <button
                 className="nline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,0.833vw,0.833vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 sm:px-8 text-black h-full"
                 onClick={handleScrollToVideo}

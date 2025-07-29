@@ -77,6 +77,7 @@ function App() {
 
       // Try to find the main model object
       let mainModel = splineApp.findObjectByName("Drip_Animated");
+      console.log("🚀 ~ waitForObjects ~ mainModel:", mainModel);
 
       if (!mainModel) {
         // Try alternative names
@@ -93,11 +94,13 @@ function App() {
           mainModel = splineApp.findObjectByName(name);
           if (mainModel) break;
         }
+        console.log("🚀🚀🚀🚀🚀 ~ waitForObjects ~ mainModel:", mainModel);
 
         // If still not found, try to use the first object that has rotation
         if (!mainModel) {
           mainModel = allObjects.find((obj) => obj.rotation);
         }
+        console.log("🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 ~ waitForObjects ~ mainModel:", mainModel);
       }
 
       if (!mainModel) {
