@@ -97,9 +97,9 @@
     font-family: "Menda", "Helvetica Neue", Helvetica, Arial, sans-serif;
   } */
 
-h3 {
-  margin-bottom: 0;
-}
+  h3 {
+    margin-bottom: 0;
+  }
 
   /* Mobile-specific scroll improvements */
   .snap-y {
@@ -185,4 +185,65 @@ h3 {
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
   }
+}
+
+/* Carousel animations */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.5s ease-in-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.5s ease-in-out;
+}
+
+.animate-slideOutLeft {
+  animation: slideOutLeft 0.5s ease-in-out;
+}
+
+.animate-slideOutRight {
+  animation: slideOutRight 0.5s ease-in-out;
 }

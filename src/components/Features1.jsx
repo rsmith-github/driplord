@@ -1,8 +1,10 @@
 import { Fade, Slide } from "react-awesome-reveal";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Features1 = () => {
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
+  const [slideDirection, setSlideDirection] = useState("right");
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
   const features = [
     {
@@ -40,44 +42,69 @@ const Features1 = () => {
   ];
 
   const nextFeature = () => {
-    setCurrentFeatureIndex((prev) => (prev + 1) % features.length);
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setSlideDirection("left");
+    const nextIndex = (currentFeatureIndex + 1) % features.length;
+    setCurrentFeatureIndex(nextIndex);
   };
 
   const prevFeature = () => {
-    setCurrentFeatureIndex(
-      (prev) => (prev - 1 + features.length) % features.length
-    );
+    if (isTransitioning) return;
+    setIsTransitioning(true);
+    setSlideDirection("right");
+    const prevIndex =
+      (currentFeatureIndex - 1 + features.length) % features.length;
+    setCurrentFeatureIndex(prevIndex);
   };
 
-  const renderFeature = (feature, index) => (
-    <Fade key={feature.id} delay={feature.delay}>
-      <div className="group text-left">
-        <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
-          <img
-            src={feature.icon}
-            alt={feature.title}
-            className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
-          />
-          <h3
-            className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
-            style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
-          >
-            {feature.title}
-          </h3>
-        </div>
-        <p
-          className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
-          style={{
-            fontFamily: "Helvetica Neue",
-            fontWeight: "300",
-            color: "#6D6C68",
-            lineHeight: "1.5",
-          }}
+  useEffect(() => {
+    if (isTransitioning) {
+      const timer = setTimeout(() => {
+        setIsTransitioning(false);
+      }, 500); // Match animation duration
+      return () => clearTimeout(timer);
+    }
+  }, [isTransitioning]);
+
+  const renderFeature = (feature, index, isExiting = false) => (
+    <div
+      key={`${feature.id}-${isExiting ? "exit" : "enter"}`}
+      className={`group text-left absolute top-0 left-0 w-full ${
+        isExiting
+          ? slideDirection === "left"
+            ? "animate-slideOutLeft"
+            : "animate-slideOutRight"
+          : slideDirection === "left"
+          ? "animate-slideInLeft"
+          : "animate-slideInRight"
+      }`}
+    >
+      <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
+        <img
+          src={feature.icon}
+          alt={feature.title}
+          className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
+        />
+        <h3
+          className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
+          style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
         >
-          {feature.description}
-        </p>
+          {feature.title}
+        </h3>
       </div>
-    </Fade>
+      <p
+        className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+        style={{
+          fontFamily: "Helvetica Neue",
+          fontWeight: "300",
+          color: "#6D6C68",
+          lineHeight: "1.5",
+        }}
+      >
+        {feature.description}
+      </p>
+    </div>
   );
 
   return (
@@ -97,8 +124,7 @@ const Features1 = () => {
                 letterSpacing: "-5%",
               }}
             >
-              Unlock Web3 for{" "}
-              <br className="hidden sm:visible" />
+              Unlock Web3 for <br className="hidden sm:visible" />
               Everyone with AI Agents
             </h2>
           </Slide>
@@ -137,22 +163,38 @@ const Features1 = () => {
 
         {/* Mobile: Single feature with navigation */}
         <div className="block sm:hidden w-[18rem]">
-          <div className="w-full">
+          <div className="w-full h-[120px] relative overflow-hidden">
+            {/* Current feature */}
             {renderFeature(features[currentFeatureIndex], currentFeatureIndex)}
+
+            {/* Exiting feature (shown during transition) */}
+            {isTransitioning &&
+              renderFeature(
+                features[
+                  slideDirection === "left"
+                    ? (currentFeatureIndex - 1 + features.length) %
+                      features.length
+                    : (currentFeatureIndex + 1) % features.length
+                ],
+                currentFeatureIndex,
+                true
+              )}
           </div>
 
           {/* Navigation buttons */}
           <div className="flex justify-start items-center gap-4 mt-8">
             <button
               onClick={prevFeature}
-              className="w-12 h-12 rounded-full bg-white border border-black flex items-center justify-center hover:bg-gray-100 transition-colors"
+              disabled={isTransitioning}
+              className="w-12 h-12 rounded-full bg-white border border-black flex items-center justify-center hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Previous feature"
             >
               <span className="text-black text-lg font-bold">←</span>
             </button>
             <button
               onClick={nextFeature}
-              className="w-12 h-12 rounded-full bg-white border border-black flex items-center justify-center hover:bg-gray-100 transition-colors"
+              disabled={isTransitioning}
+              className="w-12 h-12 rounded-full bg-white border border-black flex items-center justify-center hover:bg-gray-100 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
               aria-label="Next feature"
             >
               <span className="text-black text-lg font-bold">→</span>
@@ -162,7 +204,36 @@ const Features1 = () => {
 
         {/* Desktop: Grid layout (unchanged) */}
         <div className="hidden sm:grid sm:grid-cols-2 gap-6 sm:gap-8 2xl:gap-12 w-[58%]">
-          {features.map((feature, index) => renderFeature(feature, index))}
+          {features.map((feature, index) => (
+            <Fade key={feature.id} delay={feature.delay}>
+              <div className="group text-left">
+                <div className="mb-4 sm:mb-6 flex justify-start items-center gap-4">
+                  <img
+                    src={feature.icon}
+                    alt={feature.title}
+                    className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
+                  />
+                  <h3
+                    className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
+                    style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
+                  >
+                    {feature.title}
+                  </h3>
+                </div>
+                <p
+                  className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+                  style={{
+                    fontFamily: "Helvetica Neue",
+                    fontWeight: "300",
+                    color: "#6D6C68",
+                    lineHeight: "1.5",
+                  }}
+                >
+                  {feature.description}
+                </p>
+              </div>
+            </Fade>
+          ))}
         </div>
       </div>
     </section>
