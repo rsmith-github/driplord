@@ -52,7 +52,7 @@ const Hero = ({ splineRef, onLoad }) => {
           <Fade delay={600} triggerOnce>
             <div className="bg-white rounded-full h-[clamp(3.75rem,3.125vw,3.125vw)] w-[clamp(15.375rem,3.125vw,3.125vw)]">
               <button
-                className="nline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,0.833vw,0.833vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 sm:px-8 text-black h-full"
+                className="inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,0.833vw,0.833vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 sm:px-8 text-black h-full"
                 onClick={handleScrollToVideo}
               >
                 Get Started

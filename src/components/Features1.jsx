@@ -110,7 +110,7 @@ const Features1 = () => {
   return (
     <section
       id="features1"
-      className="h-screen bg-transparent flex items-start sm:items-center justify-start sm:justify-centerunlo px-4 sm:px-8 pt-24 pb-24 sm:pt-0 sm:pb-0"
+      className="h-screen bg-transparent flex items-start sm:items-center justify-start sm:justify-centerunlo px-0 sm:px-8 pt-24 pb-24 sm:pt-0 sm:pb-0"
     >
       <div className="mx-auto w-full h-full flex flex-col justify-start sm:justify-center gap-4 sm:gap-[3rem] px-4 sm:px-[5%] pt-4 sm:pt-[2%]">
         <div className="ml-0 text-left">
