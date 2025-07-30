@@ -23,7 +23,7 @@ const VideoSection = () => {
       <img
         src="https://d17r7llinqok54.cloudfront.net/play-button.svg"
         alt="Play video"
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(1rem,5vw,4rem)] h-[clamp(1rem,5vw,4rem)] hover:scale-110 transition-all duration-300 z-20 cursor-pointer"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[clamp(7rem,5vw,4rem)] h-[clamp(7rem,5vw,4rem)] hover:scale-110 transition-all duration-300 z-20 cursor-pointer"
       />
 
       {/* Optional overlay for better mobile visibility */}

@@ -208,8 +208,8 @@ function App() {
         const isTablet = window.innerWidth >= 768 && window.innerWidth < 1024;
 
         // Adjust movement based on screen size
-        const rightMovement = isMobile ? 10 : isTablet ? 20 : 33;
-        const upMovement = isMobile ? 10 : 15;
+        const rightMovement = isMobile ? 5 : isTablet ? 20 : 33;
+        const upMovement = isMobile ? -20 : 15;
         const backMovement = isMobile ? -80 : -120;
         const finalBackMovement = isMobile ? -50 : -100;
 
@@ -228,8 +228,8 @@ function App() {
           .to(
             mainModel.position,
             {
-              x: originalModelX - 4, // Return to center
-              y: originalModelY, // Return to original height
+              x: originalModelX - (isMobile ? 0 : 4), // Return to center
+              y: originalModelY + (isMobile ? -5 : 0), // Return to original height
               z: originalModelZ + finalBackMovement, // Less zoom out for Features2 on mobile
               ease: "power2.inOut",
               duration: 0.4,
@@ -289,7 +289,7 @@ function App() {
           tl2.to(
             mainModel.rotation,
             {
-              y: Math.PI * 4.5, // 765° (360° + 360° + 45°) - full extra rotation then settle
+              y: Math.PI * (isMobile ? 3.5 : 4.5), // 765° (360° + 360° + 45°) - full extra rotation then settle
               ease: "power2.inOut",
               // Since roadmap is hidden, we need to complete the full rotation to Contact
               duration: 1.0, // SHOULD BE 0.6 WHEN ROADMAP IS VISIBLE
@@ -305,7 +305,7 @@ function App() {
             mainModel.position,
             {
               x: originalModelX - contactLeftAmount, // Keep centered
-              y: originalModelY, // (should be -40 with roadmap)
+              y: originalModelY - (isMobile ? 0 : 0), // (should be -40 with roadmap)
               z: originalModelZ + contactZoomAmount, // Less zoom on mobile to prevent model going too close
               ease: "power2.inOut",
               duration: 0.7, // should be 1 when roadmap is visible
