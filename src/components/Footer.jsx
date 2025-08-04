@@ -3,7 +3,7 @@ import { Fade } from "react-awesome-reveal";
 const Footer = ({ scrollProgress }) => {
   return (
     <footer
-      className="fixed bottom-0 left-0 right-0 w-full py-2 bg-gradient-to-t from-black to-[#0E0E0E] sm:bg-transparent"
+      className="fixed bottom-0 left-0 right-0 w-full py-2 bg-gradient-to-t from-[#0E0E0E] to-black sm:bg-transparent sm:bg-gradient-to-t sm:from-transparent sm:to-transparent"
       style={{ zIndex: 999 }}
     >
       <div
@@ -13,24 +13,18 @@ const Footer = ({ scrollProgress }) => {
           fontWeight: "300",
         }}
       >
-        <div className="flex flex-col sm:flex-row gap-1">
+        <div className="flex flex-col sm:flex-row gap-1 text-[clamp(0.625rem,0.521vw,0.521vw)] text-left">
           {/* Mobile: Multi-line layout */}
           <div className="block sm:hidden">
-            <div className="flex flex-col gap-1">
+            <div className="flex flex-col gap-1 items-start sm:items-center text-white/80">
               <span>2025 © Copyright Drip Prime.</span>
               <span>All Rights Reserved.</span>
               <div className="flex items-center gap-1">
-                <a
-                  href="#"
-                  className="hover:text-[rgb(238,63,154)] text-white font-bold"
-                >
+                <a href="#" className="hover:text-[rgb(238,63,154)] text-white">
                   Terms and Conditions
                 </a>
                 <span className="text-white">|</span>
-                <a
-                  href="#"
-                  className="hover:text-[rgb(238,63,154)] text-white font-bold"
-                >
+                <a href="#" className="hover:text-[rgb(238,63,154)] text-white">
                   Privacy Policy
                 </a>
               </div>
@@ -38,18 +32,20 @@ const Footer = ({ scrollProgress }) => {
           </div>
 
           {/* Desktop: Original single-line layout */}
-          <div className="hidden sm:flex sm:flex-row gap-1">
-            <span>2025 © Copyright Drip Prime. All Rights Reserved.</span>
+          <div className="hidden sm:flex sm:flex-row gap-2 items-center text-white/80">
+            <span className="font-light">
+              2025 © Copyright Drip Prime. All Rights Reserved.
+            </span>
             <a
               href="#"
-              className="hover:text-[rgb(238,63,154)] text-white font-bold"
+              className="hover:text-[rgb(238,63,154)] text-white font-light"
             >
               Terms and Conditions
             </a>
-            <span className="text-white">|</span>
+            <span className="text-white font-light">|</span>
             <a
               href="#"
-              className="hover:text-[rgb(238,63,154)] text-white font-bold"
+              className="hover:text-[rgb(238,63,154)] text-white font-light"
             >
               Privacy Policy
             </a>
@@ -65,16 +61,16 @@ const Footer = ({ scrollProgress }) => {
             <img
               src="https://d17r7llinqok54.cloudfront.net/scroll.svg"
               alt="Scroll Down"
-              className="w-[clamp(0.625rem,0.521vw,0.521vw)] h-[clamp(0.625rem,0.521vw,0.521vw)]"
+              className="w-[clamp(0.625rem,1.25vw,1.25vw)] h-[clamp(0.625rem,1.25vw,1.25vw)]"
             />
-            <p className="text-[rgb(238,63,154)] font-bold pt-[0.125vw]">
+            <p className="text-[rgb(238,63,154)] font-bold pt-[0.125vw] text-[clamp(0.625rem,0.521vw,0.521vw)">
               Scroll Down to Continue
             </p>
           </div>
           <div className="flex items-center gap-[clamp(1.563rem,1.256vw,1.256vw)]">
             <div className="flex items-center justify-center">
               <svg
-                className="w-[clamp(0.875rem,0.521vw,0.521vw)] h-[clamp(0.875rem,0.521vw,0.521vw)] text-white"
+                className="w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -83,7 +79,7 @@ const Footer = ({ scrollProgress }) => {
             </div>
             <div className="flex items-center justify-center">
               <svg
-                className="w-[clamp(0.875rem,0.521vw,0.521vw)] h-[clamp(0.875rem,0.521vw,0.521vw)] text-white"
+                className="w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >

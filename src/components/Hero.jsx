@@ -48,7 +48,7 @@ const Hero = ({ splineRef, onLoad }) => {
         {/* Empty space where the image was - now the image is positioned separately */}
         <div></div>
 
-        <div className="text-center mb-42 sm:mb-[8.021vw] pointer-events-auto">
+        <div className="text-center mb-[16rem] sm:mb-[8.021vw] pointer-events-auto">
           <Fade delay={600} triggerOnce>
             <div className="bg-white rounded-full h-[clamp(3.75rem,3.125vw,3.125vw)] w-[clamp(15.375rem,3.125vw,3.125vw)]">
               <button
