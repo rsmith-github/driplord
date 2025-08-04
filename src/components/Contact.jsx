@@ -8,7 +8,7 @@ const Contact = () => {
     >
       <div className="w-full mx-auto px-4 sm:px-[5%] relative z-10 sm:grid sm:grid-cols-[1fr_45.26vw]">
         <div className="w-full flex flex-col items-start sm:col-start-2 sm:col-end-3 gap-16">
-          <Slide direction="up">
+          <Fade>
             <div className="w-[18rem] sm:w-auto">
               <h2
                 className="text-[clamp(2.25rem,4vw,6rem)] sm:text-[clamp(1.5rem,1.875vw,1.875vw)] font-bold text-white uppercase tracking-wider"
@@ -45,7 +45,7 @@ const Contact = () => {
                 decentralized technology.
               </p>
             </div>
-          </Slide>
+          </Fade>
           <Fade delay={600}>
             <div className="pointer-events-auto w-[18rem] sm:w-auto">
               <div className="bg-white rounded-full text-center h-[clamp(3.75rem,3.125vw,3.125vw)] w-[clamp(15.375rem,3.125vw,3.125vw)]">

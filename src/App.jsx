@@ -111,7 +111,7 @@ function App() {
       console.log("Main model:", mainModel);
 
       // Get the custom scroll container
-      const scrollContainer = document.querySelector(".overflow-y-scroll");
+      const scrollContainer = document.querySelector(".snap-y");
       if (!scrollContainer) {
         console.warn("Scroll container not found");
         return;
@@ -341,7 +341,7 @@ function App() {
           // Check if we're in Features2 section
           const isInFeatures2 = () => {
             const scrollContainer =
-              document.querySelector(".overflow-y-scroll");
+              document.querySelector(".snap-y");
             const features2Section = document.querySelector("#features2");
 
             if (!scrollContainer || !features2Section) return false;
@@ -475,7 +475,7 @@ function App() {
   }, [splineApp]);
 
   useEffect(() => {
-    const scrollContainer = document.querySelector(".overflow-y-scroll");
+    const scrollContainer = document.querySelector(".snap-y");
     if (!scrollContainer) return;
 
     const updateScrollProgress = () => {
