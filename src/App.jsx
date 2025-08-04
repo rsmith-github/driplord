@@ -209,7 +209,7 @@ function App() {
 
         // Adjust movement based on screen size
         const rightMovement = isMobile ? 5 : isTablet ? 20 : 33;
-        const upMovement = isMobile ? -20 : 15;
+        const upMovement = isMobile ? 0 : 15;
         const backMovement = isMobile ? -80 : -120;
         const finalBackMovement = isMobile ? -50 : -100;
 
@@ -229,7 +229,7 @@ function App() {
             mainModel.position,
             {
               x: originalModelX - (isMobile ? 0 : 4), // Return to center
-              y: originalModelY + (isMobile ? -5 : 0), // Return to original height
+              y: originalModelY + (isMobile ? 5 : 0), // Return to original height
               z: originalModelZ + finalBackMovement, // Less zoom out for Features2 on mobile
               ease: "power2.inOut",
               duration: 0.4,
@@ -305,7 +305,7 @@ function App() {
             mainModel.position,
             {
               x: originalModelX - contactLeftAmount, // Keep centered
-              y: originalModelY - (isMobile ? 0 : 0), // (should be -40 with roadmap)
+              y: originalModelY - (isMobile ? 10 : 0), // (should be -40 with roadmap)
               z: originalModelZ + contactZoomAmount, // Less zoom on mobile to prevent model going too close
               ease: "power2.inOut",
               duration: 0.7, // should be 1 when roadmap is visible
