@@ -3,11 +3,11 @@ import { Fade } from "react-awesome-reveal";
 const Footer = ({ scrollProgress }) => {
   return (
     <footer
-      className="fixed bottom-0 left-0 right-0 w-full py-2 bg-gradient-to-t from-[#0E0E0E] to-black sm:bg-transparent sm:bg-gradient-to-t sm:from-transparent sm:to-transparent"
+      className="fixed bottom-0 left-0 right-0 w-full py-1 sm:py-2 bg-gradient-to-t from-[#0E0E0E] to-black sm:bg-transparent sm:bg-gradient-to-t sm:from-transparent sm:to-transparent"
       style={{ zIndex: 999 }}
     >
       <div
-        className="px-[3.125vw] text-[clamp(0.625rem,0.521vw,0.521vw)] py-4 2xl:py-6 flex justify-between items-start sm:items-end font-helvetica pointer-events-auto"
+        className="px-[3.125vw] text-[clamp(0.625rem,0.521vw,0.521vw)] py-1 2xl:py-6 flex justify-between items-start sm:items-end font-helvetica pointer-events-auto"
         style={{
           fontFamily: "Helvetica Neue",
           fontWeight: "300",
