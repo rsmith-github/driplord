@@ -30,10 +30,22 @@ function App() {
     setSplineApp(spline);
     setIsSplineLoaded(true);
 
-    // Wait a bit for objects to initialize before hiding loading screen
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
+    // Actually wait for objects to be available
+    const checkForObjects = () => {
+      const allObjects = spline.getAllObjects();
+      if (allObjects.length > 0) {
+        // Objects are available, hide loading screen
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
+      } else {
+        // Keep checking every 300ms for up to 5 seconds
+        setTimeout(checkForObjects, 300);
+      }
+    };
+
+    // Start checking after initial load
+    setTimeout(checkForObjects, 500);
   };
 
   // Disable scrolling during loading
@@ -114,7 +126,7 @@ function App() {
       console.log("Main model:", mainModel);
 
       // Get the custom scroll container
-      const scrollContainer = document.querySelector(".snap-y");
+      const scrollContainer = document.querySelector(".overflow-y-scroll");
       if (!scrollContainer) {
         console.warn("Scroll container not found");
         return;
@@ -343,7 +355,8 @@ function App() {
 
           // Check if we're in Features2 section
           const isInFeatures2 = () => {
-            const scrollContainer = document.querySelector(".snap-y");
+            const scrollContainer =
+              document.querySelector(".overflow-y-scroll");
             const features2Section = document.querySelector("#features2");
 
             if (!scrollContainer || !features2Section) return false;
@@ -477,7 +490,7 @@ function App() {
   }, [splineApp]);
 
   useEffect(() => {
-    const scrollContainer = document.querySelector(".snap-y");
+    const scrollContainer = document.querySelector(".overflow-y-scroll");
     if (!scrollContainer) return;
 
     const updateScrollProgress = () => {
