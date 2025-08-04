@@ -107,7 +107,7 @@ const Features2 = () => {
   return (
     <section
       id="features2"
-      className="h-screen bg-transparent flex flex-col items-start justify-start sm:justify-center px-0 sm:px-8 relative overflow-hidden"
+      className="min-h-screen bg-transparent flex flex-col items-start justify-start sm:justify-center px-0 sm:px-8 relative overflow-hidden"
     >
       <div className="mx-auto w-full h-auto flex flex-col justify-center px-4 sm:px-[5%]">
         <div className="w-full relative z-10 flex-1 flex flex-col gap-[5.781vw]">

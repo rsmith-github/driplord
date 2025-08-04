@@ -4,7 +4,7 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="h-screen bg-transparent relative overflow-hidden py-20 sm:py-24 flex items-start sm:items-center mb-[100%] sm:mb-0"
+      className="min-h-[145vh] bg-transparent relative overflow-hidden py-20 sm:py-24 flex items-start sm:items-center"
     >
       <div className="w-full mx-auto px-4 sm:px-[5%] relative z-10 sm:grid sm:grid-cols-[1fr_45.26vw]">
         <div className="w-full flex flex-col items-start sm:col-start-2 sm:col-end-3 gap-16">

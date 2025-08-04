@@ -100,7 +100,10 @@ function App() {
         if (!mainModel) {
           mainModel = allObjects.find((obj) => obj.rotation);
         }
-        console.log("🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 ~ waitForObjects ~ mainModel:", mainModel);
+        console.log(
+          "🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 ~ waitForObjects ~ mainModel:",
+          mainModel
+        );
       }
 
       if (!mainModel) {
@@ -340,8 +343,7 @@ function App() {
 
           // Check if we're in Features2 section
           const isInFeatures2 = () => {
-            const scrollContainer =
-              document.querySelector(".snap-y");
+            const scrollContainer = document.querySelector(".snap-y");
             const features2Section = document.querySelector("#features2");
 
             if (!scrollContainer || !features2Section) return false;
