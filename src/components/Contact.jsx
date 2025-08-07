@@ -28,21 +28,20 @@ const Contact = () => {
                   fontWeight: "300",
                 }}
               >
-                Supercharge Your Business with AI-Powered Web3 Infrastructure
+                Supercharge Your Business with AI Agents
               </p>
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.8rem,0.938vw,0.938vw)] leading-relaxed font-helvetica max-w-[clamp(18rem,35.885vw,35.885vw)] mt-4 w-[18rem] sm:w-auto"
+                className="sm:text-[clamp(1rem,1vw,1.2rem)] leading-relaxed font-helvetica max-w-[clamp(18rem,35.885vw,35.885vw)] mt-4 w-[18rem] sm:w-auto"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
                   color: "#6D6C68",
                 }}
               >
-                Collaborate with DripLord to integrate cutting-edge AI agents
-                into your platform or product. From automating DeFi operations
-                to streamlining onboarding, our tools help you drive growth,
-                reduce overhead, and unlock innovation at the edge of
-                decentralized technology.
+                Partner with Drip to bring intelligent, interactive agents into
+                your business. Whether you're selling goods or building the next
+                Web3 platform, our agents are designed to drive engagement and
+                deliver results.
               </p>
             </div>
           </Fade>

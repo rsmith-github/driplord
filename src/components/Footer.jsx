@@ -1,9 +1,9 @@
 import { Fade } from "react-awesome-reveal";
 
-const Footer = ({ scrollProgress }) => {
+const Footer = ({ scrollProgress, isMobileMenuOpen }) => {
   return (
     <footer
-      className="fixed bottom-0 left-0 right-0 w-full py-1 sm:py-2 bg-gradient-to-t from-[#0E0E0E] to-black sm:bg-transparent sm:bg-gradient-to-t sm:from-transparent sm:to-transparent"
+      className={`fixed bottom-0 left-0 right-0 w-full py-1 sm:py-2 ${isMobileMenuOpen ? "bg-transparent" : "bg-gradient-to-t from-[#0E0E0E] to-black"} sm:bg-transparent sm:bg-gradient-to-t sm:from-transparent sm:to-transparent`}
       style={{ zIndex: 999 }}
     >
       <div
@@ -16,7 +16,7 @@ const Footer = ({ scrollProgress }) => {
         <div className="flex flex-col sm:flex-row gap-1 text-[clamp(0.625rem,0.521vw,0.521vw)] text-left">
           {/* Mobile: Multi-line layout */}
           <div className="block sm:hidden">
-            <div className="flex flex-col gap-1 items-start sm:items-center text-white/80">
+            <div className="flex flex-col gap-0 sm:gap-1 items-start sm:items-center text-white/80">
               <span>2025 © Copyright Drip Prime.</span>
               <span>All Rights Reserved.</span>
               <div className="flex items-center gap-1">

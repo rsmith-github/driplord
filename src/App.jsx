@@ -544,7 +544,10 @@ function App() {
         <div className="md:snap-always md:snap-end">
           <Contact />
         </div>
-        <Footer scrollProgress={scrollProgress} />
+        <Footer
+          scrollProgress={scrollProgress}
+          isMobileMenuOpen={isMobileMenuOpen}
+        />
       </div>
 
       {/* Loading Screen */}

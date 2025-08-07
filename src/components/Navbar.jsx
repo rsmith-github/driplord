@@ -67,9 +67,9 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         <div className="sm:px-6 2xl:px-8 py-4 px-4 2xl:py-6  flex justify-between items-center">
           <div className="navbar-brand">
             <img
-              src="/images/drip-navbar-logo.svg"
+              src="https://d17r7llinqok54.cloudfront.net/drip-navbar-logo.svg"
               alt="Driplord Logo"
-              className="w-[clamp(5.6rem,2.5vw,2.5vw)] h-[clamp(0.5rem,0.781vw,0.781vw)]"
+              className="w-[clamp(5.6rem,2.5vw,2.5vw)] h-[clamp(0.781rem,0.781vw,0.781vw)]"
             />
           </div>
           <button

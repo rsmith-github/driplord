@@ -1,35 +1,34 @@
 import { Fade, Slide } from "react-awesome-reveal";
 import { useState, useEffect } from "react";
-import StarBorder from "./reactbits/StarBorder";
 
 const featuresData = [
   {
     id: "voice-based-trading",
     icon: "https://d17r7llinqok54.cloudfront.net/voice.svg",
-    title: "VOICE-BASED TRADING",
+    title: "CUSTOM AI ROLES",
     description:
-      "Buy, sell, stake, or swap with natural voice or text commands—no dashboards, no complexity.",
+      "Design agents with distinct personas—creator, trader, moderator, and more.",
   },
   {
     id: "auto-defi-strategies",
     icon: "https://d17r7llinqok54.cloudfront.net/solutions.svg",
-    title: "AUTO-DEFI STRATEGIES",
+    title: "FLEXIBLE API INTEGRATION",
     description:
-      "Access curated yield modules with returns up to 240% APY—automated, diversified, and beginner-friendly.",
+      "Embed Drip agents into Web3 products and platforms with minimal development.",
   },
   {
     id: "portfolio-management",
     icon: "https://d17r7llinqok54.cloudfront.net/portfolio.svg",
-    title: "PORTFOLIO MANAGEMENT",
+    title: "AI-POWERED MARKET INTELLIGENCE",
     description:
-      "Maximize performance with real-time AI signals powered by GT-Protocol and live sentiment analysis.",
+      "Get real-time crypto forecasts and investment suggestions with machine learning precision.",
   },
   {
     id: "onboarding-education",
     icon: "https://d17r7llinqok54.cloudfront.net/education.svg",
-    title: "ONBOARDING & EDUCATION",
+    title: "SMART COMMUNITY MANAGEMENT",
     description:
-      "Master the basics of Web3 and trading with built-in tutorials, walkthroughs, and contextual guidance.",
+      "Automate moderation and engagement with AI-driven tools that boost loyalty and interaction.",
   },
 ];
 
@@ -122,9 +121,9 @@ const Features2 = () => {
                   letterSpacing: "-5%",
                 }}
               >
-                Meet the Drip Lord
-                <br className="hidden sm:visible" />
-                Ultimate AI Trading Agent
+                UNLOCK YOUR DIGITAL STYLE WITH AI AGENTS
+                {/* <br className="hidden sm:visible" />
+                Ultimate AI Trading Agent */}
               </h2>
             </Slide>
             <Fade delay={300}>
@@ -135,7 +134,7 @@ const Features2 = () => {
                   fontWeight: "300",
                 }}
               >
-                AI-Powered Automation for Smarter, Simpler Web3 Trading
+                Custom AI agents for your brand, Community, or Product
               </p>
             </Fade>
           </div>

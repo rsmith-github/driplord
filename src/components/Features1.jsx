@@ -10,33 +10,33 @@ const Features1 = () => {
     {
       id: 1,
       icon: "https://d17r7llinqok54.cloudfront.net/agents.svg",
-      title: "AI AGENTS",
+      title: "real-time AI hosts",
       description:
-        "Autonomous tools that handle trading, payments, and on-chain tasks using simple voice commands or prompts—no technical expertise required.",
+        "Chat freely with the trendiest virtual hosts, powered by advanced AI and fashion datasets.",
       delay: 400,
     },
     {
       id: 2,
       icon: "https://d17r7llinqok54.cloudfront.net/solutions.svg",
-      title: "B2B2C SOLUTIONS",
+      title: "LIVESTREAM SHOPPING",
       description:
-        "Boost adoption with AI-powered workflows that connect Web2 familiarity to Web3 functionality, helping your business onboard users at scale.",
+        "Discover, showcase, and buy digital fashion items. All while engaging live with your community.",
       delay: 500,
     },
     {
       id: 3,
       icon: "https://d17r7llinqok54.cloudfront.net/chain.svg",
-      title: "CROSS-CHAIN COMPATIBILITY",
+      title: "AI STYLING ADVISOR",
       description:
-        "Operate seamlessly across major blockchain networks with plug-and-play cross-chain integration.",
+        "Get personalized outfit suggestions and styling insights based on data-driven analysis.",
       delay: 600,
     },
     {
       id: 4,
       icon: "https://d17r7llinqok54.cloudfront.net/token.svg",
-      title: "TOKENIZED INFRASTRUCTURE",
+      title: "TREND FORECASTING",
       description:
-        "Power your business with secure, transparent, and auditable systems built on blockchain technology—ideal for identity, access, and transactions.",
+        "Stay ahead of digital fashion trends and launch your own must-have styles before the curve.",
       delay: 700,
     },
   ];
@@ -124,8 +124,9 @@ const Features1 = () => {
                 letterSpacing: "-5%",
               }}
             >
-              Unlock Web3 for <br className="hidden sm:visible" />
-              Everyone with AI Agents
+              MEET THE DRIPLORD
+              {/* <br className="hidden sm:visible" />
+              Everyone with AI Agents */}
             </h2>
           </Slide>
           <Fade delay={300}>
@@ -136,11 +137,10 @@ const Features1 = () => {
                 fontWeight: "300",
               }}
             >
-              Seamless B2B2C Solutions That Bridge Traditional and Decentralized
-              Worlds
+              Where AI Agents Meet Fashion, Shopping, and Streaming
             </p>
           </Fade>
-          <Fade delay={400}>
+          {/* <Fade delay={400}>
             <div className="flex justify-start mt-4 mb-14 sm:mb-0">
               <p
                 className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(1rem,1vw,1.2rem)] text-white tracking-widest font-medium normal-case w-[18rem] sm:w-[55%]"
@@ -158,7 +158,7 @@ const Features1 = () => {
                 to scale with you.
               </p>
             </div>
-          </Fade>
+          </Fade> */}
         </div>
 
         {/* Mobile: Single feature with navigation */}
