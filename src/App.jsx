@@ -159,6 +159,16 @@ function App() {
           }
         }
 
+        if (globalIsMobile) {
+          gsap.to(camera.position, {
+            x: camera.position.x,
+            y: camera.position.y - 3,
+            z: camera.position.z,
+            duration: 0.5,
+            ease: "power2.inOut",
+          });
+        }
+
         const pinkLight =
           splineApp.findObjectByName("Directional Light 2") ||
           splineApp.findObjectByName("Pink Light") ||
