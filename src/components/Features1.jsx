@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 const Features1 = ({ globalIsMobile }) => {
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState("right");
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(true);
+  const [hasInitialAnimated, setHasInitialAnimated] = useState(false);
 
   const features = [
     {
@@ -67,6 +68,36 @@ const Features1 = ({ globalIsMobile }) => {
     }
   }, [isTransitioning]);
 
+  // Intersection Observer to trigger initial animation when in view
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting && !hasInitialAnimated) {
+            setHasInitialAnimated(true);
+            setIsTransitioning(false);
+          } else if (!entry.isIntersecting && hasInitialAnimated) {
+            // Reset when section goes out of view
+            setHasInitialAnimated(false);
+            setIsTransitioning(true);
+          }
+        });
+      },
+      { threshold: 0.4 } // Trigger when 40% of the section is visible
+    );
+
+    const section = document.getElementById("features1");
+    if (section) {
+      observer.observe(section);
+    }
+
+    return () => {
+      if (section) {
+        observer.unobserve(section);
+      }
+    };
+  }, [hasInitialAnimated]);
+
   const renderFeature = (feature, index, isExiting = false) => (
     <div
       key={`${feature.id}-${isExiting ? "exit" : "enter"}`}
@@ -75,6 +106,8 @@ const Features1 = ({ globalIsMobile }) => {
           ? slideDirection === "left"
             ? "animate-slideOutLeft"
             : "animate-slideOutRight"
+          : !hasInitialAnimated
+          ? "opacity-0"
           : slideDirection === "left"
           ? "animate-slideInLeft"
           : "animate-slideInRight"

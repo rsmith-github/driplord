@@ -87,19 +87,19 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
             onClick={() => scrollToSection("hero")}
             className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
-            BACK TO START
-          </button>
-          <button
-            onClick={() => scrollToSection("features2")}
-            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
-          >
-            MEET DRIPLORD
+            START
           </button>
           <button
             onClick={() => scrollToSection("features1")}
             className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
-            UNLOCK YOUR DIGITAL STYLE
+            MEET DRIPLORD
+          </button>
+          <button
+            onClick={() => scrollToSection("features2")}
+            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+          >
+            CUSTOM AGENTS
           </button>
           <button
             onClick={() => scrollToSection("contact")}
