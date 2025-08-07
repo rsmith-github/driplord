@@ -24,7 +24,7 @@ function App() {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-
+  const globalIsMobile = window.innerWidth < 768;
   // Handle Spline load
   const onLoad = (spline) => {
     setSplineApp(spline);
@@ -535,14 +535,14 @@ function App() {
           <VideoSection />
         </div>
         <div className="md:snap-always md:snap-start">
-          <Features1 />
+          <Features1 globalIsMobile={globalIsMobile} />
         </div>
         <div className="md:snap-always md:snap-start">
-          <Features2 />
+          <Features2 globalIsMobile={globalIsMobile} />
         </div>
         <div className="md:snap-always md:snap-start">{/* <Roadmap /> */}</div>
         <div className="md:snap-always md:snap-end">
-          <Contact />
+          <Contact globalIsMobile={globalIsMobile} />
         </div>
         <Footer
           scrollProgress={scrollProgress}

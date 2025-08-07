@@ -82,30 +82,30 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         </div>
 
         {/* Mobile Navigation Items */}
-        <div className="flex-grow flex flex-col justify-center items-center gap-8 sm:pb-30 pb-58">
+        <div className="flex-grow flex flex-col justify-center items-center gap-8 sm:pb-26 pb-58">
           <button
             onClick={() => scrollToSection("hero")}
             className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
-            LEGEND
+            BACK TO START
           </button>
           <button
             onClick={() => scrollToSection("features2")}
             className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
-            TRADING AGENT
+            MEET DRIPLORD
           </button>
           <button
             onClick={() => scrollToSection("features1")}
             className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
-            AI FUTURE
+            UNLOCK YOUR DIGITAL STYLE
           </button>
           <button
             onClick={() => scrollToSection("contact")}
             className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
           >
-            Book a Call
+            BOOK A CALL
           </button>
         </div>
       </div>

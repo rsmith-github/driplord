@@ -6,6 +6,6 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   plugins: [react(), tailwindcss()],
   server: {
-    allowedHosts: ['dripagent.ai', 'driplord.vercel.app'],
+    allowedHosts: ['dripagent.ai', 'driplord.vercel.app', '5c0b6418e93b.ngrok-free.app'],
   },
 })

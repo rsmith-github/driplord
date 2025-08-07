@@ -32,7 +32,7 @@ const featuresData = [
   },
 ];
 
-const Features2 = () => {
+const Features2 = ({ globalIsMobile }) => {
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState("right");
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -110,8 +110,8 @@ const Features2 = () => {
     >
       <div className="mx-auto w-full h-auto flex flex-col justify-center px-4 sm:px-[5%]">
         <div className="w-full relative z-10 flex-1 flex flex-col gap-[5.781vw]">
-          <div className="ml-0 text-left">
-            <Slide direction="up">
+          <div className="ml-0 text-left max-w-full overflow-hidden">
+            <Slide direction={globalIsMobile ? "left" : "up"}>
               <h2
                 className="text-[clamp(2.25rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold w-[18rem] sm:w-[55%]"
                 style={{
@@ -126,7 +126,7 @@ const Features2 = () => {
                 Ultimate AI Trading Agent */}
               </h2>
             </Slide>
-            <Fade delay={300}>
+            <Slide direction={globalIsMobile ? "right" : "up"}>
               <p
                 className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize w-[18rem] sm:w-[55%]"
                 style={{
@@ -136,7 +136,7 @@ const Features2 = () => {
               >
                 Custom AI agents for your brand, Community, or Product
               </p>
-            </Fade>
+            </Slide>
           </div>
 
           {/* Mobile Layout - Single feature with carousel */}
@@ -163,7 +163,7 @@ const Features2 = () => {
             </div>
 
             {/* Navigation buttons */}
-            <div className="flex justify-start items-center gap-4 mt-8">
+            <div className="flex justify-start items-center gap-4">
               <button
                 onClick={prevFeature}
                 disabled={isTransitioning}

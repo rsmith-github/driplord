@@ -1,7 +1,7 @@
 import { Fade, Slide } from "react-awesome-reveal";
 import { useState, useEffect } from "react";
 
-const Features1 = () => {
+const Features1 = ({ globalIsMobile }) => {
   const [currentFeatureIndex, setCurrentFeatureIndex] = useState(0);
   const [slideDirection, setSlideDirection] = useState("right");
   const [isTransitioning, setIsTransitioning] = useState(false);
@@ -113,8 +113,8 @@ const Features1 = () => {
       className="h-screen bg-transparent flex items-start sm:items-center justify-start sm:justify-centerunlo px-0 sm:px-8 pt-24 pb-42 sm:pt-0 sm:pb-0 mb-[100%] sm:mb-0"
     >
       <div className="mx-auto w-full h-full flex flex-col justify-start sm:justify-center gap-4 sm:gap-[3rem] px-4 sm:px-[5%] pt-4 sm:pt-[2%] z-10">
-        <div className="ml-0 text-left">
-          <Slide direction="up">
+        <div className="ml-0 text-left max-w-full overflow-hidden">
+          <Slide direction={globalIsMobile ? "left" : "up"}>
             <h2
               className="text-[clamp(2.25rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold w-[18rem] sm:w-[55%]"
               style={{
@@ -129,7 +129,7 @@ const Features1 = () => {
               Everyone with AI Agents */}
             </h2>
           </Slide>
-          <Fade delay={300}>
+          <Slide direction={globalIsMobile ? "right" : "up"}>
             <p
               className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize w-[18rem] sm:w-[55%]"
               style={{
@@ -139,7 +139,7 @@ const Features1 = () => {
             >
               Where AI Agents Meet Fashion, Shopping, and Streaming
             </p>
-          </Fade>
+          </Slide>
           {/* <Fade delay={400}>
             <div className="flex justify-start mt-4 mb-14 sm:mb-0">
               <p
@@ -182,7 +182,7 @@ const Features1 = () => {
           </div>
 
           {/* Navigation buttons */}
-          <div className="flex justify-start items-center gap-4 mt-8">
+          <div className="flex justify-start items-center gap-4">
             <button
               onClick={prevFeature}
               disabled={isTransitioning}
