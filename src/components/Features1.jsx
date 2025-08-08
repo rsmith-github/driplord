@@ -120,19 +120,18 @@ const Features1 = ({ globalIsMobile }) => {
           className="w-[clamp(1.5rem,1.25vw,1.25vw)] h-[clamp(1.5rem,1.25vw,1.25vw)]"
         />
         <h3
-          className="text-[clamp(0.9rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
+          className="text-[clamp(1rem,1rem,1.5rem)] sm:text-[clamp(0.75rem,0.833vw,2rem)] font-bold text-white uppercase tracking-wide pt-1"
           style={{ fontFamily: "Helvetica Neue", fontWeight: "750" }}
         >
           {feature.title}
         </h3>
       </div>
       <p
-        className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
+        className="text-[clamp(1.3rem,1vw,1.2rem)] sm:text-[clamp(1rem,1vw,1.2rem)] text-white/70 line-height-[125%] sm:line-height-[1.5]"
         style={{
           fontFamily: "Helvetica Neue",
           fontWeight: "300",
           color: "#6D6C68",
-          lineHeight: "1.5",
         }}
       >
         {feature.description}
@@ -140,16 +139,19 @@ const Features1 = ({ globalIsMobile }) => {
     </div>
   );
 
+  // 36 header
+  // 24 for subheader
+  // 19 for body copy
   return (
     <section
       id="features1"
-      className="h-screen bg-transparent flex items-start sm:items-center justify-start sm:justify-centerunlo px-0 sm:px-8 pt-24 pb-42 sm:pt-0 sm:pb-0 mb-[100%] sm:mb-0"
+      className="min-h-screen bg-transparent flex flex-col items-start justify-start sm:justify-center px-0 sm:px-8 relative overflow-hidden pt-24 sm:pt-0"
     >
-      <div className="mx-auto w-full h-full flex flex-col justify-start sm:justify-center gap-4 sm:gap-[3rem] px-4 sm:px-[5%] pt-4 sm:pt-[2%] z-10">
+      <div className="mx-auto w-full h-full flex flex-col justify-start sm:justify-center gap-4 sm:gap-[3rem] px-4 sm:px-[5%] pt-4 sm:pt-0 z-10">
         <div className="ml-0 text-left max-w-full overflow-hidden">
           <Slide direction={globalIsMobile ? "left" : "up"}>
             <h2
-              className="text-[clamp(2.25rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold w-[18rem] sm:w-[55%]"
+              className="text-[clamp(3rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold w-[25rem] sm:w-[55%]"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "750",
@@ -164,7 +166,7 @@ const Features1 = ({ globalIsMobile }) => {
           </Slide>
           <Slide direction={globalIsMobile ? "right" : "up"}>
             <p
-              className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize w-[18rem] sm:w-[55%]"
+              className="text-[clamp(1.6rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white capitalize w-[22.6rem] sm:w-[55%] mb-6 line-height-[125%]"
               style={{
                 fontFamily: "Helvetica Neue",
                 fontWeight: "300",
@@ -173,29 +175,30 @@ const Features1 = ({ globalIsMobile }) => {
               Where AI Agents Meet Fashion, Shopping, and Streaming
             </p>
           </Slide>
-          {/* <Fade delay={400}>
+          <Fade delay={400}>
             <div className="flex justify-start mt-4 mb-14 sm:mb-0">
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(1rem,1vw,1.2rem)] text-white tracking-widest font-medium normal-case w-[18rem] sm:w-[55%]"
+                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(1rem,1vw,1.2rem)] text-white/70 normal-case w-[18rem] sm:w-[55%]"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
                   color: "#6D6C68",
+                  lineHeight: "1.5",
                 }}
               >
-                AI doesn't just simplify Web3—it makes it accessible. Drip
-                empowers businesses and users alike with intelligent agents that
-                automate trading, payments, and blockchain interactions. Whether
-                you're integrating into existing systems or building something
-                entirely new, our cross-chain, tokenized infrastructure is ready
-                to scale with you.
+                DripLord blends AI with the energy of live entertainment to
+                create a new kind of fashion experience. It's a place where
+                style moves fast, trends emerge in real time, and your digital
+                identity is part of the show. Whether you're here to explore,
+                express, or connect, every interaction puts you at the center of
+                the scene.
               </p>
             </div>
-          </Fade> */}
+          </Fade>
         </div>
 
         {/* Mobile: Single feature with navigation */}
-        <div className="block sm:hidden w-[18rem]">
+        <div className="block sm:hidden w-[22rem]">
           <div className="w-full h-[120px] relative overflow-hidden">
             {/* Current feature */}
             {renderFeature(features[currentFeatureIndex], currentFeatureIndex)}
@@ -253,17 +256,19 @@ const Features1 = ({ globalIsMobile }) => {
                     {feature.title}
                   </h3>
                 </div>
-                <p
-                  className="text-[clamp(1rem,1vw,1.2rem)] text-white/70"
-                  style={{
-                    fontFamily: "Helvetica Neue",
-                    fontWeight: "300",
-                    color: "#6D6C68",
-                    lineHeight: "1.5",
-                  }}
-                >
-                  {feature.description}
-                </p>
+                <div className="w-[260px]">
+                  <p
+                    className="text-[clamp(1rem,1vw,1.2rem)] text-white/70 normal-case"
+                    style={{
+                      fontFamily: "Helvetica Neue",
+                      fontWeight: "300",
+                      color: "#6D6C68",
+                      lineHeight: "1.5",
+                    }}
+                  >
+                    {feature.description}
+                  </p>
+                </div>
               </div>
             </Fade>
           ))}

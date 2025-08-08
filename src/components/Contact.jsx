@@ -11,7 +11,7 @@ const Contact = ({ globalIsMobile }) => {
           <div className="w-[18rem] sm:w-auto">
             <Slide direction={globalIsMobile ? "left" : "up"}>
               <h2
-                className="text-[clamp(2.25rem,4vw,6rem)] sm:text-[clamp(1.5rem,1.875vw,1.875vw)] font-bold text-white uppercase tracking-wider"
+                className="text-[clamp(3rem,4vw,4rem)] sm:text-[clamp(1rem,1.875vw,1.875vw)] font-bold text-white mb-2 uppercase tracking-wider bold w-[25rem] sm:w-[55%]"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "750",
@@ -24,10 +24,11 @@ const Contact = ({ globalIsMobile }) => {
             </Slide>
             <Slide direction={globalIsMobile ? "right" : "up"}>
               <p
-                className="text-[clamp(1rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize w-[18rem] sm:w-auto"
+                className="text-[clamp(1.6rem,1vw,1.2rem)] sm:text-[clamp(0.5rem,1.25vw,1.25vw)] text-white tracking-widest font-medium capitalize w-[22.6rem] sm:w-[55%]"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
+                  lineHeight: "125%",
                 }}
               >
                 Supercharge Your Business with AI Agents
@@ -35,11 +36,12 @@ const Contact = ({ globalIsMobile }) => {
             </Slide>
             <Slide direction={globalIsMobile ? "up" : "up"}>
               <p
-                className="sm:text-[clamp(1rem,1vw,1.2rem)] leading-relaxed font-helvetica max-w-[clamp(18rem,35.885vw,35.885vw)] mt-4 w-[18rem] sm:w-auto"
+                className="text-[clamp(1.3rem,1vw,1.2rem)] sm:text-[clamp(1rem,1vw,1.2rem)] leading-relaxed font-helvetica max-w-[clamp(18rem,35.885vw,35.885vw)] mt-4 w-[18rem] sm:w-auto"
                 style={{
                   fontFamily: "Helvetica Neue",
                   fontWeight: "300",
                   color: "#6D6C68",
+                  lineHeight: "125%",
                 }}
               >
                 Partner with Drip to bring intelligent, interactive agents into

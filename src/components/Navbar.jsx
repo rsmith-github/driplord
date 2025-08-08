@@ -85,27 +85,27 @@ const Navbar = ({ isMobileMenuOpen, setIsMobileMenuOpen }) => {
         <div className="flex-grow flex flex-col justify-center items-center gap-8 sm:pb-26 pb-58">
           <button
             onClick={() => scrollToSection("hero")}
-            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] capitalize tracking-wider font-helvetica py-2"
           >
-            START
+            Start
           </button>
           <button
             onClick={() => scrollToSection("features1")}
-            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] capitalize tracking-wider font-helvetica py-2"
           >
-            MEET DRIPLORD
+            Meet Driplord
           </button>
           <button
             onClick={() => scrollToSection("features2")}
-            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] capitalize tracking-wider font-helvetica py-2"
           >
-            CUSTOM AGENTS
+            Custom Agents
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] uppercase tracking-wider font-helvetica py-2"
+            className="block text-white/80 text-[clamp(3rem,2.5vw,2.5vw)] font-thin cursor-pointer transition-colors duration-300 hover:text-[rgb(238,63,154)] capitalize tracking-wider font-helvetica py-2"
           >
-            BOOK A CALL
+            Book a Call
           </button>
         </div>
       </div>

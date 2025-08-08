@@ -1,30 +1,58 @@
-import { Fade } from "react-awesome-reveal";
+import { useEffect, useState } from "react";
 
 const Footer = ({ scrollProgress, isMobileMenuOpen }) => {
+  const [shouldAnimate, setShouldAnimate] = useState(false);
+
+  useEffect(() => {
+    // Trigger animations after a brief delay to ensure they play on page load/refresh
+    const timer = setTimeout(() => {
+      setShouldAnimate(true);
+    }, 500);
+
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
     <footer
-      className={`fixed bottom-0 left-0 right-0 w-full py-1 sm:py-2 ${isMobileMenuOpen ? "bg-transparent" : "bg-gradient-to-t from-[#0E0E0E] to-black"} sm:bg-transparent sm:bg-gradient-to-t sm:from-transparent sm:to-transparent`}
+      className={`fixed bottom-0 left-0 right-0 w-full py-3 sm:py-2 ${
+        shouldAnimate ? "animate-footer-reveal" : ""
+      } ${
+        isMobileMenuOpen
+          ? "bg-transparent"
+          : "bg-gradient-to-t from-[#0E0E0E] to-black"
+      } sm:bg-transparent sm:bg-gradient-to-t sm:from-transparent sm:to-transparent`}
       style={{ zIndex: 999 }}
     >
       <div
-        className="px-[3.125vw] text-[clamp(0.625rem,0.521vw,0.521vw)] py-1 2xl:py-6 flex justify-between items-start sm:items-end font-helvetica pointer-events-auto"
+        className={`px-[3.125vw] text-[clamp(0.625rem,0.521vw,0.521vw)] py-1 2xl:py-6 flex justify-between items-start sm:items-end font-helvetica pointer-events-auto ${
+          shouldAnimate ? "animate-footer-content" : ""
+        }`}
         style={{
           fontFamily: "Helvetica Neue",
           fontWeight: "300",
         }}
       >
-        <div className="flex flex-col sm:flex-row gap-1 text-[clamp(0.625rem,0.521vw,0.521vw)] text-left">
+        <div
+          className={`flex flex-col sm:flex-row gap-1 text-[clamp(0.8rem,0.521vw,0.521vw)] sm:text-[clamp(0.625rem,0.521vw,0.521vw)] text-left ${
+            shouldAnimate ? "animate-footer-left" : ""
+          }`}
+        >
           {/* Mobile: Multi-line layout */}
           <div className="block sm:hidden">
-            <div className="flex flex-col gap-0 sm:gap-1 items-start sm:items-center text-white/80">
-              <span>2025 © Copyright Drip Prime.</span>
-              <span>All Rights Reserved.</span>
-              <div className="flex items-center gap-1">
-                <a href="#" className="hover:text-[rgb(238,63,154)] text-white">
+            <div className="flex flex-col gap-1 sm:gap-1 items-start sm:items-center text-white/80">
+              <span className={shouldAnimate ? "animate-footer-text" : ""}>
+                2025 © Copyright Drip Prime. All Rights Reserved.
+              </span>
+              <div
+                className={`flex items-center gap-1 ${
+                  shouldAnimate ? "animate-footer-links" : ""
+                }`}
+              >
+                <a href="#" className="hover:text-[rgb(238,63,154)]">
                   Terms and Conditions
                 </a>
-                <span className="text-white">|</span>
-                <a href="#" className="hover:text-[rgb(238,63,154)] text-white">
+                <span className="">|</span>
+                <a href="#" className="hover:text-[rgb(238,63,154)]">
                   Privacy Policy
                 </a>
               </div>
@@ -33,30 +61,48 @@ const Footer = ({ scrollProgress, isMobileMenuOpen }) => {
 
           {/* Desktop: Original single-line layout */}
           <div className="hidden sm:flex sm:flex-row gap-2 items-center text-white/80">
-            <span className="font-light">
+            <span
+              className={`font-light ${
+                shouldAnimate ? "animate-footer-text" : ""
+              }`}
+            >
               2025 © Copyright Drip Prime. All Rights Reserved.
             </span>
             <a
               href="#"
-              className="hover:text-[rgb(238,63,154)] text-white font-light"
+              className={`hover:text-[rgb(238,63,154)] text-white font-light ${
+                shouldAnimate ? "animate-footer-links" : ""
+              }`}
             >
               Terms and Conditions
             </a>
-            <span className="text-white font-light">|</span>
+            <span
+              className={`text-white font-light ${
+                shouldAnimate ? "animate-footer-links" : ""
+              }`}
+            >
+              |
+            </span>
             <a
               href="#"
-              className="hover:text-[rgb(238,63,154)] text-white font-light"
+              className={`hover:text-[rgb(238,63,154)] text-white font-light ${
+                shouldAnimate ? "animate-footer-links" : ""
+              }`}
             >
               Privacy Policy
             </a>
           </div>
         </div>
 
-        <div className="flex gap-[1.719vw]">
+        <div
+          className={`flex gap-[1.719vw] ${
+            shouldAnimate ? "animate-footer-right" : ""
+          }`}
+        >
           <div
             className={`hidden sm:flex items-center gap-[0.938vw] transition-all duration-300 ${
-              scrollProgress < 100 ? "opacity-100" : "opacity-0"
-            }`}
+              shouldAnimate ? "animate-footer-scroll" : ""
+            } ${scrollProgress < 100 ? "opacity-100" : "opacity-0"}`}
           >
             <img
               src="https://d17r7llinqok54.cloudfront.net/scroll.svg"
@@ -67,10 +113,14 @@ const Footer = ({ scrollProgress, isMobileMenuOpen }) => {
               Scroll Down to Continue
             </p>
           </div>
-          <div className="flex items-center gap-[clamp(1.563rem,1.256vw,1.256vw)]">
+          <div
+            className={`flex items-center gap-[clamp(1.563rem,1.256vw,1.256vw)] ${
+              shouldAnimate ? "animate-footer-social" : ""
+            }`}
+          >
             <div className="flex items-center justify-center">
               <svg
-                className="w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
+                className="w-[clamp(2rem,1.25vw,1.25vw)] sm:w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(2rem,1.25vw,1.25vw)] sm:h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
@@ -79,7 +129,7 @@ const Footer = ({ scrollProgress, isMobileMenuOpen }) => {
             </div>
             <div className="flex items-center justify-center">
               <svg
-                className="w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
+                className="w-[clamp(2rem,1.25vw,1.25vw)] sm:w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(2rem,1.25vw,1.25vw)] sm:h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
                 fill="currentColor"
                 viewBox="0 0 24 24"
               >
