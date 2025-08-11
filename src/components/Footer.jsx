@@ -119,22 +119,34 @@ const Footer = ({ scrollProgress, isMobileMenuOpen }) => {
             }`}
           >
             <div className="flex items-center justify-center">
-              <svg
-                className="w-[clamp(2rem,1.25vw,1.25vw)] sm:w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(2rem,1.25vw,1.25vw)] sm:h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+              <a
+                href="https://x.com/ai_driplord"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-              </svg>
+                <svg
+                  className="w-[clamp(2rem,1.25vw,1.25vw)] sm:w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(2rem,1.25vw,1.25vw)] sm:h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                </svg>
+              </a>
             </div>
             <div className="flex items-center justify-center">
-              <svg
-                className="w-[clamp(2rem,1.25vw,1.25vw)] sm:w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(2rem,1.25vw,1.25vw)] sm:h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
-                fill="currentColor"
-                viewBox="0 0 24 24"
+              <a
+                href="https://www.tiktok.com/@driplordai"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43V7.93a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.36z" />
-              </svg>
+                <svg
+                  className="w-[clamp(2rem,1.25vw,1.25vw)] sm:w-[clamp(0.875rem,1.25vw,1.25vw)] h-[clamp(2rem,1.25vw,1.25vw)] sm:h-[clamp(0.875rem,1.25vw,1.25vw)] text-white"
+                  fill="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-5.2 1.74 2.89 2.89 0 012.31-4.64 2.93 2.93 0 01.88.13V9.4a6.84 6.84 0 00-.88-.05A6.33 6.33 0 005 20.1a6.34 6.34 0 0010.86-4.43V7.93a8.16 8.16 0 004.77 1.52v-3.4a4.85 4.85 0 01-1-.36z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
