@@ -33,8 +33,8 @@ const VideoSection = () => {
   };
 
   const videoSrc = isMobile
-    ? "https://d17r7llinqok54.cloudfront.net/DriplordVideoMobile.mp4"
-    : "https://d17r7llinqok54.cloudfront.net/DriplordVideo.mp4";
+    ? "https://d17r7llinqok54.cloudfront.net/DriplordVideoMobile.MOV"
+    : "https://d17r7llinqok54.cloudfront.net/DriplordVideo.MOV";
 
   return (
     <section
@@ -62,12 +62,14 @@ const VideoSection = () => {
         <picture className="absolute inset-0 w-full h-full z-0">
           <source
             media="(min-width: 680px)"
-            srcSet="https://d17r7llinqok54.cloudfront.net/video-bg-2.png"
+            // srcSet="https://d17r7llinqok54.cloudfront.net/video-bg-2.png" // Desktop
+            srcSet="https://d17r7llinqok54.cloudfront.net/DriplordCover.webp"
           />
           <img
-            src="https://d17r7llinqok54.cloudfront.net/video-bg.png"
+            // src="https://d17r7llinqok54.cloudfront.net/video-bg.png" // Mobile
+            src="https://d17r7llinqok54.cloudfront.net/DriplordCover2.webp"
             alt="video background"
-            className="w-full h-full object-cover scale-[1.58] sm:scale-100 transition-transform duration-700"
+            className="w-full h-full object-cover scale-[1] sm:scale-100 transition-transform duration-700 object-top"
           />
         </picture>
       )}
