@@ -55,7 +55,9 @@ const Contact = ({ globalIsMobile }) => {
           <Fade delay={600}>
             <div className="pointer-events-auto w-[18rem] sm:w-auto">
               <div className="bg-white rounded-full text-center h-[clamp(3.75rem,3.125vw,3.125vw)] w-[clamp(15.375rem,3.125vw,3.125vw)]">
-                <button className="text-center inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,0.833vw,0.833vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 sm:px-8 text-black h-full">
+                <button className="text-center inline-block text-[clamp(0.9rem,3vw,1.5rem)] sm:text-[clamp(1rem,0.833vw,0.833vw)] font-bold uppercase tracking-widest font-helvetica cursor-pointer px-6 sm:px-8 text-black h-full"
+                  onClick={() => window.location.href = "mailto:business@driplord.ai"}
+                >
                   Book a Call
                 </button>
               </div>

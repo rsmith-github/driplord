@@ -63,7 +63,7 @@ const VideoSection = () => {
           <source
             media="(min-width: 680px)"
             // srcSet="https://d17r7llinqok54.cloudfront.net/video-bg-2.png" // Desktop
-            srcSet="https://d17r7llinqok54.cloudfront.net/DriplordCover.webp"
+            srcSet="https://d17r7llinqok54.cloudfront.net/DriplordCover2.webp"
           />
           <img
             // src="https://d17r7llinqok54.cloudfront.net/video-bg.png" // Mobile
